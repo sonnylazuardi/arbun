@@ -36,13 +36,6 @@
                     <div class="book"><a href="#">Graph Theory Applications in Electrical Networks</a></div>
                   </div>
                 </div>
-                <div class="rows">
-                  <div class="loc">
-                    <div class="book"><a href="#">Representasi Graf dalam Jejaring Sosial Facebook</a></div>
-                    <div class="book"><a href="#">Aplikasi Graf Berbobot dan Pohon Merentang Minimum dalam Perancangan Jalur Trem di Kota Bandung</a></div>
-                    <div class="book"><a href="#">Penerapan Pohon pada Game Berbasis Artificial Intelligence</a></div>
-                  </div>
-                </div>
               </div>
             </div>
             <ul class="nav nav-tabs bwh">
