@@ -142,7 +142,8 @@ footer p {
   display: inline-block;
   margin: 0 24px;
   padding: 5px;
-  border: 1px solid #000; 
+  border: 1px solid #fff; 
+  box-shadow: 0px -30px 50px rgba(0,0,0,.3) inset;
   float: left;
   line-height: .6em;
   box-sizing:;

@@ -16,8 +16,8 @@
                 </form>
               </li>
             </ul>
-            <a href="#" class="btn btn-success">Pencarian Lanjutan</a> 
-            <a href="#" class="btn">Telusuri Arsip</a>
+            <?php echo anchor('arsip/search', 'Pencarian Lanjutan', array('class'=>'btn btn-success')); ?>
+            <?php echo anchor('arsip/index', 'Telusuri Arsip', array('class'=>'btn')); ?>
           </div>  
           <div class="span6 bookwrap tabs-below">
             <div class="strip bookrak bookshelf">
