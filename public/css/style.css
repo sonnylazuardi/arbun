@@ -1,0 +1,154 @@
+body{
+  background-color: #2A313A;
+  color: #fff;
+  margin-top: 80px;
+}
+a {
+  color: #ddd;
+}
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+.navbar-inverse .navbar-inner {
+  background-color: #2A313A;
+  background-image: none;
+  border: none;
+  border-radius: none;
+  filter: none;
+  box-shadow: none;
+  //padding: 20px;
+  width: none;
+}
+.nav-collapse ul.nav {
+  margin-top: 25px;
+}
+.navbar-inverse .brand {
+  padding-top:0;
+  padding-bottom: 0;
+}
+a.brand {
+  background: url(../img/web.png) no-repeat 20px;
+  width: 195px;
+  height: 82px;
+}
+.navbar-inverse .nav .active>a{
+  background-color: #13151b;
+  border-radius: 5px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, .9) inset;
+}
+.desk h3{
+  font-weight: normal;
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 1.6em;
+  
+}
+.strip{
+  background-color: #fff;
+  color: #000;
+}
+.item-stream {
+  background-color: whiteSmoke;
+  border: 1px solid #D8D8D8;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+.full-search-bar {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+.full-search-bar form input[type="text"] {
+  height: 35px;
+}
+.full-search-bar form input[type="text"] {
+  float: left;
+  height: 30px;
+  font-size: 20px;
+  line-height: 24px;
+  -webkit-border-radius: 6px 0 0 6px;
+  -moz-border-radius: 6px 0 0 6px;
+  border-radius: 6px 0 0 6px;
+  border-right: 0;
+  width: 86%;
+  margin-bottom: 0;
+}
+.full-search-bar .search-input-item {
+  padding: 10px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+}
+form.search-form{
+  margin: 0;
+}
+.full-search-bar form button[type="submit"] {
+  width: 46px;
+  height: 40px;
+  -webkit-border-radius: 0 6px 6px 0;
+  -moz-border-radius: 0 6px 6px 0;
+  border-radius: 0 6px 6px 0;
+}
+footer p {
+  padding:20px;
+}
+.bookrak {
+  height: 430px;
+  border-radius: 10px;
+  padding:10px;
+}
+.bookwrap{
+  margin-top:-150px;
+  margin-bottom:-150px;
+}
+.kategori{
+  margin-top: 10px;
+}
+.kategori h4{
+  font-weight: normal;
+  color: #7b7b7b;
+}
+.bwh {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.rows {
+  height: 140px;
+}
+.bookshelf .shelf .rows::after {
+  background: url(../img/wall-bookshelf.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+  width: 500px;
+  height: 70px;
+  display: block;
+  content: "";
+  margin-left: -30px;
+  padding-top: 105px;
+}
+.bookshelf .shelf .loc {
+  text-align: center;
+}
+.book{
+  overflow: hidden;
+  width: 82px;
+  height: 105px;
+  background-color: #ddd;
+  display: inline-block;
+  margin: 0 24px;
+  padding: 5px;
+  border: 1px solid #000; 
+  float: left;
+  line-height: .6em;
+  box-sizing:;
+}
+.book a{
+  font-size:.7em;
+  color: #000;
+}
+.tabs-below > .nav-tabs
+{
+  border: none;
+}
