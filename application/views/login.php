@@ -2,7 +2,7 @@
   <div style="height:50px"></div>
   <div class="login strip">
       <?php echo form_open('user/auth'); ?>
-          <label>Username</label>
+          <label>NIM/NIP</label>
           <input type="text" name="username" tabindex="20">
           
           <label>Password (<?php echo anchor('user/forgot', "Lupa Password"); ?>)</label>
