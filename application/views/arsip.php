@@ -1,5 +1,5 @@
 <div style="height:30px"></div>
-<div class="strip">
+<div class="strip strip-page">
 <div class="container">
 	<h2>List Arsip </h2>
 			<form action = "#" method="POST" class="form-inline">

@@ -9,7 +9,7 @@
           <input type="password" name="password" tabindex="21">
           <br/>
           <button type="submit" class="btn btn-large btn-primary">Login</button>
-          <span class="create-account">atau <?php echo anchor('user/create', "Buat Akun"); ?></span>
+          <span class="create-account">atau <?php echo anchor('user/register', "Buat Akun"); ?></span>
       <?php echo form_close(); ?>
     </section>
 </div>
