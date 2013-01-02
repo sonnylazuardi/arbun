@@ -48,6 +48,12 @@ a.brand {
   background-color: #fff;
   color: #000;
 }
+.strip a{
+  color: #777;
+}
+.strip a:hover{
+  color: #999;
+}
 .item-stream {
   background-color: whiteSmoke;
   border: 1px solid #D8D8D8;
@@ -154,4 +160,10 @@ footer p {
 .tabs-below > .nav-tabs
 {
   border: none;
+}
+.login {
+  width: 240px;
+  margin: 0 auto;
+  padding: 20px;
+  border-radius: 10px;
 }

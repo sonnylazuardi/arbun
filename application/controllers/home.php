@@ -22,6 +22,16 @@ class Home extends CI_Controller {
 		$data['page']='home';
 		$this->load->view('theme/template', $data);
 	}
+	public function kontak()
+	{
+		$data['page']='kontak';
+		$this->load->view('theme/template', $data);
+	}
+	public function login()
+	{
+		$data['page']='login';
+		$this->load->view('theme/template', $data);
+	}
 }
 
 /* End of file welcome.php */

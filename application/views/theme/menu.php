@@ -4,10 +4,10 @@
       <a class="brand"></a>
       <div class="nav-collapse collapse">
         <ul class="nav pull-right">
-          <li class="active"><a href="#">Home</a></li>
-          <li><a href="#">Arsip</a></li>
-          <li><a href="#">Kontak</a></li>
-          <li><a href="#">Login</a></li>
+          <li <?php echo ($page=='home')?'class="active"':''; ?>><?php echo anchor('home/index', 'Home');?></li>
+          <li <?php echo ($page=='arsip')?'class="active"':''; ?>><?php echo anchor('arsip/index', 'Arsip');?></li>
+          <li <?php echo ($page=='kontak')?'class="active"':''; ?>><?php echo anchor('home/kontak', 'Kontak');?></li>
+          <li <?php echo ($page=='login')?'class="active"':''; ?>><?php echo anchor('home/login', 'Login');?></li>
         </ul>
 
       </div>

@@ -13,7 +13,7 @@
   <body>
     <!-- Navbar
     ================================================== -->
-    <?php $this->load->view('theme/menu'); ?>
+    <?php $this->load->view('theme/menu', array('page'=>$page)); ?>
 
     <?php
     if (!empty($page)): 
