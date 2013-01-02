@@ -16,15 +16,15 @@
 			<button type="submit" class="btn btn-primary">Sort</button>
 			</form>
 	<table class="table table-striped">
-	  <th>
-		  <td> No </td>
-		  <td> Judul </td>
-		  <td> Pengarang </td>
-		  <td> Tahun Terbit </td>
-		  <td> Mata Kuliah </td>
-		  <td> Bidang </td>
-		  <td> Link </td>
-	  </th>
+	  <tr>
+		  <th> No </th>
+		  <th> Judul </th>
+		  <th> Pengarang </th>
+		  <th> Tahun Terbit </th>
+		  <th> Mata Kuliah </th>
+		  <th> Bidang </th>
+		  <th> Link </th>
+	  </tr>
 	  
 	  <tr>
 		  <td> 1 </td>
