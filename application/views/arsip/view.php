@@ -31,37 +31,21 @@
     // Specify the main script used to create a new PDF.JS web worker.
     // In production, change this to point to the combined `pdf.js` file.
     PDFJS.workerSrc = '<?php echo base_url() ?>public/js/pdfjs/worker_loader.js';
-    PDFJS.getDocument('<?php echo base_url() ?>public/pdf/tes.pdf').then(function(pdf) {
-		  // Using promise to fetch the page
-		  pdf.getPage(1).then(function(page) {
-		    var scale = 1.5;
-		    var viewport = page.getViewport(scale);
-
-		    //
-		    // Prepare canvas using PDF page dimensions
-		    //
-		    var canvas = document.getElementById('the-canvas');
-		    var context = canvas.getContext('2d');
-		    canvas.height = viewport.height;
-		    canvas.width = viewport.width;
-
-		    //
-		    // Render PDF page into canvas context
-		    //
-		    var renderContext = {
-		      canvasContext: context,
-		      viewport: viewport
-		    };
-		    page.render(renderContext);
-		  });
-		});
+    var pdfWithFormsPath = '<?php echo base_url() ?>public/pdf/tes.pdf';
   </script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/tes.js"></script>
 
+  <style>
+  .pdfpage { position:relative; top: 0; left: 0; border: solid 1px black; margin: 10px; }
+  .pdfpage > canvas { position: absolute; top: 0; left: 0; }
+  .pdfpage > div { position: absolute; top: 0; left: 0; }
+  .inputControl { background: transparent; border: 0px none; position: absolute; margin: auto; }
+  .inputControl[type='checkbox'] { margin: 0px; }
+  .inputHint { opacity: 0.2; background: #ccc; position: absolute; }
+  </style>
+
 <div class="strip strip-page">
 	<div class="container">
-    <button class="toolbarButton findPrevious" title="" id="findPrevious" tabindex="21" data-l10n-id="find_previous"></button>
-    <button class="toolbarButton findNext" title="" id="findNext" tabindex="22" data-l10n-id="find_next"></button>
-		<canvas id="the-canvas" style="border:1px solid black;"/>
+		<div id="viewer"></div>
 	</div>
 </div>
