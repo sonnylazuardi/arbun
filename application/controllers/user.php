@@ -46,6 +46,12 @@ class User extends CI_Controller {
 		$data['page']='user/arsipku';
 		$this->load->view('theme/template', $data);
 	}
+	public function forgot()
+	{
+		$data['page']='user/forgot';
+		$this->load->view('theme/template', $data);
+	}
+
 }
 
 /* End of file welcome.php */

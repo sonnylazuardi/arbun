@@ -1,7 +1,15 @@
 <div class="container">
-  <div class="span6 desk">
-    <h3>View Arsip</h3>
-	</div>
+  <div class="row desk">
+    <div class="span6">
+      <h3>View Arsip</h3>
+  	</div>
+    <div class="span6">
+      <div style="text-align:right">
+        <h4>0301201312Rangga.pdf</h4>
+        <p>Rangga Yustian <span>(13511017)</span></p>
+      </div>
+    </div>
+  </div>
 </div>
 
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/pdfjs/core.js"></script>
@@ -46,6 +54,8 @@
 
 <div class="strip strip-page">
 	<div class="container">
-		<div id="viewer"></div>
+    <div class="loader"></div>  
+		<div id="viewer">
+    </div>
 	</div>
 </div>

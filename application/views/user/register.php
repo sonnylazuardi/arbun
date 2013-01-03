@@ -1,10 +1,11 @@
 <div class="page">
 	<div class="row">
-		<div class="span7 offset5" style="background-color:white;border-radius:8px;box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6); color:#000; padding-bottom:20px">
-					<h3 style="margin-left:20px">Registrasi</h3>
+		<div class="span8 offset5">
+				<div style="font-size:20px;color: rgb(255, 255, 255);background-color:white;border-radius:8px;box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);margin-bottom:20px;padding-bottom:20px">
+					<p style="font-size:25px; padding-left:10px;padding-top:20px; color: rgb(0, 130, 196);">Registrasi</p>
 					<legend></legend>
 					<div class="row" style="padding-left:30px">
-						<div class="span3" style="float:left; margin-left:20px">
+						<div class="span4" style="float:left; margin-left:20px">
 							<p style="font-size:14px;padding-left:10px;color:black">Nama :</p>
 							<input class="span3" style="margin-left:10px" type="text" >
 							<p style="font-size:14px;padding-left:10px;color:black">NIM :</p>
@@ -22,9 +23,16 @@
 								<option>Januari</option><option>Februari</option><option>Maret</option><option>April</option><option>Mei</option><option>Juni</option>			
 								<option>Juli</option><option>Agustus</option><option>September</option><option>Oktober</option><option>November</option><option>Desember</option>
 							</select>
-							<input class="span1" style="margin-left:2px" type="text" >
+							<input class="span1" style="margin-left:0px" type="text" >
 						</div>
 						<div class="span3" style="float:left; margin-left:40px">
+							<p style="font-size:14px;padding-left:10px;color:black">Status :</p>
+							<select class="span3" style="margin-left:10px">
+								<option>Dosen</option>
+								<option>Mahasiswa</option>
+								<option>Staf</option>
+								<option>Lain-Lain</option>
+							</select>
 							<p style="font-size:14px;padding-left:10px;color:black">Fakultas/Sekolah :</p>
 							<select class="span3" style="margin-left:10px">
 								<option>STEI</option>
@@ -52,6 +60,7 @@
 							<button type="submit" style="margin-left:10px" class="btn btn-success">Registrasi</button>
 						</div>
 					</div>
+				</div>
 		</div>	
 		
 	</div>

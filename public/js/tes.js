@@ -140,11 +140,17 @@ PDFJS.getDocument(pdfWithFormsPath).then(function getPdfForm(pdf) {
   // Rendering all pages starting from first
   var viewer = document.getElementById('viewer');
   var pageNumber = 1;
+  //$('#viewer').html('')
   renderPage(viewer, pdf, pageNumber++, function pageRenderingComplete() {
     if (pageNumber > pdf.numPages)
-      return; // All pages rendered
+    {
+      $('.loader').hide();
+      return;
+    }
+       // All pages rendered
     // Continue rendering of the next page
     renderPage(viewer, pdf, pageNumber++, pageRenderingComplete);
+
   });
 });
 

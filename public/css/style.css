@@ -37,12 +37,13 @@ a.brand {
   border-radius: 5px;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .9) inset;
 }
-.desk h3{
-  font-weight: normal;
+.desk{
   margin-top: 50px;
   margin-bottom: 20px;
+}
+.desk h3 {
+  font-weight: normal;
   font-size: 1.6em;
-  
 }
 .strip{
   background-color: #fff;
@@ -168,4 +169,9 @@ footer p {
 }
 .page {
   padding-top: 20px;
+}
+.loader {
+  background: url(../img/loader.gif) no-repeat;
+  width: 32px;
+  height:32px;
 }
