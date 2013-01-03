@@ -11,8 +11,10 @@
 			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='rgb(222,222,222)'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(222,222,222)">Arsipku</p>
 		</div>
 		<div class="span9" style="border-radius:10px;background-color:white;">
-
 			<div style="margin:20px">
+				<button type="submit" class="btn">Check semua</button>
+				<button type="submit" class="btn">Hapus check</button>
+				<button type="submit" class="btn btn-primary">Hapus file yang dicek</button>
 				<table class="table table-striped">
 				  <tr>
 					  <th> Check</th>
