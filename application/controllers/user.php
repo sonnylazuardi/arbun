@@ -36,6 +36,11 @@ class User extends CI_Controller {
 		$data['page']='user/account';
 		$this->load->view('theme/template', $data);
 	}
+	public function editprofil()
+	{
+		$data['page']='user/editprofil';
+		$this->load->view('theme/template', $data);
+	}
 	public function arsipku()
 	{
 		$data['page']='user/arsipku';
