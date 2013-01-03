@@ -3,10 +3,29 @@
     <h3>Pencarian Arsip</h3>
 	</div>
 </div>
+<script src="<?php echo base_url() ?>public/js/jquery.js"></script>
+<script>
+	$(function()
+	{
+		$("#advsearch").hide();
+		
+		$("#adv").click(function()
+		{
+			$("#simple").hide(500);
+			$("#advsearch").show(500);
+		});
+		
+		$("#sim").click(function()
+		{
+			$("#simple").show(500);
+			$("#advsearch").hide(500);
+		});
+	});
+</script>
 <div class="strip">
 <div class="container">
 	<div class="row">
-	<div class="span5">
+	<div class="span3">
 		<div id="simple">
 		<form action = "link?" method="POST">
 		<fieldset>
@@ -22,8 +41,6 @@
 		</fieldset>
 		</form>
 		</div>
-	</div>
-	<div class="span7">
 		<div id="advsearch">
 		<form action = "link?" method="POST">
 		<fieldset>
@@ -57,7 +74,53 @@
 		
 		</div>
 		
-		</div>
+	</div>
+	<div class="span9">
+		<table class="table table-striped">
+	  <tr>
+		  <th> No </th>
+		  <th> Judul </th>
+		  <th> Pengarang </th>
+		  <th> Tahun Terbit </th>
+		  <th> Mata Kuliah </th>
+		  <th> Bidang </th>
+		  <th> Link </th>
+	  </tr>
+	  
+	  <tr>
+		  <td> 1 </td>
+		  <td> Aplikasi Induksi matematik dalam kehidupan sehari-hari </td>
+		  <td> Anonim </td>
+		  <td> 2011 </td>
+		  <td> Struktur Diskrit </td>
+		  <td> Induksi Matematik </td>
+		  <td> <a href = "?">Lihat</a> </td>
+	  </tr>
+	  
+	  <tr>
+		  <td> 2 </td>
+		  <td> Aplikasi algoritma greedy dalam menyusun salad pizza hut </td>
+		  <td> Alexander Sadiku </td>
+		  <td> 2012 </td>
+		  <td> Strategi Algoritma </td>
+		  <td> Algoritma </td>
+		  <td> <a href = "?">Lihat</a> </td>
+	  </tr>
+
+		</table>
+
+		<div class="pagination">
+	    <ul>
+	      <li><a href="#">«</a></li>
+	      <li><a href="#">1</a></li>
+	      <li><a href="#">2</a></li>
+	      <li><a href="#">3</a></li>
+	      <li><a href="#">4</a></li>
+	      <li><a href="#">5</a></li>
+	      <li><a href="#">»</a></li>
+	    </ul>
+	  </div>
+	</div>
 	</div>
 </div>	
 </div>

@@ -24,7 +24,7 @@
               <div class="shelf">
                 <div class="rows">
                   <div class="loc">
-                    <div class="book"><a href="#">Aplikasi Pohon Keputusan dalam Rekrutmen Karyawan</a></div>
+                    <div class="book"><?php echo anchor('arsip/view', 'Aplikasi Pohon Keputusan dalam Rekrutmen Karyawan') ?></div>
                     <div class="book"><a href="#">Partisi Maksimum pada Poligon</a></div>
                     <div class="book"><a href="">Aplikasi Graf dalam Diagnosis Penyakit Dalam</a></div>
                   </div>

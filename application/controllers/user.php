@@ -19,12 +19,26 @@ class User extends CI_Controller {
 	 */
 	public function login()
 	{
-		$data['page']='login';
+		$data['page']='user/login';
 		$this->load->view('theme/template', $data);
+	}
+	public function auth()
+	{
+		redirect('user/account');
 	}
 	public function register()
 	{
-		$data['page']='register';
+		$data['page']='user/register';
+		$this->load->view('theme/template', $data);
+	}
+	public function account()
+	{
+		$data['page']='user/account';
+		$this->load->view('theme/template', $data);
+	}
+	public function arsipku()
+	{
+		$data['page']='user/arsipku';
 		$this->load->view('theme/template', $data);
 	}
 }
