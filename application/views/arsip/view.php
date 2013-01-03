@@ -60,6 +60,8 @@
 
 <div class="strip strip-page">
 	<div class="container">
+    <button class="toolbarButton findPrevious" title="" id="findPrevious" tabindex="21" data-l10n-id="find_previous"></button>
+    <button class="toolbarButton findNext" title="" id="findNext" tabindex="22" data-l10n-id="find_next"></button>
 		<canvas id="the-canvas" style="border:1px solid black;"/>
 	</div>
 </div>

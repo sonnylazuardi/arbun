@@ -13,7 +13,7 @@
 		<div class="span9" style="border-radius:10px;background-color:white;padding-bottom:10px">
 			<h3 style="margin-left:20px;">Profil</h3>
 			<legend></legend>
-			<?php echo anchor('user/editprofil', 'Edit Profil', array('class'=>'btn btn-success')) ?>
+			<?php echo anchor('user/editprofil', 'Edit Profil', array('class'=>'btn btn-success', 'style'=>'margin-left:20px;')) ?>
 			<div class="row" style="margin-top:10px">
 				<div class="span5">
 					<div style="padding:20px">	
