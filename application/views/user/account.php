@@ -6,7 +6,7 @@
     </div>
 <div class="container" style="color:black;">
 	<div class="row">
-		<div class="span3 desk" style="border-radius:10px;background-color:white;padding-top:10px">
+		<div class="span3" style="border-radius:10px;background-color:white;padding-top:10px">
 			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='rgb(222,222,222)'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(222,222,222)">Profil</p>
 			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='white'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(255,255,255)"><?php echo anchor('user/arsipku', 'Arsipku') ?></p>
 		</div>
