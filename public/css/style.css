@@ -175,3 +175,9 @@ footer p {
   width: 32px;
   height:32px;
 }
+.box {
+  border-radius: 10px;
+}
+.box h3 {
+  margin-left: 20px;
+}

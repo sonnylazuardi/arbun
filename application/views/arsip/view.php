@@ -12,6 +12,23 @@
   </div>
 </div>
 
+  <style>
+  .pdfpage { position:relative; top: 0; left: 0; border: solid 1px black; margin: 10px; }
+  .pdfpage > canvas { position: absolute; top: 0; left: 0; }
+  .pdfpage > div { position: absolute; top: 0; left: 0; }
+  .inputControl { background: transparent; border: 0px none; position: absolute; margin: auto; }
+  .inputControl[type='checkbox'] { margin: 0px; }
+  .inputHint { opacity: 0.2; background: #ccc; position: absolute; }
+  </style>
+
+<div class="strip strip-page">
+	<div class="container">
+    <div class="loader"></div>  
+		<div id="viewer">
+    </div>
+	</div>
+</div>
+
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/pdfjs/core.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/pdfjs/util.js"></script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/pdfjs/api.js"></script>
@@ -42,20 +59,3 @@
     var pdfWithFormsPath = '<?php echo base_url() ?>public/pdf/tes.pdf';
   </script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/tes.js"></script>
-
-  <style>
-  .pdfpage { position:relative; top: 0; left: 0; border: solid 1px black; margin: 10px; }
-  .pdfpage > canvas { position: absolute; top: 0; left: 0; }
-  .pdfpage > div { position: absolute; top: 0; left: 0; }
-  .inputControl { background: transparent; border: 0px none; position: absolute; margin: auto; }
-  .inputControl[type='checkbox'] { margin: 0px; }
-  .inputHint { opacity: 0.2; background: #ccc; position: absolute; }
-  </style>
-
-<div class="strip strip-page">
-	<div class="container">
-    <div class="loader"></div>  
-		<div id="viewer">
-    </div>
-	</div>
-</div>
