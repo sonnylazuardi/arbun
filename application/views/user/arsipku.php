@@ -15,6 +15,7 @@
 				<button type="submit" class="btn">Check semua</button>
 				<button type="submit" class="btn">Hapus check</button>
 				<button type="submit" class="btn btn-primary">Hapus file yang dicek</button>
+				<?php echo anchor('user/unggah', 'Unggah Arsip', array('class'=>'btn btn-info')) ?>
 				<table class="table table-striped">
 				  <tr>
 					  <th> Check</th>

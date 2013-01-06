@@ -6,7 +6,7 @@
     <div class="span6">
       <div style="text-align:right">
         <h4>0301201312Rangga.pdf</h4>
-        <p>Rangga Yustian <span>(13511017)</span></p>
+        <p>Rangga Yustian <span>(13511017)</span> - Mahasiswa</p>
       </div>
     </div>
   </div>
