@@ -7,7 +7,12 @@
           <li <?php echo ($page=='home')?'class="active"':''; ?>><?php echo anchor('home/index', 'Home');?></li>
           <li <?php echo ($page=='arsip/arsip')?'class="active"':''; ?>><?php echo anchor('arsip/index', 'Arsip');?></li>
           <li <?php echo ($page=='kontak')?'class="active"':''; ?>><?php echo anchor('home/kontak', 'Kontak');?></li>
-          <li <?php echo ($page=='user/login')?'class="active"':''; ?>><?php echo anchor('user/login', 'Login');?></li>
+          <?php if(!$this->session->userdata('logged_in_id')): ?>
+          <li <?php echo ($page=='auth/login')?'class="active"':''; ?>><?php echo anchor('auth/login', 'Login');?></li>
+          <?php endif; ?>
+          <?php if($this->session->userdata('logged_in_id')): ?>
+            <li> <?php echo anchor('auth/logout', 'Logout');?></li>
+          <?php endif; ?>
         </ul>
 
       </div>

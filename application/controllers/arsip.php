@@ -1,6 +1,11 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Arsip extends CI_Controller {
+	function __construct()
+	{
+		parent::__construct();
+		$this->load->library('login_manager', array('autologin' => FALSE));
+	}
 	public function index()
 	{
 		$data['page']='arsip/arsip';
