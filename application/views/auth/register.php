@@ -57,6 +57,8 @@
 							<label>Ulangi Password :</label>
 							<?php echo form_password('Akun[confirm_password]'); ?>
 							<label>Captcha :</label>
+							<?php echo $captcha ?>
+
 							<button type="submit" class="btn btn-success">Registrasi</button>
 						</div>
 					</div>

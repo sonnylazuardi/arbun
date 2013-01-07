@@ -18,6 +18,7 @@
 
     <?php
     $data['model']=isset($model)?$model:null;
+    $data['captcha']=isset($captcha)?$captcha:null;
     if (!empty($page)): 
      $this->load->view($page, $data); 
     else: 
