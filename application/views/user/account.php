@@ -1,17 +1,13 @@
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
 <div class="container">
-      <div class="span6 desk">
-        <h3>Akun</h3>
-    	</div>
-    </div>
-<div class="container" style="color:black;">
+  <div class="span6 desk">
+    <h3>Akun</h3>
+	</div>
+</div>
+<div class="container">
 	<div class="row">
-		<div class="span3" style="border-radius:10px;background-color:white;padding-top:10px">
-			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='rgb(222,222,222)'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(222,222,222)">Profil</p>
-			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='white'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(255,255,255)"><?php echo anchor('user/arsipku', 'Arsipku') ?></p>
-		</div>
-		<div class="span9" style="border-radius:10px;background-color:white;padding-bottom:10px">
-			<h3 style="margin-left:20px;">Profil</h3>
+		<?php $this->load->view('user/sidebar.php'); ?>
+		<div class="span9 strip box" >
+			<h3>Profil</h3>
 			<legend></legend>
 			<?php echo anchor('user/editprofil', 'Edit Profil', array('class'=>'btn btn-success', 'style'=>'margin-left:20px;')) ?>
 			<div class="row" style="margin-top:10px">

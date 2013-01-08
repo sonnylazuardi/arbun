@@ -70,10 +70,10 @@ class Auth extends CI_Controller {
 		if (isset($_POST['Login'])) {
 			$user->from_array($_POST['Login'], array('nim', 'password'));
 			$login_redirect = $this->login_manager->process_login($user);
-			if ($login_redirect) {
-				if ($login_redirect === true) {
+			if($login_redirect) {
+				if ($login_redirect == true) {
 					redirect('user/account');
-				} else {
+				}	else {
 					redirect($login_redirect);
 				}
 			}

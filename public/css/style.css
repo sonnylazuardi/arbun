@@ -96,7 +96,7 @@ footer p {
 }
 .bookrak {
   height: 360px;
-  width: 460px;
+  width: 430px;
   border-radius: 10px;
   padding:10px;
 }
@@ -181,4 +181,10 @@ footer p {
 }
 .box h3 {
   margin-left: 20px;
+}
+.nav-tabs.nav-stacked > li > a {
+  border-color: transparent;
+}
+.nav-tabs.nav-stacked li.active a{
+  background: #ddd;
 }

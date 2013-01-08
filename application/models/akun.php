@@ -1,5 +1,9 @@
 <?php
 class Akun extends DataMapper {
+    var $created_field = 'wkt_dibuat';
+    var $updated_field = 'wkt_diupdate';
+    var $local_time = TRUE;
+    var $unix_timestamp = FALSE;
 
     var $table = 'akun';
 
@@ -66,14 +70,13 @@ class Akun extends DataMapper {
     }
     function login()
     {
-        $unim = $this->nim;
-        $u = new Akun();
-        $u->where('nim', $unim)->get();
-        if ($this->password === $u->password) {
-            return $u->id;
+        $nim = $this->nim;
+        $this->validate()->get();
+        if ($this->exists()) {
+            return true;
         } else {
             $this->error_message('login', 'NIM/NIP atau Password salah');
-            $this->nim = $unim;
+            $this->nim = $nim;
             return FALSE;
         }
     }

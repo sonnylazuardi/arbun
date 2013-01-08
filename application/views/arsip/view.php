@@ -56,6 +56,6 @@
     // Specify the main script used to create a new PDF.JS web worker.
     // In production, change this to point to the combined `pdf.js` file.
     PDFJS.workerSrc = '<?php echo base_url() ?>public/js/pdfjs/worker_loader.js';
-    var pdfWithFormsPath = '<?php echo base_url() ?>public/pdf/tes.pdf';
+    var pdfWithFormsPath = '<?php echo site_url() ?>/proxy/index?url=http://informatika.stei.itb.ac.id/~rinaldi.munir/Matdis/2012-2013/Makalah2012/Makalah-IF2091-2012-001.pdf';
   </script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/tes.js"></script>

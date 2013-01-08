@@ -45,12 +45,11 @@ class Login_Manager {
 	function process_login($user)
 	{
 		// attempt the login
-		$ret = $user->login();
-		$success = !is_null($ret);
+		$success = $user->login();
 		if($success)
 		{
 			// store the userid if the login was successful
-			$this->session->set_userdata('logged_in_id', $ret);
+			$this->session->set_userdata('logged_in_id', $user->id);
 			// store the user for this request
 			$this->logged_in_user = $user;
 		

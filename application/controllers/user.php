@@ -13,7 +13,13 @@ class User extends CI_Controller {
 	}
 	public function editprofil()
 	{
+		$model = $this->login_manager->get_user();
+		$date = DateTime::createFromFormat("Y-m-d", "2068-06-15");
+		$model->thn = $date->format("Y");
+		$model->bln = $date->format("m");
+		$model->tgl = $date->format("d");
 		$data['page']='user/editprofil';
+		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}
 	public function arsipku()
