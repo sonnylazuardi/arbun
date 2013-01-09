@@ -48,7 +48,7 @@
 	<label>Gambar Profil :</label>
 
 	<?php 
-		if ($model->picture) {
+		if (!empty($model->picture) and $model->picture!='error') {
 			echo '<img src="'.base_url().'public/img/user/'.$model->picture.'"" />';
 		}
 		echo form_upload('user_file');

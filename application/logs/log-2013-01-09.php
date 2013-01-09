@@ -20335,3 +20335,1190 @@ DEBUG - 2013-01-09 06:54:44 --> File loaded: application/views/theme/js.php
 DEBUG - 2013-01-09 06:54:44 --> File loaded: application/views/theme/template.php
 DEBUG - 2013-01-09 06:54:45 --> Final output sent to browser
 DEBUG - 2013-01-09 06:54:45 --> Total execution time: 4.4948
+DEBUG - 2013-01-09 07:15:21 --> Config Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:15:21 --> URI Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> Router Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> No URI present. Default controller set.
+DEBUG - 2013-01-09 07:15:21 --> Output Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> Security Class Initialized
+DEBUG - 2013-01-09 07:15:21 --> Input Class Initialized
+DEBUG - 2013-01-09 07:15:22 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:15:22 --> Language Class Initialized
+DEBUG - 2013-01-09 07:15:22 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:15:22 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:15:22 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:15:22 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:15:23 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:15:23 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:15:23 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:15:23 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:15:23 --> Session Class Initialized
+DEBUG - 2013-01-09 07:15:23 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:15:23 --> Session routines successfully run
+DEBUG - 2013-01-09 07:15:23 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:15:24 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:15:24 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:15:24 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:15:24 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:15:24 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:15:24 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:15:24 --> Final output sent to browser
+DEBUG - 2013-01-09 07:15:24 --> Total execution time: 2.9737
+DEBUG - 2013-01-09 07:15:26 --> Config Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:15:26 --> URI Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> Router Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> Output Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> Security Class Initialized
+DEBUG - 2013-01-09 07:15:26 --> Input Class Initialized
+DEBUG - 2013-01-09 07:15:27 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:15:27 --> Language Class Initialized
+DEBUG - 2013-01-09 07:15:27 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:15:27 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:15:27 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:15:27 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:15:27 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:15:27 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:15:27 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:15:27 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:15:27 --> Session Class Initialized
+DEBUG - 2013-01-09 07:15:27 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:15:27 --> Session routines successfully run
+DEBUG - 2013-01-09 07:15:27 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:15:27 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:15:28 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:15:28 --> File loaded: application/views/arsip/arsip.php
+DEBUG - 2013-01-09 07:15:28 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:15:28 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:15:28 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:15:28 --> Final output sent to browser
+DEBUG - 2013-01-09 07:15:28 --> Total execution time: 1.8801
+DEBUG - 2013-01-09 07:16:02 --> Config Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:16:02 --> URI Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> Router Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> Output Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> Security Class Initialized
+DEBUG - 2013-01-09 07:16:02 --> Input Class Initialized
+DEBUG - 2013-01-09 07:16:03 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:16:03 --> Language Class Initialized
+DEBUG - 2013-01-09 07:16:03 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:16:03 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:16:03 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:16:03 --> Database Driver Class Initialized
+ERROR - 2013-01-09 07:16:03 --> Severity: Warning  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: MySQL server has gone away D:\wamp\www\arbun\system\database\drivers\mysql\mysql_driver.php 91
+DEBUG - 2013-01-09 07:16:04 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:16:04 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:16:04 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:16:04 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:16:04 --> Session Class Initialized
+DEBUG - 2013-01-09 07:16:04 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:16:04 --> Session routines successfully run
+DEBUG - 2013-01-09 07:16:04 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:16:05 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:16:05 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:16:05 --> File loaded: application/views/arsip/arsip.php
+DEBUG - 2013-01-09 07:16:05 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:16:05 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:16:05 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:16:05 --> Final output sent to browser
+DEBUG - 2013-01-09 07:16:05 --> Total execution time: 2.9667
+DEBUG - 2013-01-09 07:16:07 --> Config Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:16:07 --> URI Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Router Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Output Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Security Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Input Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:16:07 --> Language Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:16:07 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:16:07 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:16:08 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:16:08 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:16:08 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:16:08 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:16:08 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:16:08 --> Session Class Initialized
+DEBUG - 2013-01-09 07:16:08 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:16:08 --> Session routines successfully run
+DEBUG - 2013-01-09 07:16:08 --> Controller Class Initialized
+ERROR - 2013-01-09 07:16:08 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:16:08 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:16:08 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:16:08 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:16:08 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:16:08 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "buku_judul"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "buku_abstrak"
+ERROR - 2013-01-09 07:16:09 --> Could not find the language line "buku_bidang"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_status"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_jilid"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_penerbit"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_isbn"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_id"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_akun_id"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_ISBN"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_link"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_view"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_tgl_terbit"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_created"
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "buku_updated"
+DEBUG - 2013-01-09 07:16:10 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:16:10 --> File loaded: application/views/theme/menu.php
+ERROR - 2013-01-09 07:16:10 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:16:11 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:16:11 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:16:11 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:16:11 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:16:11 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:16:11 --> File loaded: application/views/user/header.php
+DEBUG - 2013-01-09 07:16:11 --> File loaded: application/views/user/sidebar.php
+DEBUG - 2013-01-09 07:16:11 --> File loaded: application/views/user/arsipku.php
+DEBUG - 2013-01-09 07:16:11 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:16:11 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:16:11 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:16:11 --> Final output sent to browser
+DEBUG - 2013-01-09 07:16:11 --> Total execution time: 4.6479
+DEBUG - 2013-01-09 07:16:41 --> Config Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:16:41 --> URI Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Router Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Output Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Security Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Input Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:16:41 --> Language Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:16:41 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:16:42 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:16:42 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:16:42 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:16:42 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:16:42 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:16:42 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:16:42 --> Session Class Initialized
+DEBUG - 2013-01-09 07:16:42 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:16:42 --> Session routines successfully run
+DEBUG - 2013-01-09 07:16:42 --> Controller Class Initialized
+ERROR - 2013-01-09 07:16:42 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:16:42 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:16:42 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:16:42 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:16:42 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "buku_judul"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "buku_abstrak"
+ERROR - 2013-01-09 07:16:43 --> Could not find the language line "buku_bidang"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_status"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_jilid"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_penerbit"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_isbn"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_id"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_akun_id"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_ISBN"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_link"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_view"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_tgl_terbit"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_created"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "buku_updated"
+DEBUG - 2013-01-09 07:16:44 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:16:44 --> File loaded: application/views/theme/menu.php
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:16:44 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:16:45 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:16:45 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:16:45 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:16:45 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/user/header.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/user/sidebar.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/theme/validation.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/arsip/_form.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/arsip/create.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:16:45 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:16:45 --> Final output sent to browser
+DEBUG - 2013-01-09 07:16:45 --> Total execution time: 4.6921
+DEBUG - 2013-01-09 07:18:57 --> Config Class Initialized
+DEBUG - 2013-01-09 07:18:57 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:18:57 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:18:57 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:18:57 --> URI Class Initialized
+DEBUG - 2013-01-09 07:18:57 --> Router Class Initialized
+DEBUG - 2013-01-09 07:18:57 --> No URI present. Default controller set.
+DEBUG - 2013-01-09 07:18:57 --> Output Class Initialized
+DEBUG - 2013-01-09 07:18:58 --> Security Class Initialized
+DEBUG - 2013-01-09 07:18:58 --> Input Class Initialized
+DEBUG - 2013-01-09 07:18:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:18:58 --> Language Class Initialized
+DEBUG - 2013-01-09 07:18:58 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:18:58 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:18:58 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:18:58 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:18:59 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:18:59 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:18:59 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:18:59 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:18:59 --> Session Class Initialized
+DEBUG - 2013-01-09 07:18:59 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:18:59 --> Session routines successfully run
+DEBUG - 2013-01-09 07:19:00 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:19:00 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:19:00 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:19:00 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:19:00 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:19:00 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:19:00 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:19:00 --> Final output sent to browser
+DEBUG - 2013-01-09 07:19:00 --> Total execution time: 3.0640
+DEBUG - 2013-01-09 07:19:44 --> Config Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:19:44 --> URI Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Router Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Output Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Security Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Input Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:19:44 --> Language Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:19:44 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:19:44 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:19:44 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:19:46 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:19:46 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:19:46 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:19:46 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:19:46 --> Session Class Initialized
+DEBUG - 2013-01-09 07:19:46 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:19:46 --> Session routines successfully run
+DEBUG - 2013-01-09 07:19:46 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:19:46 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:19:46 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:19:46 --> File loaded: application/views/arsip/arsip.php
+DEBUG - 2013-01-09 07:19:46 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:19:46 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:19:46 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:19:46 --> Final output sent to browser
+DEBUG - 2013-01-09 07:19:46 --> Total execution time: 2.8827
+DEBUG - 2013-01-09 07:19:48 --> Config Class Initialized
+DEBUG - 2013-01-09 07:19:48 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:19:48 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:19:48 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:19:48 --> URI Class Initialized
+DEBUG - 2013-01-09 07:19:48 --> Router Class Initialized
+DEBUG - 2013-01-09 07:19:49 --> Output Class Initialized
+DEBUG - 2013-01-09 07:19:49 --> Security Class Initialized
+DEBUG - 2013-01-09 07:19:49 --> Input Class Initialized
+DEBUG - 2013-01-09 07:19:49 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:19:49 --> Language Class Initialized
+DEBUG - 2013-01-09 07:19:49 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:19:49 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:19:49 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:19:49 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:19:50 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:19:50 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:19:50 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:19:50 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:19:50 --> Session Class Initialized
+DEBUG - 2013-01-09 07:19:51 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:19:51 --> Session routines successfully run
+DEBUG - 2013-01-09 07:19:51 --> Controller Class Initialized
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:19:51 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_judul"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_abstrak"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_bidang"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_status"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_jilid"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_penerbit"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_isbn"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_id"
+ERROR - 2013-01-09 07:19:52 --> Could not find the language line "buku_akun_id"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "buku_ISBN"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "buku_link"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "buku_view"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "buku_tgl_terbit"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "buku_created"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "buku_updated"
+DEBUG - 2013-01-09 07:19:53 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:19:53 --> File loaded: application/views/theme/menu.php
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:19:53 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:19:53 --> File loaded: application/views/user/header.php
+DEBUG - 2013-01-09 07:19:53 --> File loaded: application/views/user/sidebar.php
+DEBUG - 2013-01-09 07:19:54 --> File loaded: application/views/user/arsipku.php
+DEBUG - 2013-01-09 07:19:54 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:19:54 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:19:54 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:19:54 --> Final output sent to browser
+DEBUG - 2013-01-09 07:19:54 --> Total execution time: 5.6512
+DEBUG - 2013-01-09 07:19:56 --> Config Class Initialized
+DEBUG - 2013-01-09 07:19:56 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:19:56 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:19:56 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:19:56 --> URI Class Initialized
+DEBUG - 2013-01-09 07:19:56 --> Router Class Initialized
+DEBUG - 2013-01-09 07:19:56 --> Output Class Initialized
+DEBUG - 2013-01-09 07:19:56 --> Security Class Initialized
+DEBUG - 2013-01-09 07:19:57 --> Input Class Initialized
+DEBUG - 2013-01-09 07:19:57 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:19:57 --> Language Class Initialized
+DEBUG - 2013-01-09 07:19:57 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:19:57 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:19:57 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:19:57 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:19:58 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:19:58 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:19:58 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:19:58 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:19:58 --> Session Class Initialized
+DEBUG - 2013-01-09 07:19:58 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:19:58 --> Session routines successfully run
+DEBUG - 2013-01-09 07:19:58 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:19:59 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:19:59 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:19:59 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:19:59 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:19:59 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:19:59 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:19:59 --> Final output sent to browser
+DEBUG - 2013-01-09 07:19:59 --> Total execution time: 2.8944
+DEBUG - 2013-01-09 07:20:01 --> Config Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:20:01 --> URI Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Router Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Output Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Security Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Input Class Initialized
+DEBUG - 2013-01-09 07:20:01 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:20:01 --> Language Class Initialized
+DEBUG - 2013-01-09 07:20:02 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:20:02 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:20:02 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:20:02 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:20:03 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:20:03 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:20:03 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:20:03 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:20:03 --> Session Class Initialized
+DEBUG - 2013-01-09 07:20:03 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:20:03 --> Session routines successfully run
+DEBUG - 2013-01-09 07:20:03 --> Controller Class Initialized
+ERROR - 2013-01-09 07:20:03 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:20:03 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:20:04 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_judul"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_abstrak"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_bidang"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_status"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_jilid"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_penerbit"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_isbn"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_id"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_akun_id"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_ISBN"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_link"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_view"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_tgl_terbit"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_created"
+ERROR - 2013-01-09 07:20:05 --> Could not find the language line "buku_updated"
+DEBUG - 2013-01-09 07:20:05 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/theme/menu.php
+ERROR - 2013-01-09 07:20:06 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:20:06 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:20:06 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:20:06 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:20:06 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:20:06 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/user/header.php
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/user/sidebar.php
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/user/arsipku.php
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:20:06 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:20:06 --> Final output sent to browser
+DEBUG - 2013-01-09 07:20:06 --> Total execution time: 5.5760
+DEBUG - 2013-01-09 07:20:12 --> Config Class Initialized
+DEBUG - 2013-01-09 07:20:12 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:20:12 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:20:13 --> URI Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Router Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Output Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Security Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Input Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:20:13 --> Language Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:20:13 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:20:13 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Config Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:20:13 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:20:14 --> URI Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Router Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Output Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Security Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Input Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:20:14 --> Language Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:20:14 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:20:14 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:20:14 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:20:14 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:20:14 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:20:15 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:20:15 --> Session Class Initialized
+DEBUG - 2013-01-09 07:20:15 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:20:15 --> Session routines successfully run
+DEBUG - 2013-01-09 07:20:15 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:20:15 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:20:15 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:20:15 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:20:16 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:20:16 --> Session Class Initialized
+DEBUG - 2013-01-09 07:20:16 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:20:16 --> Session routines successfully run
+DEBUG - 2013-01-09 07:20:16 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:20:16 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:20:16 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:20:16 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:20:16 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:20:16 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:20:16 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:20:16 --> Final output sent to browser
+DEBUG - 2013-01-09 07:20:16 --> Total execution time: 2.9050
+DEBUG - 2013-01-09 07:20:18 --> Config Class Initialized
+DEBUG - 2013-01-09 07:20:18 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:20:18 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:20:18 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:20:18 --> URI Class Initialized
+DEBUG - 2013-01-09 07:20:18 --> Router Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Output Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Security Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Input Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:20:19 --> Language Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:20:19 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:20:19 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:20:19 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:20:19 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:20:19 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:20:19 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:20:19 --> Session Class Initialized
+DEBUG - 2013-01-09 07:20:20 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:20:20 --> Session routines successfully run
+DEBUG - 2013-01-09 07:20:20 --> Controller Class Initialized
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:20:20 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_judul"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_abstrak"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_bidang"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_status"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_jilid"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_penerbit"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_isbn"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_id"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_akun_id"
+ERROR - 2013-01-09 07:20:21 --> Could not find the language line "buku_ISBN"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "buku_link"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "buku_view"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "buku_tgl_terbit"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "buku_created"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "buku_updated"
+DEBUG - 2013-01-09 07:20:22 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:20:22 --> File loaded: application/views/theme/menu.php
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:20:22 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:20:22 --> File loaded: application/views/user/header.php
+DEBUG - 2013-01-09 07:20:22 --> File loaded: application/views/user/sidebar.php
+DEBUG - 2013-01-09 07:20:22 --> File loaded: application/views/user/arsipku.php
+DEBUG - 2013-01-09 07:20:23 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:20:23 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:20:23 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:20:23 --> Final output sent to browser
+DEBUG - 2013-01-09 07:20:23 --> Total execution time: 4.5972
+DEBUG - 2013-01-09 07:22:09 --> Config Class Initialized
+DEBUG - 2013-01-09 07:22:09 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:22:09 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:22:09 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:22:09 --> URI Class Initialized
+DEBUG - 2013-01-09 07:22:09 --> Router Class Initialized
+DEBUG - 2013-01-09 07:22:09 --> Output Class Initialized
+DEBUG - 2013-01-09 07:22:09 --> Security Class Initialized
+DEBUG - 2013-01-09 07:22:10 --> Input Class Initialized
+DEBUG - 2013-01-09 07:22:10 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:22:10 --> Language Class Initialized
+DEBUG - 2013-01-09 07:22:10 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:22:10 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:22:10 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:22:10 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:22:10 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:22:10 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:22:10 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:22:10 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:22:10 --> Session Class Initialized
+DEBUG - 2013-01-09 07:22:10 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:22:10 --> Session routines successfully run
+DEBUG - 2013-01-09 07:22:10 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:22:11 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:22:11 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:22:11 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:22:11 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:22:11 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:22:11 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:22:11 --> Final output sent to browser
+DEBUG - 2013-01-09 07:22:11 --> Total execution time: 1.9048
+DEBUG - 2013-01-09 07:22:13 --> Config Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:22:13 --> URI Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Router Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Output Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Security Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Input Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:22:13 --> Language Class Initialized
+DEBUG - 2013-01-09 07:22:13 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:22:14 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:22:14 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:22:14 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:22:14 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:22:14 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:22:14 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:22:14 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:22:14 --> Session Class Initialized
+DEBUG - 2013-01-09 07:22:14 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:22:14 --> Session routines successfully run
+DEBUG - 2013-01-09 07:22:14 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:22:14 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:22:14 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:22:14 --> File loaded: application/views/arsip/arsip.php
+DEBUG - 2013-01-09 07:22:14 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:22:15 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:22:15 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:22:15 --> Final output sent to browser
+DEBUG - 2013-01-09 07:22:15 --> Total execution time: 1.8931
+DEBUG - 2013-01-09 07:22:16 --> Config Class Initialized
+DEBUG - 2013-01-09 07:22:16 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:22:16 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:22:16 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:22:16 --> URI Class Initialized
+DEBUG - 2013-01-09 07:22:16 --> Router Class Initialized
+ERROR - 2013-01-09 07:22:16 --> 404 Page Not Found --> penulis
+DEBUG - 2013-01-09 07:22:19 --> Config Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:22:19 --> URI Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Router Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Output Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Security Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Input Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:22:19 --> Language Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:22:19 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:22:20 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:22:20 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:22:20 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:22:20 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:22:20 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:22:20 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:22:20 --> Session Class Initialized
+DEBUG - 2013-01-09 07:22:20 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:22:20 --> Session routines successfully run
+DEBUG - 2013-01-09 07:22:20 --> Controller Class Initialized
+ERROR - 2013-01-09 07:22:20 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:22:20 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:22:20 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:22:20 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:22:20 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "buku_judul"
+ERROR - 2013-01-09 07:22:21 --> Could not find the language line "buku_abstrak"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_bidang"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_status"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_jilid"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_penerbit"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_isbn"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_id"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_akun_id"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_ISBN"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_link"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_view"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_tgl_terbit"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_created"
+ERROR - 2013-01-09 07:22:22 --> Could not find the language line "buku_updated"
+DEBUG - 2013-01-09 07:22:22 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:22:22 --> File loaded: application/views/theme/menu.php
+ERROR - 2013-01-09 07:22:23 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:22:23 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:22:23 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:22:23 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:22:23 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:22:23 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:22:23 --> File loaded: application/views/user/header.php
+DEBUG - 2013-01-09 07:22:23 --> File loaded: application/views/user/sidebar.php
+DEBUG - 2013-01-09 07:22:23 --> File loaded: application/views/user/arsipku.php
+DEBUG - 2013-01-09 07:22:23 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:22:23 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:22:23 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:22:23 --> Final output sent to browser
+DEBUG - 2013-01-09 07:22:23 --> Total execution time: 4.6323
+DEBUG - 2013-01-09 07:24:12 --> Config Class Initialized
+DEBUG - 2013-01-09 07:24:12 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:24:12 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:24:12 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:24:12 --> URI Class Initialized
+DEBUG - 2013-01-09 07:24:12 --> Router Class Initialized
+DEBUG - 2013-01-09 07:24:13 --> No URI present. Default controller set.
+DEBUG - 2013-01-09 07:24:13 --> Output Class Initialized
+DEBUG - 2013-01-09 07:24:13 --> Security Class Initialized
+DEBUG - 2013-01-09 07:24:13 --> Input Class Initialized
+DEBUG - 2013-01-09 07:24:13 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:24:13 --> Language Class Initialized
+DEBUG - 2013-01-09 07:24:13 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:24:13 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:24:13 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:24:13 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:24:14 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:24:14 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:24:14 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:24:14 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:24:15 --> Session Class Initialized
+DEBUG - 2013-01-09 07:24:15 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:24:15 --> Session routines successfully run
+DEBUG - 2013-01-09 07:24:15 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:24:15 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:24:15 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:24:15 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:24:15 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:24:15 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:24:15 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:24:15 --> Final output sent to browser
+DEBUG - 2013-01-09 07:24:15 --> Total execution time: 3.0138
+DEBUG - 2013-01-09 07:31:29 --> Config Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:31:29 --> URI Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Router Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> No URI present. Default controller set.
+DEBUG - 2013-01-09 07:31:29 --> Output Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Security Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Input Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:31:29 --> Language Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:31:29 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:31:29 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:31:30 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:31:31 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:31:31 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:31:31 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:31:31 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:31:31 --> Session Class Initialized
+DEBUG - 2013-01-09 07:31:31 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:31:31 --> Session routines successfully run
+DEBUG - 2013-01-09 07:31:31 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:31:31 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:31:31 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:31:31 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:31:31 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:31:31 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:31:32 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:31:32 --> Final output sent to browser
+DEBUG - 2013-01-09 07:31:32 --> Total execution time: 3.0313
+DEBUG - 2013-01-09 07:31:41 --> Config Class Initialized
+DEBUG - 2013-01-09 07:31:41 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:31:41 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:31:41 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:31:42 --> URI Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Router Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Output Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Security Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Input Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:31:42 --> Language Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:31:42 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:31:42 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:31:42 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:31:42 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:31:42 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:31:42 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:31:43 --> Session Class Initialized
+DEBUG - 2013-01-09 07:31:43 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:31:43 --> Session routines successfully run
+DEBUG - 2013-01-09 07:31:43 --> Controller Class Initialized
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:31:43 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:31:44 --> Could not find the language line "akun_jurusan"
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/theme/validation.php
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/auth/login.php
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:31:44 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:31:45 --> Final output sent to browser
+DEBUG - 2013-01-09 07:31:45 --> Total execution time: 3.3005
+DEBUG - 2013-01-09 07:44:46 --> Config Class Initialized
+DEBUG - 2013-01-09 07:44:47 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:44:47 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:44:48 --> URI Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Router Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> No URI present. Default controller set.
+DEBUG - 2013-01-09 07:44:48 --> Output Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Security Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Input Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:44:48 --> Language Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:44:48 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:44:48 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:44:48 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:44:49 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:44:49 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:44:49 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:44:49 --> Session Class Initialized
+DEBUG - 2013-01-09 07:44:49 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:44:49 --> Session routines successfully run
+DEBUG - 2013-01-09 07:44:49 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:44:49 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:44:49 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:44:49 --> File loaded: application/views/home.php
+DEBUG - 2013-01-09 07:44:49 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:44:49 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:44:49 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:44:49 --> Final output sent to browser
+DEBUG - 2013-01-09 07:44:49 --> Total execution time: 3.3458
+DEBUG - 2013-01-09 07:44:50 --> Config Class Initialized
+DEBUG - 2013-01-09 07:44:52 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:44:52 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:44:52 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:44:53 --> URI Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Router Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Output Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Security Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Input Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:44:53 --> Language Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:44:53 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:44:54 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:44:54 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:44:54 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:44:56 --> Config Class Initialized
+DEBUG - 2013-01-09 07:44:56 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:44:56 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:44:56 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:44:56 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:44:56 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:44:56 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:44:56 --> URI Class Initialized
+DEBUG - 2013-01-09 07:44:56 --> Session Class Initialized
+DEBUG - 2013-01-09 07:44:56 --> Router Class Initialized
+DEBUG - 2013-01-09 07:44:56 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:44:57 --> Session routines successfully run
+DEBUG - 2013-01-09 07:44:57 --> Output Class Initialized
+DEBUG - 2013-01-09 07:44:57 --> Controller Class Initialized
+DEBUG - 2013-01-09 07:44:57 --> Security Class Initialized
+DEBUG - 2013-01-09 07:44:57 --> Input Class Initialized
+DEBUG - 2013-01-09 07:44:57 --> Global POST and COOKIE data sanitized
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_nama"
+DEBUG - 2013-01-09 07:44:57 --> Language Class Initialized
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_email"
+DEBUG - 2013-01-09 07:44:57 --> Loader Class Initialized
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_password"
+DEBUG - 2013-01-09 07:44:57 --> Helper loaded: url_helper
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_confirm_password"
+DEBUG - 2013-01-09 07:44:57 --> Helper loaded: form_helper
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_password_old"
+DEBUG - 2013-01-09 07:44:57 --> Database Driver Class Initialized
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:44:57 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:44:58 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:44:58 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:44:58 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:44:58 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:44:58 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:44:58 --> Could not find the language line "akun_jurusan"
+DEBUG - 2013-01-09 07:44:58 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:44:58 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:44:58 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:44:58 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:44:58 --> Session Class Initialized
+DEBUG - 2013-01-09 07:44:58 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:44:59 --> Session routines successfully run
+DEBUG - 2013-01-09 07:44:59 --> Controller Class Initialized
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:44:59 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:45:00 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:45:00 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:45:00 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:45:00 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:45:00 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:45:00 --> Could not find the language line "akun_jurusan"
+DEBUG - 2013-01-09 07:45:00 --> Helper loaded: captcha_helper
+DEBUG - 2013-01-09 07:45:00 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:45:00 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:45:00 --> File loaded: application/views/theme/validation.php
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "fakulta_id"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "fakulta_singkat"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "fakulta_nama"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:45:01 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:45:01 --> File loaded: application/views/user/_form.php
+DEBUG - 2013-01-09 07:45:01 --> File loaded: application/views/auth/register.php
+DEBUG - 2013-01-09 07:45:01 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:45:01 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:45:01 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:45:02 --> Final output sent to browser
+DEBUG - 2013-01-09 07:45:02 --> Total execution time: 6.0495
+DEBUG - 2013-01-09 07:45:56 --> Config Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:45:58 --> URI Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Router Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Output Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Security Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Input Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:45:58 --> Language Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:45:58 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:45:59 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:45:59 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:45:59 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:45:59 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:45:59 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:45:59 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:45:59 --> Session Class Initialized
+DEBUG - 2013-01-09 07:45:59 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:45:59 --> Session routines successfully run
+DEBUG - 2013-01-09 07:45:59 --> Controller Class Initialized
+ERROR - 2013-01-09 07:45:59 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:45:59 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:45:59 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:45:59 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:46:00 --> Could not find the language line "akun_jurusan"
+DEBUG - 2013-01-09 07:46:00 --> Helper loaded: captcha_helper
+DEBUG - 2013-01-09 07:46:01 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:46:01 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:46:01 --> File loaded: application/views/theme/validation.php
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "fakulta_id"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "fakulta_singkat"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "fakulta_nama"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:46:01 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:46:02 --> File loaded: application/views/user/_form.php
+DEBUG - 2013-01-09 07:46:02 --> File loaded: application/views/auth/register.php
+DEBUG - 2013-01-09 07:46:02 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:46:02 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:46:02 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:46:02 --> Final output sent to browser
+DEBUG - 2013-01-09 07:46:02 --> Total execution time: 5.5249
+DEBUG - 2013-01-09 07:46:07 --> Config Class Initialized
+DEBUG - 2013-01-09 07:46:08 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:46:08 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:46:09 --> URI Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Router Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Output Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Security Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Input Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:46:09 --> Language Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:46:09 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:46:09 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:46:09 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:46:10 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:46:10 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:46:10 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:46:10 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:46:10 --> Session Class Initialized
+DEBUG - 2013-01-09 07:46:10 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:46:10 --> Session routines successfully run
+DEBUG - 2013-01-09 07:46:10 --> Controller Class Initialized
+ERROR - 2013-01-09 07:46:10 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:46:11 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:46:12 --> Could not find the language line "akun_jurusan"
+DEBUG - 2013-01-09 07:46:12 --> Upload Class Initialized
+DEBUG - 2013-01-09 07:46:12 --> Language file loaded: language/english/upload_lang.php
+ERROR - 2013-01-09 07:46:12 --> The filetype you are attempting to upload is not allowed.
+DEBUG - 2013-01-09 07:46:12 --> Form Validation Class Initialized
+DEBUG - 2013-01-09 07:46:12 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2013-01-09 07:46:12 --> Helper loaded: captcha_helper
+DEBUG - 2013-01-09 07:46:12 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:46:12 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:46:12 --> File loaded: application/views/theme/validation.php
+ERROR - 2013-01-09 07:46:12 --> Could not find the language line "fakulta_id"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "fakulta_singkat"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "fakulta_nama"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:46:13 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:46:13 --> File loaded: application/views/user/_form.php
+DEBUG - 2013-01-09 07:46:13 --> File loaded: application/views/auth/register.php
+DEBUG - 2013-01-09 07:46:13 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:46:13 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:46:13 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:46:14 --> Final output sent to browser
+DEBUG - 2013-01-09 07:46:14 --> Total execution time: 7.0765
+DEBUG - 2013-01-09 07:47:12 --> Config Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Hooks Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Utf8 Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> UTF-8 Support Enabled
+DEBUG - 2013-01-09 07:47:14 --> URI Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Router Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Output Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Security Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Input Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Global POST and COOKIE data sanitized
+DEBUG - 2013-01-09 07:47:14 --> Language Class Initialized
+DEBUG - 2013-01-09 07:47:14 --> Loader Class Initialized
+DEBUG - 2013-01-09 07:47:15 --> Helper loaded: url_helper
+DEBUG - 2013-01-09 07:47:15 --> Helper loaded: form_helper
+DEBUG - 2013-01-09 07:47:15 --> Database Driver Class Initialized
+DEBUG - 2013-01-09 07:47:15 --> Language file loaded: language/english/datamapper_lang.php
+DEBUG - 2013-01-09 07:47:15 --> Helper loaded: inflector_helper
+DEBUG - 2013-01-09 07:47:15 --> Helper loaded: security_helper
+DEBUG - 2013-01-09 07:47:15 --> Config file loaded: application/config/datamapper.php
+DEBUG - 2013-01-09 07:47:15 --> Session Class Initialized
+DEBUG - 2013-01-09 07:47:15 --> Helper loaded: string_helper
+DEBUG - 2013-01-09 07:47:15 --> Session routines successfully run
+DEBUG - 2013-01-09 07:47:15 --> Controller Class Initialized
+ERROR - 2013-01-09 07:47:15 --> Could not find the language line "akun_jurusan"
+ERROR - 2013-01-09 07:47:15 --> Could not find the language line "akun_nama"
+ERROR - 2013-01-09 07:47:15 --> Could not find the language line "akun_email"
+ERROR - 2013-01-09 07:47:16 --> Could not find the language line "akun_password"
+ERROR - 2013-01-09 07:47:16 --> Could not find the language line "akun_confirm_password"
+ERROR - 2013-01-09 07:47:16 --> Could not find the language line "akun_password_old"
+ERROR - 2013-01-09 07:47:16 --> Could not find the language line "akun_password_new"
+ERROR - 2013-01-09 07:47:16 --> Could not find the language line "akun_nim"
+ERROR - 2013-01-09 07:47:16 --> Could not find the language line "akun_tgl_lahir"
+ERROR - 2013-01-09 07:47:17 --> Could not find the language line "akun_fakultas_id"
+ERROR - 2013-01-09 07:47:18 --> Could not find the language line "akun_jurusan_id"
+ERROR - 2013-01-09 07:47:18 --> Could not find the language line "akun_status"
+ERROR - 2013-01-09 07:47:18 --> Could not find the language line "akun_jen_kelamin"
+ERROR - 2013-01-09 07:47:18 --> Could not find the language line "akun_captcha"
+ERROR - 2013-01-09 07:47:19 --> Could not find the language line "akun_picture"
+ERROR - 2013-01-09 07:47:19 --> Could not find the language line "akun_angkatan"
+ERROR - 2013-01-09 07:47:19 --> Could not find the language line "akun_id"
+ERROR - 2013-01-09 07:47:19 --> Could not find the language line "akun_jurusan"
+DEBUG - 2013-01-09 07:47:19 --> Upload Class Initialized
+DEBUG - 2013-01-09 07:47:19 --> Language file loaded: language/english/upload_lang.php
+ERROR - 2013-01-09 07:47:19 --> The filetype you are attempting to upload is not allowed.
+DEBUG - 2013-01-09 07:47:19 --> Form Validation Class Initialized
+DEBUG - 2013-01-09 07:47:19 --> Language file loaded: language/english/form_validation_lang.php
+DEBUG - 2013-01-09 07:47:19 --> Helper loaded: captcha_helper
+DEBUG - 2013-01-09 07:47:19 --> File loaded: application/views/theme/functions.php
+DEBUG - 2013-01-09 07:47:19 --> File loaded: application/views/theme/menu.php
+DEBUG - 2013-01-09 07:47:19 --> File loaded: application/views/theme/validation.php
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "fakulta_id"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "fakulta_singkat"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "fakulta_nama"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "jurusan_akun"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "jurusan_id"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "jurusan_fakultas_id"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "jurusan_singkat"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "jurusan_nama"
+ERROR - 2013-01-09 07:47:20 --> Could not find the language line "jurusan_akun"
+DEBUG - 2013-01-09 07:47:20 --> File loaded: application/views/user/_form.php
+DEBUG - 2013-01-09 07:47:20 --> File loaded: application/views/auth/register.php
+DEBUG - 2013-01-09 07:47:20 --> File loaded: application/views/theme/footer.php
+DEBUG - 2013-01-09 07:47:20 --> File loaded: application/views/theme/js.php
+DEBUG - 2013-01-09 07:47:20 --> File loaded: application/views/theme/template.php
+DEBUG - 2013-01-09 07:47:21 --> Final output sent to browser
+DEBUG - 2013-01-09 07:47:21 --> Total execution time: 8.2268

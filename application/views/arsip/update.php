@@ -3,7 +3,7 @@
   <div class="row">
     <?php $this->load->view('user/sidebar.php'); ?>
     <div class="span9 strip box">
-      <h3>Tambah Arsip</h3>
+      <h3>Edit Arsip</h3>
       <legend></legend> 
       <?php echo form_open('arsip/update'); ?>
       <?php $this->load->view('arsip/_form') ?>
