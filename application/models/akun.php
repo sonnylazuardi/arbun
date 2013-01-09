@@ -75,7 +75,7 @@ class Akun extends DataMapper {
     function _valid_pic($field)
     {
         if($this->{$field}=='error') {
-            $this->error_message('valid_pic', 'File gambar hanya bertipe gif,jpg,png dibawah 200kb');
+            $this->error_message('valid_pic', 'File gambar hanya bertipe gif,jpg,png dibawah 500kb');
         }
     }
     function _valid_captcha($field)
