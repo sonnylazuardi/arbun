@@ -23,14 +23,15 @@ class Arsip extends CI_Controller {
 	}
 	public function create()
 	{
-		if(!$this->login_manager->get_user())
+		$user = $this->login_manager->get_user();
+		if(!$user)
 			redirect('auth/login');
 		$model = new Buku();
 		if(isset($_POST['Buku'])) {
 			$model->trans_start();
 			$u = $_POST['Buku'];
 			$model->from_array($u);
-			$model->akun_id=$this->login_manager->get_user()->id;
+			$model->akun_id = $user->id;
 			if ($model->save()) {
 				$model->trans_complete();
 				redirect('user/arsipku');

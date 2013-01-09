@@ -1,3 +1,11 @@
+<?php
+  $user = isset($this->login_manager) ? $this->login_manager->get_user() : FALSE;
+  $data['user'] = $user;
+  if( ! isset($message))
+  {
+    $message = $this->session->flashdata('message');
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -16,9 +24,14 @@
     ================================================== -->
     <?php $this->load->view('theme/menu'); ?>
 
+    <?php if( ! empty($message)): ?>
+      <!-- Form Result Message -->
+      <div class="alert"><?php echo htmlspecialchars($message); ?></div>
+    <?php endif; ?>
+
     <?php
     if (!empty($page)): 
-     $this->load->view($page); 
+     $this->load->view($page, $data); 
     else: 
      $this->load->view('theme/error_page');
     endif;

@@ -30,12 +30,14 @@ class Auth extends CI_Controller {
 			$this->db->cache_on();			
 		}
 		$data = array(
-		    'captcha_time' => $cap['time'],
-		    'ip_address' => $this->input->ip_address(),
-		    'word' => $cap['word']
-	    );
+	    'captcha_time' => $cap['time'],
+	    'ip_address' => $this->input->ip_address(),
+	    'word' => $cap['word']
+    );
+    log_message('error', print_r($data, true));
 		$query = $this->db->insert_string('captcha', $data);
-		$this->db->query($query);
+		$ret = $this->db->query($query);
+		log_message('error', $ret);
 		$teks = $cap['image'];
 		$teks .= form_input('Akun[captcha]', '', 'id="captcha"');
 		return $teks;
@@ -50,7 +52,8 @@ class Auth extends CI_Controller {
 			$u = $_POST['Akun'];
 			$model->from_array($u);
 			$model->confirm_password = $u['confirm_password'];
-			$model->captcha = $u['captcha'];
+			if($this->_valid_captcha())
+				$model->captcha = $u['captcha'];
 
 			$config['upload_path'] = './public/img/user/';
 			$config['allowed_types'] = 'gif|jpg|png';
@@ -69,7 +72,7 @@ class Auth extends CI_Controller {
 					$model->picture = $ret['file_name'];
 				}
 			}
-			
+
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			if ($model->save()) {
 				$model->trans_complete();
@@ -125,6 +128,19 @@ class Auth extends CI_Controller {
 		$data['page']='auth/forgot';
 		$this->load->view('theme/template', $data);
 	}
+	function _valid_captcha()
+  {
+      $expiration = time()-7200;
+      $this->db->query("DELETE FROM captcha WHERE captcha_time < ".$expiration);
+      $sql = "SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?";
+      $binds = array($_POST['Akun']['captcha'], $this->input->ip_address(), $expiration);
+      $query = $this->db->query($sql, $binds);
+      $row = $query->row();
+      if ($row->count == 0)
+      {
+      	return false;
+      } else return true;
+  }
 }
 
 /* End of file login.php */

@@ -58,7 +58,8 @@ class User extends CI_Controller {
 	public function arsipku()
 	{
 		$model = new Buku();
-		$model->where('akun_id', $this->login_manager->get_user()->id)->get();
+		$user = $this->login_manager->get_user();
+		$model->where('akun_id', $user->id)->get();
 
 		$data['page']='user/arsipku';
 		$data['model']=$model;

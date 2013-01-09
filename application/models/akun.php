@@ -50,7 +50,7 @@ class Akun extends DataMapper {
             'rules' => array('required', 'numeric'),
         ),
         'captcha' =>array(
-            'rules' => array('valid_captcha'),
+            'rules' => array('required'),
         ),
         'picture' => array(
             'rules' => array('valid_pic'),
@@ -78,19 +78,6 @@ class Akun extends DataMapper {
             $this->error_message('valid_pic', 'File gambar hanya bertipe gif,jpg,png dibawah 500kb');
         }
     }
-    function _valid_captcha($field)
-    {
-        $expiration = time()-7200;
-        $this->db->query("DELETE FROM captcha WHERE captcha_time < ".$expiration);
-        $sql = "SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?";
-        $this->controller =& get_instance(); 
-        $binds = array($this->{$field}, $this->controller->input->ip_address(), $expiration);
-        $query = $this->db->query($sql, $binds);
-        $row = $query->row();
-        if ($row->count == 0)
-        { $this->error_message('valid_captcha', "Gambar verifikasi tidak sesuai");
-        } 
-    }
     
     function login()
     {
@@ -103,6 +90,11 @@ class Akun extends DataMapper {
             $this->nim = $nim;
             return FALSE;
         }
+    }
+
+    function get_profpic()
+    {
+        return base_url().'public/img/user/'.$this->picture;
     }
 }
 
