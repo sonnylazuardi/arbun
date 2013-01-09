@@ -38,7 +38,7 @@
                 </div>
               </div>
             </div>
-            <ul class="nav nav-tabs bwh">
+            <ul class="nav nav-tabs bwh stripb">
               <li class="active"><a href="#">Terbaru</a></li>
               <li><a href="#">Terfavorit</a></li>
               <li><a href="#">Terpopuler</a></li>
@@ -48,7 +48,7 @@
       </div>
     </div>
 
-    <div class="kategori container">
+    <div class="kategori container stripb">
       <div class="row">
         <div class="span3">
           <h4>Kategori</h4>

@@ -12,12 +12,12 @@
 
           <?php activeMenu('<i class="icon-envelope icon-white"></i> Kontak', 'home/kontak', 'kontak', $page); ?>
 
-          <?php if(!IsLogged()): ?>
+          <?php if(!$this->session->userdata('logged_in_id')): ?>
             <?php activeMenu('<i class="icon-user icon-white"></i> Login', 'auth/login', 'auth/login', $page); ?>          
           <?php endif; ?>
 
-          <?php if(IsLogged()): ?>
-            <?php activeMenu('<i class="icon-user icon-white"></i> Akun', 'user/account', 'user/account', $page); ?>    
+          <?php if($this->session->userdata('logged_in_id')): ?>
+            <?php activeMenu('<i class="icon-user icon-white"></i> Akun', 'user/arsipku', 'user/arsipku', $page); ?>    
           <?php endif; ?>
 
         </ul>

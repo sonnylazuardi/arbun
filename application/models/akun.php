@@ -1,13 +1,9 @@
 <?php
 class Akun extends DataMapper {
-    var $created_field = 'wkt_dibuat';
-    var $updated_field = 'wkt_diupdate';
-    var $local_time = TRUE;
-    var $unix_timestamp = FALSE;
 
     var $table = 'akun';
 
-    var $has_one = array();
+    var $has_one = array('jurusan');
 
     var $has_many = array();
 
@@ -28,16 +24,23 @@ class Akun extends DataMapper {
             'rules' => array('matches' => 'password'),
             'type' => 'password',
         ),
+        'password_old' => array(
+            'rules' => array('valid_old_pass'),
+            'type' => 'password',
+        ),
+        'password_new' => array(
+            'type' => 'password',
+        ),
         'nim' => array(
             'rules' => array('required', 'unique', 'numeric'),
         ),
         'tgl_lahir' => array(
             'rules' => array('required', 'date[y-m-d,-]'),
         ),
-        'id_fakultas' => array(
+        'fakultas_id' => array(
             'rules' => array('required', 'numeric'),
         ),
-        'id_jurusan' => array(
+        'jurusan_id' => array(
             'rules' => array('required', 'numeric'),
         ),
         'status' => array(
@@ -47,13 +50,33 @@ class Akun extends DataMapper {
             'rules' => array('required', 'numeric'),
         ),
         'captcha' =>array(
-            'rules' => array('required','valid_captcha'),
+            'rules' => array('valid_captcha'),
+        ),
+        'picture' => array(
+            'rules' => array('valid_pic'),
+        ),
+        'angkatan' => array(
+            'rules' => array('required', 'numeric'),
         ),
     );
 
     function __construct($id = NULL)
     {
         parent::__construct($id);
+    }
+    function _valid_old_pass($field)
+    {
+        if($this->{$field}!=$this->password){
+            $this->error_message('valid_old_pass', 'Password lama tidak sesuai');
+        } else {
+            $this->password = $this->password_new;
+        }
+    }
+    function _valid_pic($field)
+    {
+        if($this->{$field}=='error') {
+            $this->error_message('valid_pic', 'File gambar hanya bertipe gif,jpg,png dibawah 200kb');
+        }
     }
     function _valid_captcha($field)
     {
@@ -65,9 +88,10 @@ class Akun extends DataMapper {
         $query = $this->db->query($sql, $binds);
         $row = $query->row();
         if ($row->count == 0)
-        { $this->form_validation->set_message('valid_captcha', "gambar verifikasi tidak sesuai"); return FALSE;
-        } else {return TRUE;}
+        { $this->error_message('valid_captcha', "Gambar verifikasi tidak sesuai");
+        } 
     }
+    
     function login()
     {
         $nim = $this->nim;

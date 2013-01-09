@@ -3,7 +3,7 @@
   <div class="login strip">
       <?php echo form_open('auth/login'); ?>
           <label>NIM/NIP</label>
-            <?php echo form_input('Login[nim]', cekPost('Login', 'nim'), 'tabindex="1"'); ?>
+            <?php echo form_input('Login[nim]', $model->nim, 'tabindex="1"'); ?>
           
           <label>Password (<?php echo anchor('auth/forgot', "Lupa Password"); ?>)</label>
             <?php echo form_password('Login[password]', '', 'tabindex="2"'); ?>

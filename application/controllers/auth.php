@@ -43,18 +43,39 @@ class Auth extends CI_Controller {
 	public function register()
 	{
 		if($this->login_manager->get_user())
-			redirect('user/account');
+			redirect('user/arsipku');
 		$model = new Akun();
 		if(isset($_POST['Akun'])) {
 			$model->trans_start();
-			$model->from_array($_POST['Akun'], array(
-				'nama', 'email', 'password', 'confirm_password', 'nim', 'id_fakultas', 'id_jurusan', 'status', 'jen_kelamin', 'captcha',
-			));
 			$u = $_POST['Akun'];
+			$model->from_array($u);
+			$model->confirm_password = $u['confirm_password'];
+			$model->captcha = $u['captcha'];
+
+			$config['upload_path'] = './public/img/user/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size']	= '200';
+			$config['max_width']  = '1024';
+			$config['max_height']  = '768';
+			
+			$this->load->library('upload', $config);
+			if ($_FILES['user_file']['error']!=4) {
+				if (!$this->upload->do_upload('user_file'))
+				{
+					$model->picture = 'error';
+				} else {
+					$ret = $this->upload->data();
+					$this->resize_pic($ret['file_name']);
+					$model->picture = $ret['file_name'];
+				}
+			}
+			
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			if ($model->save()) {
 				$model->trans_complete();
 				redirect('user/login');
+			} elseif (!$model->error->valid_pic && isset($ret)) {
+				unlink('./public/img/user/'.$ret['file_name']);
 			}
 		}
 		$data['captcha']=$this->buat_captcha();
@@ -62,17 +83,29 @@ class Auth extends CI_Controller {
 		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}
+	function resize_pic($filename){
+		$config['image_library'] = 'gd2';
+		$config['source_image']	= './public/img/user/'.$filename;
+		$config['create_thumb'] = FALSE;
+		$config['maintain_ratio'] = FALSE;
+		$config['width']	 = 120;
+		$config['height']	= 120;
+
+		$this->load->library('image_lib', $config); 
+
+		$this->image_lib->resize();
+	}
 	public function login()
 	{
 		if($this->login_manager->get_user())
-			redirect('user/account');
+			redirect('user/arsipku');
 		$user = new Akun();
 		if (isset($_POST['Login'])) {
 			$user->from_array($_POST['Login'], array('nim', 'password'));
 			$login_redirect = $this->login_manager->process_login($user);
 			if($login_redirect) {
 				if ($login_redirect == true) {
-					redirect('user/account');
+					redirect('user/arsipku');
 				}	else {
 					redirect($login_redirect);
 				}

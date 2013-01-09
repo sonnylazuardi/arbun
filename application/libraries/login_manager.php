@@ -90,5 +90,12 @@ class Login_Manager {
 			return $this->logged_in_user;
 		}
 	}
+
+	function get_profpic()
+	{
+		if($this->get_user()) {
+			return base_url().'public/img/user/'.$this->get_user()->picture;
+		}
+	}
 	
 }

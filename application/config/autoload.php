@@ -27,6 +27,7 @@
 |
 */
 
+
 /*
 | -------------------------------------------------------------------
 |  Auto-load Packges
@@ -37,7 +38,7 @@
 |
 */
 
-$autoload['packages'] = array();
+$autoload['packages'] = array(APPPATH.'third_party/datamapper');
 
 
 /*

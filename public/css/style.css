@@ -3,10 +3,10 @@ body{
   color: #fff;
   margin-top: 80px;
 }
-a {
+.stripb a {
   color: #a5a5a5;
 }
-a:hover {
+.stripb a:hover {
   color: #c5c5c5;
   text-decoration: none;
 }
@@ -178,6 +178,7 @@ footer p {
 }
 .box {
   border-radius: 10px;
+  margin-bottom: 20px;
 }
 .box h3 {
   margin-left: 20px;
@@ -187,4 +188,10 @@ footer p {
 }
 .nav-tabs.nav-stacked li.active a{
   background: #ddd;
+}
+.form-actions {
+  margin-bottom: 0;
+}
+.nav {
+  margin-bottom: 10px;
 }

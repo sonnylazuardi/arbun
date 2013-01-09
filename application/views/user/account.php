@@ -1,8 +1,4 @@
-<div class="container">
-  <div class="span6 desk">
-    <h3>Akun</h3>
-	</div>
-</div>
+<?php $this->load->view('user/header.php'); ?>
 <div class="container">
 	<div class="row">
 		<?php $this->load->view('user/sidebar.php'); ?>

@@ -14,13 +14,11 @@
     <?php $this->load->view('theme/functions'); ?>
     <!-- Navbar
     ================================================== -->
-    <?php $this->load->view('theme/menu', array('page'=>$page)); ?>
+    <?php $this->load->view('theme/menu'); ?>
 
     <?php
-    $data['model']=isset($model)?$model:null;
-    $data['captcha']=isset($captcha)?$captcha:null;
     if (!empty($page)): 
-     $this->load->view($page, $data); 
+     $this->load->view($page); 
     else: 
      $this->load->view('theme/error_page');
     endif;

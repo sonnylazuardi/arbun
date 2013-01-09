@@ -1,50 +1,40 @@
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300' rel='stylesheet' type='text/css'>
+<?php $this->load->view('user/header.php', array('title'=>'Arsipku')); ?>
 <div class="container">
-      <div class="span6 desk">
-        <h3>Arsipku</h3>
-    	</div>
-    </div>
-<div class="container" style="color:black;">
 	<div class="row">
-		<div class="span3" style="border-radius:10px;background-color:white;padding-top:10px">
-			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='white'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(255,255,255)"><?php echo anchor('user/account', 'Profil') ?></p>
-			<p onmouseover="this.style.background='#cccccc'" onmouseout="this.style.background='rgb(222,222,222)'" style="padding-left:10px;padding-top:10px;height:35px;background-color:rgb(222,222,222)">Arsipku</p>
-		</div>
-		<div class="span9" style="border-radius:10px;background-color:white;">
+		<?php $this->load->view('user/sidebar.php'); ?>
+		<div class="span9 strip box">
+			<h3>Arsip Saya</h3>
+			<legend></legend>	
 			<div style="margin:20px">
-				<button type="submit" class="btn">Check semua</button>
-				<button type="submit" class="btn">Hapus check</button>
-				<button type="submit" class="btn btn-primary">Hapus file yang dicek</button>
-				<?php echo anchor('user/unggah', 'Unggah Arsip', array('class'=>'btn btn-info')) ?>
+				<?php echo anchor('arsip/create', '<i class="icon-plus icon-white"></i> Tambah Arsip', array('class'=>'btn btn-success')) ?>
+
 				<table class="table table-striped">
-				  <tr>
-					  <th> Check</th>
-					  <th> Judul </th>
-					  <th> Tanggal Upload </th>
-					  <th> Mata Kuliah </th>
-					  <th> Bidang </th>
-					  <th> Link </th>
-					
-				  </tr>
-				  
-				  <tr>
-					  <td><input type="checkbox"></td>
-					  <td> Aplikasi Induksi matematik dalam kehidupan sehari-hari </td>
-					  <td> 03/03/2011 </td>
-					  <td> Struktur Diskrit </td>
-					  <td> Induksi Matematik </td>
-					  <td> <a href = "?">Lihat</a> </td>
-				  </tr>
-				  
-				  <tr>
-				      <td><input type="checkbox"></td>
-					  <td> Aplikasi algoritma greedy dalam menyusun salad pizza hut </td>
-					  <td> 05/05/2012 </td>
-					  <td> Strategi Algoritma </td>
-					  <td> Algoritma </td>
-					  <td> <a href = "?">Lihat</a> </td>
-				  </tr>
-				
+				  <thead>
+				  	<tr>
+						  <th> #</th>
+						  <th> Judul </th>
+						  <th> Waktu Upload </th>
+						  <th> Mata Kuliah </th>
+						  <th> Bidang </th>
+						  <th>  </th>
+				  	</tr>
+				  </thead>
+				  <tbody>
+				  	<?php $ctr = 1; ?>
+				  	<?php foreach($model as $buku) :?>
+				  		<td><?php echo $ctr ?></td>
+				  		<td><?php echo $buku->judul ?></td>
+				  		<td><?php echo $buku->created ?></td>
+				  		<td><?php echo $buku->bidang ?></td>
+				  		<td><?php echo $buku->bidang ?></td>
+				  		<td> 
+								<?php echo anchor('arsip/view','<i class="icon-eye-open"></i>', 'class="btn btn-small"'); ?>
+								<?php echo anchor('arsip/update/'.$buku->id,'<i class="icon-pencil"></i>', 'class="btn btn-small"'); ?>
+								<?php echo anchor('arsip/delete/'.$buku->id,'<i class="icon-trash"></i>', 'class="btn btn-small"'); ?>
+						  </td>
+				  	<?php $ctr++; ?>
+				  	<?php endforeach; ?>
+				  </tbody>
 				</table>
 			</div>
 		</div>
