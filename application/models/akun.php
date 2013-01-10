@@ -5,7 +5,7 @@ class Akun extends DataMapper {
 
     var $has_one = array('jurusan');
 
-    var $has_many = array();
+    var $has_many = array('buku');
 
     var $controller;
 

@@ -34,10 +34,10 @@ class Auth extends CI_Controller {
 	    'ip_address' => $this->input->ip_address(),
 	    'word' => $cap['word']
     );
-    log_message('error', print_r($data, true));
+    //log_message('error', print_r($data, true));
 		$query = $this->db->insert_string('captcha', $data);
-		$ret = $this->db->query($query);
-		log_message('error', $ret);
+		$this->db->query($query);
+		//log_message('error', $ret);
 		$teks = $cap['image'];
 		$teks .= form_input('Akun[captcha]', '', 'id="captcha"');
 		return $teks;
@@ -60,7 +60,6 @@ class Auth extends CI_Controller {
 			$config['max_size']	= '500';
 			$config['max_width']  = '1024';
 			$config['max_height']  = '768';
-			
 			$this->load->library('upload', $config);
 			if ($_FILES['user_file']['error']!=4) {
 				if (!$this->upload->do_upload('user_file'))
@@ -76,6 +75,7 @@ class Auth extends CI_Controller {
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			if ($model->save()) {
 				$model->trans_complete();
+				$this->session->set_flashdata('message', 'Registrasi berhasil dilakukan');
 				redirect('user/login');
 			} elseif (!$model->error->valid_pic && isset($ret)) {
 				unlink('./public/img/user/'.$ret['file_name']);

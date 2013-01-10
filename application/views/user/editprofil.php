@@ -1,6 +1,6 @@
 <?php $this->load->view('user/header.php'); ?>
 <div class="container">
-	<?php echo form_open('user/editprofil'); ?>
+	<?php echo form_open(); ?>
 	<div class="row">
 		<?php $this->load->view('user/sidebar.php'); ?>
 		<div class="span9 strip box" >

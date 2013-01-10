@@ -26,7 +26,7 @@
 
     <?php if( ! empty($message)): ?>
       <!-- Form Result Message -->
-      <div class="alert"><?php echo htmlspecialchars($message); ?></div>
+      <div class="container alert"><?php echo htmlspecialchars($message); ?></div>
     <?php endif; ?>
 
     <?php
