@@ -1,34 +1,38 @@
 <div class="span3">
 	<div class="row">
 		<div class="span3 strip box">
-			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
+			<div class="side">
+				<h4>Urutan</h4>
+				<legend></legend>
 				<?php 
-					$model->kategori->get_iterated();
-					foreach ($model->kategori as $data) {
-						echo '<li>'.anchor('arsip/kategori/'.$data->id, $data->nama).'</li>';
-					}
+					$u = array('populer'=>'Terpopuler', 'favorit'=>'Terfavorit', 'tgl_terbit'=>'Tanggal Terbit', 'tgl_upload'=>'Tanggal Upload', 'judul'=>'Judul', 'penulis'=>'Penulis');
+					echo form_dropdown('kat', $u);
 				?>
-			</ul>
+			</div>
 		</div>
 		<div class="span3 strip box">
-			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
-				<?php 
-					$model->matkul->get_iterated();
-					foreach ($model->matkul as $data) {
-						echo '<li>'.anchor('arsip/matkul/'.$data->id, $data->nama).'</li>';
-					}
-				?>
-			</ul>
-		</div>
-		<div class="span3 strip box">
-			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
-				<?php 
-					$model->bidang->get_iterated();
-					foreach ($model->bidang as $data) {
-						echo '<li>'.anchor('arsip/bidang/'.$data->id, $data->nama).'</li>';
-					}
-				?>
-			</ul>
+			<div class="side"><h4>Filter</h4>
+				<legend></legend>
+				<label>Kategori :</label>
+				<span style="width:100px">
+					<?php 
+						$u = new Kategori();
+						$arr = $u->getArray();
+						echo form_dropdown('kat', $arr);
+					?>
+					</span>
+				<label>Mata Kuliah :</label>
+					<?php 
+						$u = new Matkul();
+						$arr = $u->getArray();
+						echo form_dropdown('matkul', $arr);
+					?>
+				<label>Bidang :</label>
+					<?php 
+						$u = new Bidang();
+						$arr = $u->getArray();
+						echo form_dropdown('bid', $arr);
+					?></div>
 		</div>
 	</div>
 </div>

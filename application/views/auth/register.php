@@ -1,7 +1,7 @@
-<div class="page">
+<div class="container">
 	<?php echo form_open_multipart('auth/register'); ?>
 	<div class="row">
-		<div class="span8 offset5 strip box">
+		<div class="span8 offset2 strip box">
 					<h3>Registrasi</h3>
 					<legend></legend>
 					<div class="row" style="margin:10px">

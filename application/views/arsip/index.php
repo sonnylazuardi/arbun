@@ -3,50 +3,34 @@
 	<div class="row">
 		<?php $this->load->view('arsip/sidebar') ?>
 		<div class="span9 strip box">
-			<div style="margin:20px">
-				<table class="table table-striped">
-				  <thead>
-				  	<tr>
-	  				  <th>#</th>
-	  				  <th>Judul</th>
-	  				  <th>Pengarang</th>
-	  				  <th>Tgl Terbit</th>
-	  				  <th>Mata Kuliah</th>
-	  				  <th>Bidang</th>
-	  				  <th>Menu</th>
-				  	</tr>
-				  </thead>
-				  
-				  <tbody>
-				  	<?php $ctr = $offset; $model->get($limit, $offset); ?>
-				  	<?php foreach($model as $buku) :?>
-				  	<tr>
-				  		<td><?php echo $ctr ?></td>
-				  		<td><?php echo $buku->judul ?></td>
-				  		<td><?php $buku->akun->get(); echo $buku->akun->nama ?></td>
-				  		<td><?php echo $buku->tgl_terbit ?></td>
-				  		<td><?php echo $buku->get_matkulku() ?></td>
-				  		<td><?php echo $buku->get_bidangku() ?></td>
-				  		<td> 
-								<?php echo anchor($buku->link,'<i class="icon-eye-open"></i>', 'class="btn btn-small"'); ?>
-						  </td>
-						 </tr>
-				  	<?php $ctr++; ?>
-				  	<?php endforeach; ?>
-				  </tbody>
-				</table>
-					<!-- <div class="pagination">
-				    <ul>
-				      <li><a href="#">«</a></li>
-				      <li><a href="#">1</a></li>
-				      <li><a href="#">2</a></li>
-				      <li><a href="#">3</a></li>
-				      <li><a href="#">4</a></li>
-				      <li><a href="#">5</a></li>
-				      <li><a href="#">»</a></li>
-				    </ul> -->
-			</div>
+			<h3>Arsip</h3>
+			<legend></legend>
+		  <div class="row" style="margin:10px">
+	  		<?php $model->get($limit, $offset); ?>
+	  		<?php foreach($model as $buku) :?>
+	  		<div class="span8" style="margin-bottom:20px">
+	  			<div class="row">
+	  				<div class="span1">
+	  					<div class="book" style="margin:0"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></div>
+	  				</div>
+	  				<div class="span7">
+				  		<div style="margin: 0 -18px 0 25px">
+				  		<p style="font-weight:bold"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></p>
+				  		<span style="font-size:.9em">
+				  			<?php $buku->akun->get(); echo $buku->akun->nama ?> <br>
+					  		<?php echo $buku->tgl_terbit ?> <br>
+					  		<?php echo $buku->get_matkulku() ?> <br>
+					  		<?php echo $buku->get_bidangku() ?> <br>
+				  		</span>
+						  </div>
+						</div>
+	  			</div>
+	  		</div>
+		  	<?php endforeach; ?>
 		  </div>
-		</div>
+		  <div style="margin:20px">
+				<?php echo $pagination ?>
+			</div>
+	  </div>
 	</div>
 </div>

@@ -183,7 +183,7 @@ footer p {
   border-radius: 10px;
   margin-bottom: 20px;
 }
-.box h3 {
+.box h3{
   margin-left: 20px;
 }
 .nav-tabs.nav-stacked > li > a {
@@ -197,4 +197,10 @@ footer p {
 }
 .nav {
   margin-bottom: 10px;
+}
+.box select{
+  width: 100%;
+}
+.box .side {
+  padding: 10px;
 }

@@ -10,10 +10,19 @@ class Arsip extends CI_Controller {
 	{
 		$data['page']='arsip/index';
 		$model = new Buku();
+		$model->get(20, $offset);
 		$data['count']=$model->count();
 		$data['limit']=20;
 		$data['offset']=$offset;
 		$data['model']=$model;
+		$this->load->library('pagination');
+		$config['base_url'] = site_url().'/arsip/index/';
+		$config['total_rows'] = $data['count'];
+		$config['per_page'] = $data['limit']; 
+		$this->pagination->initialize($config); 
+
+		$data['pagination'] = $this->pagination->create_links();
+
 		$this->load->view('theme/template', $data);
 	}
 	public function search()
@@ -50,18 +59,20 @@ class Arsip extends CI_Controller {
 		$u = $_POST['Buku'];
 		$datas = explode(', ', $u[$tipe.'ku']);
 		$hasil = array();
-		foreach ($datas as $data) {
-			$u = $this->_model_tipe($tipe);
-			$u->where('nama', $data)->get();
-			if(!$u->exists()) {
-				$d = $this->_model_tipe($tipe);
-				$d->trans_start();
-				$d->nama = $data;
-				$d->save();
-				$d->trans_complete();
-				$hasil[] = $d->id;
-			} else {
-				$hasil[] = $u->id;
+		if(!empty($u[$tipe.'ku'])) {
+			foreach ($datas as $data) {
+				$u = $this->_model_tipe($tipe);
+				$u->where('nama', $data)->get();
+				if(!$u->exists()) {
+					$d = $this->_model_tipe($tipe);
+					$d->trans_start();
+					$d->nama = $data;
+					$d->save();
+					$d->trans_complete();
+					$hasil[] = $d->id;
+				} else {
+					$hasil[] = $u->id;
+				}
 			}
 		}
 		return $hasil;
