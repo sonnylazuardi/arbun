@@ -6,9 +6,14 @@ class Arsip extends CI_Controller {
 		parent::__construct();
 		$this->load->library('login_manager', array('autologin' => FALSE));
 	}
-	public function index()
+	public function index($offset = 0)
 	{
-		$data['page']='arsip/arsip';
+		$data['page']='arsip/index';
+		$model = new Buku();
+		$data['count']=$model->count();
+		$data['limit']=20;
+		$data['offset']=$offset;
+		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}
 	public function search()

@@ -45,6 +45,9 @@ a.brand {
   font-weight: normal;
   font-size: 1.6em;
 }
+.desk h2 {
+  font-weight: normal;
+}
 .strip{
   background-color: #fff;
   color: #000;

@@ -6,7 +6,7 @@
         <ul class="nav pull-right">
           <?php activeMenu('<i class="icon-home icon-white"></i> Home', 'home/index', 'home', $page); ?>
 
-          <?php activeMenu('<i class="icon-book icon-white"></i> Arsip', 'arsip/index', 'arsip/arsip', $page); ?>
+          <?php activeMenu('<i class="icon-book icon-white"></i> Arsip', 'arsip/index', 'arsip/index', $page); ?>
 
           <?php activeMenu('<i class="icon-pencil icon-white"></i> Penulis', 'penulis/index', 'penulis/index', $page); ?>
 

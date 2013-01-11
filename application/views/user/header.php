@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 	  <div class="span6 desk">
-	    <h3><?php echo (!empty($title)?$title:'Akun'); ?></h3>
+	    <h2><?php echo (!empty($title)?$title:'Akun'); ?></h2>
 		</div>
 		<div class="span6" style="text-align:right; margin-top:30px">
 			<div class="row">
