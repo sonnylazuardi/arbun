@@ -35,16 +35,6 @@
 				  	<?php endforeach; ?>
 				  </tbody>
 				</table>
-				<?php 
-					$this->load->library('pagination');
-					$config['base_url'] = site_url().'/arsip/index/';
-					$config['total_rows'] = $count;
-					$config['per_page'] = $limit; 
-
-					$this->pagination->initialize($config); 
-
-					echo $this->pagination->create_links();
-				?>
 					<!-- <div class="pagination">
 				    <ul>
 				      <li><a href="#">«</a></li>
