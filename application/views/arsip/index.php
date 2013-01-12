@@ -1,3 +1,4 @@
+<?php echo form_open('', array('method'=>'get')) ?>
 <?php $this->load->view('arsip/header') ?>
 <div class="container">
 	<div class="row">
@@ -6,7 +7,6 @@
 			<h3>Arsip</h3>
 			<legend></legend>
 		  <div class="row" style="margin:10px">
-	  		<?php $model->get($limit, $offset); ?>
 	  		<?php foreach($model as $buku) :?>
 	  		<div class="span8" style="margin-bottom:20px">
 	  			<div class="row">

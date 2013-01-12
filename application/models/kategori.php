@@ -22,6 +22,15 @@ class Kategori extends DataMapper {
         }
         return $items;
     }
+    function getLinks()
+    {
+        $ret = $this->get();
+        $items = array();
+        foreach ($ret as $item) {
+            $items[] = anchor('arsip/index?_kategori='.$item->id, $item->nama);
+        }
+        return implode(', ', $items);
+    }
 }
 
 /* End of file akun.php */

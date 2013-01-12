@@ -38,12 +38,13 @@ a.brand {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, .9) inset;
 }
 .desk{
-  margin-top: 50px;
-  margin-bottom: 20px;
+  margin-top:10px;
+  margin-bottom:10px;
 }
 .desk h3 {
   font-weight: normal;
   font-size: 1.6em;
+  line-height: 1.2em;
 }
 .desk h2 {
   font-weight: normal;
@@ -63,10 +64,10 @@ a.brand {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-.full-search-bar form input[type="text"] {
+form .full-search-bar input[type="text"] {
   height: 35px;
 }
-.full-search-bar form input[type="text"] {
+form .full-search-bar input[type="text"] {
   float: left;
   height: 30px;
   font-size: 20px;
@@ -84,10 +85,10 @@ a.brand {
   -moz-border-radius: 9px;
   border-radius: 9px;
 }
-form.search-form{
+.search-form{
   margin: 0;
 }
-.full-search-bar form button[type="submit"] {
+form .full-search-bar button[type="submit"] {
   width: 46px;
   height: 40px;
   -webkit-border-radius: 0 6px 6px 0;
@@ -198,7 +199,7 @@ footer p {
 .nav {
   margin-bottom: 10px;
 }
-.box select{
+.box .side select{
   width: 100%;
 }
 .box .side {

@@ -3,7 +3,7 @@
 	  <div class="span6 desk">
 	    <h2><?php echo (!empty($title)?$title:'Akun'); ?></h2>
 		</div>
-		<div class="span6" style="text-align:right; margin-top:30px">
+		<div class="span6" style="text-align:right; ">
 			<div class="row">
 				<div class="span5">
 					<h4><?php echo $user->nama ?></h4>

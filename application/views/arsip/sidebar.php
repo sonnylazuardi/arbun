@@ -5,8 +5,8 @@
 				<h4>Urutan</h4>
 				<legend></legend>
 				<?php 
-					$u = array('populer'=>'Terpopuler', 'favorit'=>'Terfavorit', 'tgl_terbit'=>'Tanggal Terbit', 'tgl_upload'=>'Tanggal Upload', 'judul'=>'Judul', 'penulis'=>'Penulis');
-					echo form_dropdown('kat', $u);
+					$u = array('view'=>'Terpopuler', 'favorit'=>'Terfavorit', 'diskusi'=>'Tebanyak Diskusi', 'tgl_terbit'=>'Tanggal Terbit', 'created'=>'Tanggal Upload', 'judul'=>'Judul', 'akun'=>'Penulis');
+					echo form_dropdown('_urut', $u, $v['urut'], 'onchange="this.form.submit()"');
 				?>
 			</div>
 		</div>
@@ -14,24 +14,24 @@
 			<div class="side"><h4>Filter</h4>
 				<legend></legend>
 				<label>Kategori :</label>
-				<span style="width:100px">
 					<?php 
 						$u = new Kategori();
-						$arr = $u->getArray();
-						echo form_dropdown('kat', $arr);
+						$arr = array(''=>'Semua') + $u->getArray();
+						echo form_dropdown('_kategori', $arr, $v['kategori'], 'onchange="this.form.submit()"');
 					?>
-					</span>
-				<label>Mata Kuliah :</label>
+				<br>
+				<label>M. Kuliah :</label>
 					<?php 
 						$u = new Matkul();
-						$arr = $u->getArray();
-						echo form_dropdown('matkul', $arr);
+						$arr = array(''=>'Semua') + $u->getArray();
+						echo form_dropdown('_matkul', $arr, $v['matkul'], 'onchange="this.form.submit()"');
 					?>
+				<br>
 				<label>Bidang :</label>
 					<?php 
 						$u = new Bidang();
-						$arr = $u->getArray();
-						echo form_dropdown('bid', $arr);
+						$arr = array(''=>'Semua') + $u->getArray();
+						echo form_dropdown('_bidang', $arr, $v['bidang'], 'onchange="this.form.submit()"');
 					?></div>
 		</div>
 	</div>

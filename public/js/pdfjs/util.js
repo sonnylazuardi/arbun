@@ -61,6 +61,8 @@ function error(msg) {
   }
   log(backtrace());
   PDFJS.LogManager.notify('error', msg);
+  $('.loader').hide();
+  $('#viewer').html('<div class="alert alert-danger">File PDF tidak ditemukan</div>');
   throw new Error(msg);
 }
 

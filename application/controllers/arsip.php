@@ -10,15 +10,42 @@ class Arsip extends CI_Controller {
 	{
 		$data['page']='arsip/index';
 		$model = new Buku();
-		$model->get(20, $offset);
-		$data['count']=$model->count();
-		$data['limit']=20;
-		$data['offset']=$offset;
+		foreach (array('urut', 'q', 'kategori', 'matkul', 'bidang') as $item) {
+			$v[$item] = isset($_GET['_'.$item])?$_GET['_'.$item]:'';
+		}
+		if (!empty($v['urut'])) {
+			// $model->get_sorting($v['urut']);
+			switch ($v['urut']) {
+				case 'akun':
+					$model->order_by_related_akun('nama', 'ASC');		
+					break;
+				case 'favorit':
+					// $model->order_by_related_rating('nama', 'ASC');		
+					break;
+				case 'diskusi':
+					// $model->order_by_related_komentar('nama', 'ASC');		
+					break;
+				default:
+					if (in_array($v['urut'], array('view', 'created', 'tgl_terbit'))) $d = 'DESC'; else $d = 'ASC';
+					$model->order_by($v['urut'], $d);		
+					break;
+			}
+		}
+		if (!empty($v['q'])) {
+			$model->ilike('judul', $v['q']);
+		}
+		foreach (array('kategori', 'matkul', 'bidang') as $rel) {
+			if (!empty($v[$rel])) {
+				$model->where_related($rel, 'id', $v[$rel]);
+			}
+		}
+		$model->get_iterated(20, $offset);
 		$data['model']=$model;
+		$data['v']=$v;
 		$this->load->library('pagination');
 		$config['base_url'] = site_url().'/arsip/index/';
-		$config['total_rows'] = $data['count'];
-		$config['per_page'] = $data['limit']; 
+		$config['total_rows'] = $model->count();
+		$config['per_page'] = 20; 
 		$this->pagination->initialize($config); 
 
 		$data['pagination'] = $this->pagination->create_links();
@@ -30,8 +57,13 @@ class Arsip extends CI_Controller {
 		$data['page']='search';
 		$this->load->view('theme/template', $data);
 	}
-	public function view()
+	public function view($id = 0)
 	{
+		$model = new Buku();
+		$model->get_by_id($id);
+
+		if(!$model->exists())show_error('Buku tidak ditemukan');
+		$data['model'] = $model;
 		$data['page']='arsip/view';
 		$this->load->view('theme/template', $data);
 	}
@@ -41,6 +73,8 @@ class Arsip extends CI_Controller {
 		if(!$user)
 			redirect('auth/login');
 		$model = new Buku();
+		$model->view = 0;
+		$model->tgl_terbit = date('Y-m-d');
 		$this->_save($model, $user);
 		$data['page']='arsip/create';
 		$data['model']=$model;
@@ -111,7 +145,7 @@ class Arsip extends CI_Controller {
 			}
 		}
 	}
-	public function update($id)
+	public function update($id = 0)
 	{
 		$user = $this->login_manager->get_user();
 		if(!$user)
@@ -128,7 +162,7 @@ class Arsip extends CI_Controller {
 		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}
-	public function delete($id)
+	public function delete($id = 0)
 	{
 		if(!$this->login_manager->get_user())
 			redirect('auth/login');
@@ -139,6 +173,18 @@ class Arsip extends CI_Controller {
 		$model->delete();
 		// $model->trans_complete();
 		redirect('user/arsipku');
+	}
+	public function download($id = 0)
+	{
+		$model = new Buku();
+		$model->get_by_id($id);
+		if(!$model->exists())show_error('Tidak ditemukan Buku yang dicari');
+		$this->load->helper('download');
+		$this->load->helper('file');
+		$data = file_get_contents($model->link); // Read the file's contents
+		$name = $model->judul.'.pdf';
+
+		force_download($name, $data);
 	}
 }
 

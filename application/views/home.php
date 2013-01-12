@@ -1,5 +1,5 @@
 <div class="container">
-      <div class="span6 desk">
+      <div class="span6 desk" style="margin-top:50px">
         <h3>Portal dokumentasi dan publikasi makalah Informatika Institut Teknologi Bandung.</h3>
     	</div>
     </div>
@@ -7,11 +7,12 @@
     <div class="strip">
       <div class="container">
         <div class="row">
+          <?php echo form_open('arsip/index', array('method'=>'get')) ?>
           <div class="span6 full-search-bar">
             <ul class="item-stream unstyled search-input-stream">
               <li class="stream-item search-input-item">
                 <form class="form-inline search-form" action="/artists/search">
-                  <input id="search" name="q" type="text" placeholder="Cari Arsip atau makalah" value="">
+                  <?php echo form_input('_q', '', 'id="search" placeholder="Cari Arsip atau makalah"') ?>
                   <button class="btn btn-large btn-inverse" id="sub" type="submit"><i class="icon-search icon-white"></i></button>
                 </form>
               </li>
@@ -24,16 +25,18 @@
               <div class="shelf">
                 <div class="rows">
                   <div class="loc">
-                    <div class="book"><?php echo anchor('arsip/view', 'Aplikasi Pohon Keputusan dalam Rekrutmen Karyawan') ?></div>
-                    <div class="book"><a href="#">Partisi Maksimum pada Poligon</a></div>
-                    <div class="book"><a href="">Aplikasi Graf dalam Diagnosis Penyakit Dalam</a></div>
-                  </div>
-                </div>
-                <div class="rows">
-                  <div class="loc">
-                    <div class="book"><a href="#">Segment Tree for Solving Range Minimum Query Problems</a></div>
-                    <div class="book"><a href="#">Penerapan Graf Dan Pohon Dalam Elsword Online</a></div>
-                    <div class="book"><a href="#">Graph Theory Applications in Electrical Networks</a></div>
+                    <?php
+                      $model = new Buku();
+                      $model->order_by('tgl_terbit','desc')->get(6);
+                      $ctr = 1;
+                      foreach ($model as $data) {
+                        echo '<div class="book">'.anchor('arsip/view/'.$data->id, $data->judul).'</div>';
+                        if($ctr % 3 == 0) {
+                          echo '</div></div><div class="rows"><div class="loc">';
+                        }
+                        $ctr++;
+                      }
+                    ?>
                   </div>
                 </div>
               </div>
@@ -52,19 +55,11 @@
       <div class="row">
         <div class="span3">
           <h4>Kategori</h4>
-          <ul>
-            <li><a href="#">Makalah</a></li>
-            <li><a href="#">Paper</a></li>
-            <li><a href="#">Tugas Akhir</a></li>
-          </ul>
+            <?php $u = new Kategori(); echo $u->getLinks(); ?>
         </div>
         <div class="span3">
           <h4>Mata Kuliah</h4>
-          <ul>
-            <li><a href="">Algoritma</a></li>
-            <li><a href="">Grafika</a></li>
-            <li><a href="">Basis Data</a></li>
-          </ul>
+            <?php $u = new Matkul(); echo $u->getLinks(); ?>
         </div>
       </div>
     </div>

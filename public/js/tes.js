@@ -100,7 +100,7 @@ function setupForm(div, content, viewport) {
 
 function renderPage(div, pdf, pageNumber, callback) {
   pdf.getPage(pageNumber).then(function(page) {
-    var scale = 1.5;
+    var scale = 1.14;
     var viewport = page.getViewport(scale);
 
     var pageDisplayWidth = viewport.width;

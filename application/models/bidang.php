@@ -22,6 +22,15 @@ class Bidang extends DataMapper {
         }
         return $items;
     }
+    function getLinks()
+    {
+        $ret = $this->get();
+        $items = array();
+        foreach ($ret as $item) {
+            $items[] = anchor('arsip/index?_bidang='.$item->id, $item->nama);
+        }
+        return implode(', ', $items);
+    }
 }
 
 /* End of file akun.php */
