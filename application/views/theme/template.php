@@ -1,5 +1,6 @@
 <?php
-  $user = isset($this->login_manager) ? $this->login_manager->get_user() : FALSE;
+  $this->load->library('login_manager');
+  if (isset($this->session->userdata('logged_in_id'))) $user = $this->login_manager->get_user(); else $user = FALSE;
   $data['user'] = $user;
   if( ! isset($message))
   {
@@ -22,7 +23,7 @@
     <?php $this->load->view('theme/functions'); ?>
     <!-- Navbar
     ================================================== -->
-    <?php $this->load->view('theme/menu'); ?>
+    <?php $this->load->view('theme/menu', $data); ?>
 
     <?php if( ! empty($message)): ?>
       <!-- Form Result Message -->

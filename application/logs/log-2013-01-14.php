@@ -1,4 +1,11 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed'); ?>
 
-ERROR - 2013-01-14 08:27:35 --> Severity: Notice  --> mysql_pconnect() [<a href='function.mysql-pconnect'>function.mysql-pconnect</a>]: send of 5 bytes failed with errno=10053 An established connection was aborted by the software in your host machine.
- D:\wamp\www\arbun\system\database\drivers\mysql\mysql_driver.php 91
+ERROR - 2013-01-14 10:29:49 --> Severity: Notice  --> Undefined variable: user D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:30:37 --> Severity: Notice  --> Undefined variable: user D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:30:37 --> Severity: Notice  --> Trying to get property of non-object D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:31:02 --> Severity: Notice  --> Undefined variable: user D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:31:02 --> Severity: Notice  --> Trying to get property of non-object D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:33:27 --> Severity: Notice  --> Trying to get property of non-object D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:33:30 --> Severity: Notice  --> Trying to get property of non-object D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:33:31 --> Severity: Notice  --> Trying to get property of non-object D:\wamp\www\arbun\application\views\theme\menu.php 16
+ERROR - 2013-01-14 10:34:12 --> Severity: Notice  --> Trying to get property of non-object D:\wamp\www\arbun\application\views\theme\menu.php 16

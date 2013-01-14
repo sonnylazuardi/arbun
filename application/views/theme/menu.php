@@ -12,7 +12,10 @@
 
           <?php activeMenu('<i class="icon-envelope icon-white"></i> Kontak', 'home/kontak', 'kontak', $page); ?>
 
-          <?php activeMenu('<i class="icon-user icon-white"></i> Akun', 'user/arsipku', 'user/arsipku', $page); ?>    
+          <?php 
+            if ($user) $capt = $user->nim; else $capt = 'Login';
+            activeMenu('<i class="icon-user icon-white"></i> '.$capt, 'user/arsipku', 'user/arsipku', $page);
+          ?>    
 
         </ul>
 
