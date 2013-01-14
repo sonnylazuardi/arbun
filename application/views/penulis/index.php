@@ -5,22 +5,24 @@
 
 		<?php $this->load->view('penulis/sidebar') ?>
 		<div class="span9 strip box" style = "padding-top:10px">
+			<h3>Penulis</h3>
+			<legend></legend>
 			<?php 
 				$model->get($limit, $offset);
 			?>
 			<?php foreach($model as $penulis) :?>
 			  	<div class="row" style="margin-bottom:10px">
-					<div class="span1"><span style="padding-left:10px"><?php echo img($penulis->get_profpic()) ?></span></div>
+					<div class="span1"><span style="padding-left:20px"><?php echo img($penulis->get_profpic()) ?></span></div>
 					<div class="span4">
-						<?php echo $penulis->nama ?>
+						<span style="padding-left:10px"><?php echo anchor('penulis/view/'.$penulis->id,$penulis->nama) ?>
 						<br>
-						<?php echo $penulis->jurusan->get()->nama ?>
-						<?php echo 'Jurnal' ?>
+						<span style="padding-left:10px"><?php echo $penulis->jurusan->get()->nama ?>
 					</div>
-					<div class="span2"><?php echo $penulis->buku->count() ?></div>
+					<div class="span2"><?php echo $penulis->buku->count() ?> <?php echo 'Arsip' ?> </div>
 					<div class="span2"><?php echo '0 Penghargaan'; ?></div>
 				</div>
 			<?php endforeach; ?>
+			<br>
 		</div>
 	</div>
 </div>

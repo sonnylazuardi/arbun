@@ -1,34 +1,31 @@
 <div class="span3">
 	<div class="row">
 		<div class="span3 strip box">
-			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
-				 <?php 
-					// $model->kategori->get_iterated();
-					// foreach ($model->kategori as $data) {
-					// 	echo '<li>'.anchor('arsip/kategori/'.$data->id, $data->nama).'</li>';
-					// } 
-				?> 
-			</ul>
-		</div>
-		<div class="span3 strip box">
-			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
+			<div class="side">
+				<h4>Urutan</h4>
+				<legend></legend>
+
 				<?php 
-					// $model->matkul->get_iterated();
-					// foreach ($model->matkul as $data) {
-					// 	echo '<li>'.anchor('arsip/matkul/'.$data->id, $data->nama).'</li>';
-					// }
+					$u = array('abjad'=>'Sesuai Abjad', 'jurnal'=>'Jurnal Terbanyak', 'penghargaan'=>'Penghargaan Terbanyak');
+					echo form_dropdown('_urut', $u, 'abjad');
 				?>
-			</ul>
+			</div>
 		</div>
 		<div class="span3 strip box">
-			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
-				 <?php 
-				// 	$model->bidang->get_iterated();
-				// 	foreach ($model->bidang as $data) {
-				// 		echo '<li>'.anchor('arsip/bidang/'.$data->id, $data->nama).'</li>';
-				// 	}
-				?>
-			</ul>
+			<div class="side"><h4>Filter</h4>
+				<legend></legend>
+				<label>Penulis</label>
+					<?php 
+						$u = array('all' => 'Semua', 'alumni'=>'Alumni', 'dosen'=>'Dosen', 'mahasiswa'=>'Mahasiswa');
+						echo form_dropdown('_penulis', $u, 'all');
+					?>
+				<br>
+				<label>Program Studi</label>
+					<?php
+						$u = array('all'=>'Semua', 'if'=>'Teknik Informatika', 'sti'=>'Sistem Teknologi Informasi', 'lain' => 'Lainnya');
+						echo form_dropdown('_penulis', $u, 'abjad');
+					?>
+				</div>
 		</div>
 	</div>
 </div>

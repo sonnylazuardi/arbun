@@ -21,9 +21,14 @@ class Penulis extends CI_Controller {
 		$data['page']='search';
 		$this->load->view('theme/template', $data);
 	}
-	public function view()
+	public function view($id = 0)
 	{
-		$data['page']='arsip/view';
+		$model = new Akun();
+		$model->get_by_id($id);
+
+		if(!$model->exists())show_error('Profil penulis tidak ditemukan');
+		$data['model'] = $model;
+		$data['page']='penulis/view';
 		$this->load->view('theme/template', $data);
 	}
 }

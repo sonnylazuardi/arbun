@@ -3,7 +3,8 @@
 	  <div class="span6 desk">
 	    <h2><?php echo (!empty($title)?$title:'Penulis'); ?></h2>
 		</div>
-		<div class="span6 full-search-bar"  style="margin:10px">
+    <div class="span2" >  </div>  
+		<div class="span4 full-search-bar"  style="margin:10px">
       <ul class="item-stream unstyled search-input-stream">
         <li class="stream-item search-input-item">
           <form class="form-inline search-form" action="/artists/search">
