@@ -18,26 +18,8 @@ class Auth extends CI_Controller {
 			'font_path' => './system/fonts/texb.ttf',
 			'img_url' => base_url().'public/captcha/'
     );
-		$db_reset = FALSE;
-		if ($this->db->cache_on == TRUE)
-		{
-			$this->db->cache_off();
-			$db_reset = TRUE;
-		}
 		$cap = create_captcha($vals);
-		if ($db_reset == TRUE)
-		{
-			$this->db->cache_on();			
-		}
-		$data = array(
-	    'captcha_time' => $cap['time'],
-	    'ip_address' => $this->input->ip_address(),
-	    'word' => $cap['word']
-    );
-    //log_message('error', print_r($data, true));
-		$query = $this->db->insert_string('captcha', $data);
-		$this->db->query($query);
-		//log_message('error', $ret);
+    $this->session->set_userdata('word', $cap['word']);
 		$teks = $cap['image'];
 		$teks .= form_input('Akun[captcha]', '', 'id="captcha"');
 		return $teks;
@@ -54,7 +36,6 @@ class Auth extends CI_Controller {
 			$model->confirm_password = $u['confirm_password'];
 			if($this->_valid_captcha())
 				$model->captcha = $u['captcha'];
-
 			$config['upload_path'] = './public/img/user/';
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['max_size']	= '500';
@@ -130,16 +111,10 @@ class Auth extends CI_Controller {
 	}
 	function _valid_captcha()
   {
-      $expiration = time()-7200;
-      $this->db->query("DELETE FROM captcha WHERE captcha_time < ".$expiration);
-      $sql = "SELECT COUNT(*) AS count FROM captcha WHERE word = ? AND ip_address = ? AND captcha_time > ?";
-      $binds = array($_POST['Akun']['captcha'], $this->input->ip_address(), $expiration);
-      $query = $this->db->query($sql, $binds);
-      $row = $query->row();
-      if ($row->count == 0)
-      {
-      	return false;
-      } else return true;
+    if ($_POST['Akun']['captcha'] != $this->session->userdata('word'))
+    {
+    	return false;
+    } else return true;
   }
 }
 

@@ -114,7 +114,7 @@ class Arsip extends CI_Controller {
 					$d = $this->_model_tipe($tipe);
 					$d->trans_start();
 					$d->nama = $data;
-					$d->save();
+					$d->skip_validation()->save();
 					$d->trans_complete();
 					$hasil[] = $d->id;
 				} else {
@@ -198,9 +198,6 @@ class Arsip extends CI_Controller {
 		$name = $model->judul.'.pdf';
 
 		force_download($name, $data);
-	}
-	function logs(){
-	  $this->load->spark('fire_log/0.8.2');
 	}
 }
 

@@ -58,6 +58,9 @@ class Akun extends DataMapper {
         'angkatan' => array(
             'rules' => array('required', 'numeric'),
         ),
+        'approved' => array(
+            'rules' => array('numeric'),
+        ),
     );
 
     function __construct($id = NULL)

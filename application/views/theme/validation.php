@@ -1,8 +1,5 @@
-<?php if( ! empty($model->error->all)): ?>
+<?php if( ! empty($model->error->string)): ?>
 <div class="alert alert-danger">
-	<ul><?php foreach($model->error->all as $k => $err): ?>
-		<li><?php echo $err; ?></li>
-		<?php endforeach; ?>
-	</ul>
+	<?php echo $model->error->string; ?>
 </div>
 <?php endif; ?>
