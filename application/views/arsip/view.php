@@ -73,6 +73,7 @@
           <div class="side">
             <h5>Komentar</h5>
             <legend></legend>
+            <?php $this->load->view('arsip/komentar') ?>
           </div>
         </div>
       </div>
