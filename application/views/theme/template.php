@@ -1,6 +1,8 @@
 <?php
-  $this->load->library('login_manager');
-  if (isset($this->session->userdata('logged_in_id'))) $user = $this->login_manager->get_user(); else $user = FALSE;
+  if ($this->session->userdata('logged_in_id')) {
+    $u = new Akun();
+    $user = $u->get_by_id($this->session->userdata('logged_in_id')); 
+  } else $user = FALSE;
   $data['user'] = $user;
   if( ! isset($message))
   {
