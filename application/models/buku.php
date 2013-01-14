@@ -46,30 +46,39 @@ class Buku extends DataMapper {
       }
       return $arr;
     }
-    function get_kategoriku()
+    function get_kategoriku($link = false)
     {
       $arr = array();
         $this->kategori->get_iterated();
         foreach ($this->kategori as $data) {
+          if($link)
             $arr[] = anchor('arsip/index?_kategori='.$data->id, $data->nama);
+          else
+            $arr[] = $data->nama;
         }
         return implode(', ', $arr);
     }
-    function get_matkulku()
+    function get_matkulku($link = false)
     {
         $arr = array();
         $this->matkul->get_iterated();
         foreach ($this->matkul as $data) {
+          if($link)
             $arr[] = anchor('arsip/index?_matkul='.$data->id, $data->nama);
+          else
+            $arr[] = $data->nama;
         }
         return implode(', ', $arr);
     }
-    function get_bidangku()
+    function get_bidangku($link = false)
     {
         $arr = array();
         $this->bidang->get_iterated();
         foreach ($this->bidang as $data) {
+          if($link)
             $arr[] = anchor('arsip/index?_bidang='.$data->id, $data->nama);
+          else
+            $arr[] = $data->nama;
         }
         return implode(', ', $arr);
     }

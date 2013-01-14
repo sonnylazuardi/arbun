@@ -27,9 +27,9 @@
         </div>
         <div class="span3 strip box">
           <div class="side">
-            <p><?php echo $model->get_kategoriku() ?></p>
-            <p><?php echo $model->get_matkulku() ?></p>
-            <p><?php echo $model->get_bidangku() ?></p>
+            <p><?php echo $model->get_kategoriku(true) ?></p>
+            <p><?php echo $model->get_matkulku(true) ?></p>
+            <p><?php echo $model->get_bidangku(true) ?></p>
           </div>
         </div>
         <div class="span3 strip box">
