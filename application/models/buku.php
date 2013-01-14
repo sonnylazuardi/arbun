@@ -5,7 +5,7 @@ class Buku extends DataMapper {
     var $default_order_by = array('id'=>'desc');
     var $has_one = array('akun');
 
-    var $has_many = array('kategori', 'bidang', 'matkul');
+    var $has_many = array('kategori', 'bidang', 'matkul', 'rating');
 
     var $controller;
 

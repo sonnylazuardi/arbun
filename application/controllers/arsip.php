@@ -8,7 +8,6 @@ class Arsip extends CI_Controller {
 	}
 	public function index($offset = 0)
 	{
-		$data['page']='arsip/index';
 		$model = new Buku();
 		foreach (array('urut', 'q', 'kategori', 'matkul', 'bidang') as $item) {
 			$v[$item] = isset($_GET['_'.$item])?$_GET['_'.$item]:'';
@@ -20,10 +19,19 @@ class Arsip extends CI_Controller {
 					$model->order_by_related_akun('nama', 'ASC');		
 					break;
 				case 'favorit':
-					// $model->order_by_related_rating('nama', 'ASC');		
+					$ratings = $model->rating;
+					$ratings->select_func('COUNT', '*', 'count');
+					$ratings->where_related('buku', 'id', '${parent}.id');
+					$model->distinct();
+					$model->select_subquery($ratings, 'rating_count');
+					$model->order_by('rating_count', 'desc');
 					break;
 				case 'diskusi':
-					// $model->order_by_related_komentar('nama', 'ASC');		
+					$komentars = $model->komentar;
+					$komentars->select_func('COUNT', '*', 'count');
+					$komentars->where_related('buku', 'id', '${parent}.id');
+					$model->select_subquery($komentars, 'komentar_count');
+					$model->order_by('komentar_count', 'desc');
 					break;
 				default:
 					if (in_array($v['urut'], array('view', 'created', 'tgl_terbit'))) $d = 'DESC'; else $d = 'ASC';
@@ -39,17 +47,22 @@ class Arsip extends CI_Controller {
 				$model->where_related($rel, 'id', $v[$rel]);
 			}
 		}
-		$model->get_iterated(20, $offset);
+		$model->get_paged_iterated($offset, 20);
+		$count = $model->paged->total_rows;
+		$limit = $model->paged->page_size;
 		$data['model']=$model;
 		$data['v']=$v;
 		$this->load->library('pagination');
 		$config['base_url'] = site_url().'/arsip/index/';
-		$config['total_rows'] = $model->count();
-		$config['per_page'] = 20; 
+		$config['total_rows'] = $count;
+		$config['per_page'] = $limit; 
+		$config['suffix'] = '?'.http_build_query($_GET, '', "&");
+		$config['first_url'] = $config['base_url'].$config['suffix'];
+		$config['use_page_numbers'] = TRUE;
 		$this->pagination->initialize($config); 
 
 		$data['pagination'] = $this->pagination->create_links();
-
+		$data['page']='arsip/index';
 		$this->load->view('theme/template', $data);
 	}
 	public function search()
@@ -185,6 +198,9 @@ class Arsip extends CI_Controller {
 		$name = $model->judul.'.pdf';
 
 		force_download($name, $data);
+	}
+	function logs(){
+	  $this->load->spark('fire_log/0.8.2');
 	}
 }
 

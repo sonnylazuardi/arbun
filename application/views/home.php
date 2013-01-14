@@ -31,7 +31,7 @@
                       $ctr = 1;
                       foreach ($model as $data) {
                         echo '<div class="book">'.anchor('arsip/view/'.$data->id, $data->judul).'</div>';
-                        if($ctr % 3 == 0) {
+                        if($ctr == 3) {
                           echo '</div></div><div class="rows"><div class="loc">';
                         }
                         $ctr++;

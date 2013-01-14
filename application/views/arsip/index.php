@@ -1,4 +1,4 @@
-<?php echo form_open('', array('method'=>'get')) ?>
+<?php echo form_open('arsip/index', array('method'=>'get')) ?>
 <?php $this->load->view('arsip/header') ?>
 <div class="container">
 	<div class="row">

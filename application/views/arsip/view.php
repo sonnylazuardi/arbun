@@ -59,7 +59,7 @@
               <div class="tab-pane fade" id="tulisan">
                 <?php 
                   $u = new Buku();
-                  $u->where_related('akun', 'id', $user->id)->get_iterated(5);
+                  $u->limit(5)->get_by_related($model->akun->get());
                   foreach ($u as $data) {
                     if($data->id != $model->id)
                       echo '<li>'.anchor('arsip/view/'.$data->id, $data->judul).'</li>';
