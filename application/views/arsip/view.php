@@ -6,7 +6,6 @@
   .inputControl[type='checkbox'] { margin: 0px; }
   .inputHint { opacity: 0.2; background: #ccc; position: absolute; }
 </style>
-
 <div class="container">
   <div class="row">
     <div class="span9 strip box">
@@ -24,6 +23,11 @@
             <?php echo $model->akun->get()->nama ?> <br/>
             <?php echo $model->tgl_terbit ?>
           </p>
+        </div>
+        <div class="span3 strip box">
+          <div class="side">
+            <?php $this->load->view('arsip/rating') ?>
+          </div>
         </div>
         <div class="span3 strip box">
           <div class="side">
@@ -49,11 +53,14 @@
               <div class="tab-pane fade active in" id="hubungan">
                 <?php 
                   $u = new Buku();
-                  $u->where_in_related('bidang', 'id', $model->get_array_bidang())->get_iterated(5);
-                  foreach ($u as $data) {
-                    if($data->id != $model->id)
-                      echo '<li>'.anchor('arsip/view/'.$data->id, $data->judul).'</li>';
-                  }
+                  $arr = $model->get_array_bidang();
+                  if($arr):
+                    $u->where_in_related('bidang', 'id', $arr)->get_iterated(5);
+                    foreach ($u as $data) {
+                      if($data->id != $model->id)
+                        echo '<li>'.anchor('arsip/view/'.$data->id, $data->judul).'</li>';
+                    }
+                  endif;
                 ?>
               </div>
               <div class="tab-pane fade" id="tulisan">
@@ -111,3 +118,4 @@
     var pdfWithFormsPath = '<?php echo $model->link ?>';
   </script>
   <script type="text/javascript" src="<?php echo base_url() ?>public/js/tes.js"></script>
+  <script type="text/javascript" src="<?php echo base_url(); ?>public/js/jquery.raty.min.js"></script>

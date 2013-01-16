@@ -25,10 +25,8 @@ class Admin extends CI_Controller
 	{
 		$model = new Akun();
 		$model->get_by_id($id);
-		$model->trans_start();
 		$model->approved = 1;
 		if ($model->skip_validation()->save()) {
-			$model->trans_complete();
 			redirect('admin/ListAkun');
 		} else {
 			echo $model->error->string;

@@ -19,7 +19,6 @@ class User extends CI_Controller {
 		$model->bln = $date->format("m");
 		$model->tgl = $date->format("d");
 		if(isset($_POST['Akun'])) {
-			$model->trans_start();
 			$u = $_POST['Akun'];
 			$model->from_array($u);
 
@@ -45,7 +44,6 @@ class User extends CI_Controller {
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 
 			if ($model->save()) {
-				$model->trans_complete();
 				redirect('user/account');
 			} elseif (!$model->error->valid_pic && isset($ret)) {
 				unlink('./public/img/user/'.$ret['file_name']);

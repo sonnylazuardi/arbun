@@ -9,38 +9,18 @@ class Arsip extends CI_Controller {
 	public function index($offset = 0)
 	{
 		$model = new Buku();
-		foreach (array('urut', 'q', 'kategori', 'matkul', 'bidang') as $item) {
+		$model->_include_rating_count();
+		$model->_include_komentar_count();
+		$model->_include_akun();
+		$model->select('*');
+		foreach (array('urut', 'q', 'kategori', 'matkul', 'bidang') as $item)
 			$v[$item] = isset($_GET['_'.$item])?$_GET['_'.$item]:'';
-		}
 		if (!empty($v['urut'])) {
-			// $model->get_sorting($v['urut']);
-			switch ($v['urut']) {
-				case 'akun':
-					$model->order_by_related_akun('nama', 'ASC');		
-					break;
-				case 'favorit':
-					$ratings = $model->rating;
-					$ratings->select_func('COUNT', '*', 'count');
-					$ratings->where_related('buku', 'id', '${parent}.id');
-					$model->distinct();
-					$model->select_subquery($ratings, 'rating_count');
-					$model->order_by('rating_count', 'desc');
-					break;
-				case 'diskusi':
-					$komentars = $model->komentar;
-					$komentars->select_func('COUNT', '*', 'count');
-					$komentars->where_related('buku', 'id', '${parent}.id');
-					$model->select_subquery($komentars, 'komentar_count');
-					$model->order_by('komentar_count', 'desc');
-					break;
-				default:
-					if (in_array($v['urut'], array('view', 'created', 'tgl_terbit'))) $d = 'DESC'; else $d = 'ASC';
-					$model->order_by($v['urut'], $d);		
-					break;
-			}
-		}
+			if (in_array($v['urut'], array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count'))) $d = 'DESC'; else $d = 'ASC';
+			$model->order_by($v['urut'], $d);
+		} else $v['urut'] = 'created';
 		if (!empty($v['q'])) {
-			$model->ilike('judul', $v['q']);
+			$model->search($v['q']);
 		}
 		foreach (array('kategori', 'matkul', 'bidang') as $rel) {
 			if (!empty($v[$rel])) {
@@ -73,8 +53,20 @@ class Arsip extends CI_Controller {
 	public function view($id = 0)
 	{
 		$model = new Buku();
+		$model->_include_rating_count();
+		$model->_include_rating_counts();
+		$model->select('*');
 		$model->get_by_id($id);
-
+		if(!$model->exists())show_error('Buku Tidak ditemukan');
+		$arr = array();
+		if($this->session->userdata('pageview'))$arr = $this->session->userdata('pageview');
+		if (!in_array($id, $arr)) {
+			$model->view++;
+			$model->skip_validation()->save();
+			array_push($arr, $id);
+			$this->session->set_userdata('pageview', $arr);
+			log_message('error', print_r($this->session->userdata('pageview'), true));
+		}
 		if(!$model->exists())show_error('Buku tidak ditemukan');
 		$data['model'] = $model;
 		$data['page']='arsip/view';
@@ -112,10 +104,8 @@ class Arsip extends CI_Controller {
 				$u->where('nama', $data)->get();
 				if(!$u->exists()) {
 					$d = $this->_model_tipe($tipe);
-					$d->trans_start();
 					$d->nama = $data;
 					$d->skip_validation()->save();
-					$d->trans_complete();
 					$hasil[] = $d->id;
 				} else {
 					$hasil[] = $u->id;
@@ -127,7 +117,6 @@ class Arsip extends CI_Controller {
 	public function _save($model, $user)
 	{
 		if(isset($_POST['Buku'])) {
-			$model->trans_start();
 			$u = $_POST['Buku'];
 			$u['kategori'] = $this->_save_rel('kategori');
 			$u['matkul'] = $this->_save_rel('matkul');
@@ -153,7 +142,6 @@ class Arsip extends CI_Controller {
 			} elseif(!empty($model->upload_url)) $model->link = site_url().'/proxy/index?url='.$model->upload_url;
 
 			if ($model->save($rel)) {
-				$model->trans_complete();
 				redirect('user/arsipku');
 			}
 		}
@@ -182,9 +170,7 @@ class Arsip extends CI_Controller {
 		$model = new Buku();
 		$model->get_by_id($id);
 		if(!$model->exists())show_error('Tidak ditemukan Buku yang dicari');
-		// $model->trans_start();
 		$model->delete();
-		// $model->trans_complete();
 		redirect('user/arsipku');
 	}
 	public function download($id = 0)

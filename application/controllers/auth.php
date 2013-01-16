@@ -30,7 +30,6 @@ class Auth extends CI_Controller {
 			redirect('user/arsipku');
 		$model = new Akun();
 		if(isset($_POST['Akun'])) {
-			$model->trans_start();
 			$u = $_POST['Akun'];
 			$model->from_array($u);
 			$model->confirm_password = $u['confirm_password'];
@@ -55,7 +54,6 @@ class Auth extends CI_Controller {
 
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			if ($model->save()) {
-				$model->trans_complete();
 				$this->session->set_flashdata('message', 'Registrasi berhasil dilakukan');
 				redirect('user/login');
 			} elseif (!$model->error->valid_pic && isset($ret)) {

@@ -5,7 +5,7 @@ class Buku extends DataMapper {
     var $default_order_by = array('id'=>'desc');
     var $has_one = array('akun');
 
-    var $has_many = array('kategori', 'bidang', 'matkul', 'rating');
+    var $has_many = array('kategori', 'bidang', 'matkul', 'rating', 'komentar');
 
     var $controller;
 
@@ -87,6 +87,47 @@ class Buku extends DataMapper {
         if($this->{$field}=='error') {
             $this->error_message('valid_link', 'File Unggahan belum sesuai spesifikasi');
         }
+    }
+    public function _include_rating_count()
+    {
+      $ratings = $this->rating;
+      $ratings->select_func('AVG', '@rating', 'count');
+      $ratings->where_related('buku', 'id', '${parent}.id');
+      $this->select_subquery($ratings, 'rating_count');
+    }
+    public function _include_rating_counts()
+    {
+      $ratings = $this->rating;
+      $ratings->select_func('COUNT', '*', 'count');
+      $ratings->where_related('buku', 'id', '${parent}.id');
+      $this->select_subquery($ratings, 'rating_counts');
+    }
+    public function _include_komentar_count()
+    {
+      $ratings = $this->komentar;
+      $ratings->select_func('COUNT', '*', 'count');
+      $ratings->where_related('buku', 'id', '${parent}.id');
+      $this->select_subquery($ratings, 'komentar_count');
+    }
+    public function _include_akun()
+    {
+      $this->include_related('akun', array('nama'));
+    }
+    public function search($term)
+    { 
+      // $query = $this->db->query
+      // ('SELECT * FROM buku WHERE MATCH (judul) AGAINST ("' . $term . '" IN BOOLEAN MODE)');
+      // $this->_process_query($query);
+      // "SELECT MATCH('Content') AGAINST ('keyword1 keyword2') as Relevance FROM table WHERE MATCH ('Content') AGAINST('+keyword1 +keyword2' IN BOOLEAN MODE) HAVING Relevance > 0.2 ORDER BY Relevance DESC"
+      // $this->select('*');
+      $this->where('MATCH(judul, abstrak) AGAINST("' . $term . '" IN BOOLEAN MODE)');
+      // $this->order_by('Relevance', 'DESC');
+    } 
+    public function _my_rating($buku_id, $akun_id)
+    {
+      $model = new Rating();
+      $model->get_where(array('buku_id'=>$buku_id, 'akun_id'=>$akun_id));
+      if($model->exists())return $model->rating; else return 0;
     }
 }
 
