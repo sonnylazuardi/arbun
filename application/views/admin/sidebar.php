@@ -8,6 +8,7 @@
 				<?php activeMenu('<i class="icon-comment"></i> Moderasi Komentar', 
 				'admin/ListKomentar', 'admin/ListKomentar', $page) ?>
 				<?php activeMenu('<i class="icon-bullhorn"></i> Moderasi Laporan', 'admin/ListLaporan', 'admin/ListLaporan', $page) ?>
+				<?php activeMenu('<i class="icon-star"></i> Moderasi Penghargaan', 'admin/ListPenghargaan', 'admin/ListPenghargaan', $page) ?>
 				<li><?php echo anchor('admin/logs','<i class="icon-lock"></i> Logs') ?></li>
 			</ul>
 		</div>

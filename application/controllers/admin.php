@@ -98,6 +98,24 @@ class Admin extends CI_Controller
 		$data['page']='admin/ListLaporan';
 		$this->load->view('theme/template', $data);
 	}
+	function ListPenghargaan($offset = 0)
+	{
+		$model = new Award();
+		$model->get();
+		$data['model'] = $model;
+		$data['page']='admin/ListPenghargaan';
+		$this->load->view('theme/template', $data);
+	}
+	public function DeleteAward($id = 0)
+	{
+		$model = new Award();
+		$model->get_by_id($id);
+		if($model->exists()) {
+			if($model->id == $id)
+				$model->delete();
+		}
+		redirect('admin/ListPenghargaan');
+	}
 	function logs()
 	{
 	  $this->load->spark('fire_log/0.8.2');
