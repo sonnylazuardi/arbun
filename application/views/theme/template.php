@@ -4,9 +4,9 @@
     $user = $u->get_by_id($this->session->userdata('logged_in_id')); 
   } else $user = FALSE;
   $data['user'] = $user;
-  if( ! isset($message))
+  if( ! isset($pesan))
   {
-    $message = $this->session->flashdata('message');
+    $pesan = $this->session->flashdata('pesan');
   }
 ?>
 <!DOCTYPE html>
@@ -27,9 +27,9 @@
     ================================================== -->
     <?php $this->load->view('theme/menu', $data); ?>
 
-    <?php if( ! empty($message)): ?>
-      <!-- Form Result Message -->
-      <div class="container alert"><?php echo htmlspecialchars($message); ?></div>
+    <?php if( ! empty($pesan)): ?>
+      <!-- Form Result pesan -->
+      <div class="container alert"><?php echo htmlspecialchars($pesan); ?></div>
     <?php endif; ?>
 
     <?php

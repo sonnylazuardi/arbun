@@ -27,7 +27,7 @@ $(function(){
 				  		<span style="font-size:.9em">
 				  			<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
 				  			<?php echo $buku->view. ' kali dilihat' ?> <br>
-				  			<?php echo $buku->akun->get()->nama ?> <br>
+				  			<?php echo $buku->akun_nama ?> <br>
 					  		<?php echo $buku->tgl_terbit ?> <br>
 					  		<?php echo $buku->get_matkulku() ?> <br>
 					  		<?php echo $buku->get_bidangku() ?> <br>

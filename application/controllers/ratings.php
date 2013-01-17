@@ -18,6 +18,7 @@ class Ratings extends CI_Controller {
 		}
 		$model->rating = $this->input->post('score');
 		if ($model->rating == 0) $model->delete(); else $model->save();
+		$this->session->set_flashdata('pesan', 'Rating berhasil dilakukan');
 		redirect('arsip/view/'.$idbuku);
 	}
 	public function delete()

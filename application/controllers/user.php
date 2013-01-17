@@ -46,6 +46,7 @@ class User extends CI_Controller {
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			$model->captcha = 'skip';
 			if ($model->save()) {
+				$this->session->set_flashdata('pesan', 'Profil Akun berhasil diupdate');
 				redirect('user/account');
 			} elseif (!$model->error->valid_pic && isset($ret)) {
 				unlink('./public/img/user/'.$ret['file_name']);
@@ -74,6 +75,30 @@ class User extends CI_Controller {
 	public function unggah()
 	{
 		$data['page']='user/unggah';
+		$this->load->view('theme/template', $data);
+	}
+	function _paginate($model, $url, $offset, $limit)
+	{
+		$model->get_paged($offset, $limit);
+		$this->load->library('pagination');
+		$config['base_url'] = site_url().'/'.$url.'/';
+		$config['total_rows'] = $model->paged->total_rows;
+		$config['per_page'] = $limit; 
+		$config['use_page_numbers'] = TRUE;
+		$this->pagination->initialize($config); 
+		return $this->pagination->create_links();
+	}
+	public function selipanku($offset = 0)
+	{
+		$model = new Bookmark();
+		$user = $this->login_manager->get_user();
+		$model->include_related('buku', array('judul'));
+		$model->order_by('id', 'desc');
+		$model->where('akun_id', $user->id);
+
+		$data['pagination'] = $this->_paginate($model, 'user/selipanku', $offset, 20);
+		$data['page']='user/selipanku';
+		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}
 }

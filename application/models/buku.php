@@ -5,7 +5,7 @@ class Buku extends DataMapper {
     var $default_order_by = array('id'=>'desc');
     var $has_one = array('akun');
 
-    var $has_many = array('kategori', 'bidang', 'matkul', 'rating', 'komentar');
+    var $has_many = array('kategori', 'bidang', 'matkul', 'rating', 'komentar', 'award', 'bookmark');
 
     var $controller;
 
@@ -128,6 +128,13 @@ class Buku extends DataMapper {
       $model = new Rating();
       $model->get_where(array('buku_id'=>$buku_id, 'akun_id'=>$akun_id));
       if($model->exists())return $model->rating; else return 0;
+    }
+    public function _include_award_count()
+    {
+      $award = $this->award;
+      $award->select_func('COUNT', '*', 'count');
+      $award->where_related('buku', 'id', '${parent}.id');
+      $this->select_subquery($award, 'award_count');
     }
 }
 

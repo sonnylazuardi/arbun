@@ -5,7 +5,7 @@ class Akun extends DataMapper {
 
     var $has_one = array('fakultas', 'jurusan');
 
-    var $has_many = array('buku', 'komentar');
+    var $has_many = array('buku', 'komentar', 'bookmark');
 
     var $controller;
 
@@ -98,6 +98,30 @@ class Akun extends DataMapper {
     function get_profpic()
     {
         return base_url().'public/img/user/'.$this->picture;
+    }
+    public function _count_award()
+    {
+      $this->buku->_include_award_count();
+      $this->buku->get_iterated();
+      $sum = 0;
+      foreach ($this->buku as $data) {
+        $sum += $data->award_count;
+      }
+      return $sum;
+    }
+    public function _include_buku_count()
+    {
+      $buku = $this->buku;
+      $buku->select_func('COUNT', '*', 'count');
+      $buku->where_related('akun', 'id', '${parent}.id');
+      $this->select_subquery($buku, 'buku_count');
+    }
+    public function _include_buku_view_count()
+    {
+      $award = $this->buku;
+      $award->select_func('SUM', '@view', 'count');
+      $award->where_related('akun', 'id', '${parent}.id');
+      $this->select_subquery($award, 'buku_view_count');
     }
 }
 

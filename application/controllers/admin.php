@@ -39,6 +39,7 @@ class Admin extends CI_Controller
 		$model->get_by_id($id);
 		$model->approved = $this->input->post('akun');
 		if ($model->skip_validation()->save()) {
+			$this->session->set_flashdata('pesan', 'Akun berhasil dimoderasi');
 			redirect('admin/ListAkun');
 		}
 	}
@@ -56,6 +57,7 @@ class Admin extends CI_Controller
 		$data = array('status'=>$this->input->post('buku'));
 		$this->db->where('id',$id);
 		$this->db->update('buku',$data);
+		$this->session->set_flashdata('pesan', 'Buku berhasil dimoderasi');
 		redirect('admin/ListBuku');
 	}
 	function ListKomentar($offset = 0)
@@ -74,6 +76,7 @@ class Admin extends CI_Controller
 		$data = array('status'=>$this->input->post('komentar'));
 		$this->db->where('id',$id);
 		$this->db->update('komentar',$data);
+		$this->session->set_flashdata('pesan', 'Komentar berhasil dimoderasi');
 		redirect('admin/ListKomentar');
 	}	
 	function logs()

@@ -1,5 +1,5 @@
 <?php echo form_open('komentars/create/'.$model->id);
-$model->komentar->order_by("id", "desc")->get_iterated();
+$model->komentar->order_by("id", "desc")->where('status', 1)->get_iterated();
 
 echo '<div class="row" style="overflow-y:scroll;margin-left:0px;max-height:450px">';
 foreach($model->komentar as $data){

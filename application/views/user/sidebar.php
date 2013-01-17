@@ -4,6 +4,7 @@
 			<ul id="main-nav" class="nav nav-tabs nav-stacked" style="padding:10px 0 ">
 				<?php activeMenu('<i class="icon-book"></i> Arsipku', 'user/arsipku', 'user/arsipku', $page) ?>
 				<?php activeMenu('<i class="icon-star"></i> Profilku', 'user/account', 'user/account', $page) ?>
+				<?php activeMenu('<i class="icon-bookmark"></i> Selipanku', 'user/selipanku', 'user/selipanku', $page) ?>
 			</ul>
 		</div>
 		<div class="span3 strip box">

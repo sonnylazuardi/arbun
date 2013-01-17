@@ -20,7 +20,7 @@
         </div>
         <div class="span2" style="margin-bottom:20px">
           <p>
-            <?php echo $model->akun->get()->nama ?> <br/>
+            <?php echo anchor('penulis/view/'.$model->akun_id, $model->akun_nama) ?> <br/>
             <?php echo $model->tgl_terbit ?>
           </p>
         </div>
@@ -77,6 +77,13 @@
             </div>
           </div>
         </div>
+        <?php if($user): ?>
+        <div class="span3 strip box">
+          <div class="side">
+            <?php $this->load->view('arsip/bookmark') ?>
+          </div>
+        </div>
+        <?php endif; ?>
         <div class="span3 strip box">
           <div class="side">
             <h5>Komentar</h5>

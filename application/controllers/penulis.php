@@ -6,14 +6,50 @@ class Penulis extends CI_Controller {
 		parent::__construct();
 		$this->load->library('login_manager', array('autologin' => FALSE));
 	}
-	public function index($offset = 0)
+	function _paginate($model, $url, $offset, $limit)
 	{
-		$data['page']='penulis/index';
+		$model->get_paged_iterated($offset, $limit);
+		$this->load->library('pagination');
+		$config['base_url'] = site_url().'/'.$url.'/';
+		$config['total_rows'] = $model->paged->total_rows;
+		$config['per_page'] = $limit; 
+		$config['suffix'] = '?'.http_build_query($_GET, '', "&");
+		$config['first_url'] = $config['base_url'].$config['suffix'];
+		$config['use_page_numbers'] = TRUE;
+		$this->pagination->initialize($config); 
+		return $this->pagination->create_links();
+	}
+	public function index($offset = 0)
+	{	
 		$model = new Akun();
-		$data['count']=$model->count();
-		$data['limit']=20;
-		$data['offset']=$offset;
+		$model->_include_buku_count();
+		$model->_include_buku_view_count();
+		$model->select('*');
+
+		foreach (array('urut', 'q', 'status', 'fakultas_id', 'jurusan_id') as $item)
+			$v[$item] = isset($_GET['_'.$item])?$_GET['_'.$item]:'';
+		
+		if (!empty($v['urut'])) {
+			if (in_array($v['urut'], array('buku_count', 'buku_view_count', 'id'))) $d = 'DESC'; else $d = 'ASC';
+			$model->order_by($v['urut'], $d);
+		}
+
+		if (!empty($v['q'])) {
+			$model->ilike('nama', $v['q']);
+		}
+		if (!empty($v['status'])) {
+			$model->where('status', $v['status']-1);
+		}
+		foreach (array('fakultas_id', 'jurusan_id') as $rel) {
+			if (!empty($v[$rel])) {
+				$model->where($rel, $v[$rel]);
+			}
+		}
+
+		$data['pagination'] = $this->_paginate($model, 'penulis/index', $offset, 20);
 		$data['model']=$model;
+		$data['v']=$v;
+		$data['page']='penulis/index';
 		$this->load->view('theme/template', $data);
 	}
 	public function search()

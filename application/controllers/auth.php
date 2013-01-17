@@ -53,8 +53,9 @@ class Auth extends CI_Controller {
 			}
 
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
+			$model->approved = 1;
 			if ($model->save()) {
-				$this->session->set_flashdata('message', 'Registrasi berhasil dilakukan');
+				$this->session->set_flashdata('pesan', 'Registrasi berhasil dilakukan');
 				redirect('user/login');
 			} elseif (!$model->error->valid_pic && isset($ret)) {
 				unlink('./public/img/user/'.$ret['file_name']);
@@ -78,6 +79,7 @@ class Auth extends CI_Controller {
 		$user = new Akun();
 		if (isset($_POST['Login'])) {
 			$user->from_array($_POST['Login'], array('nim', 'password'));
+			$user->where('approved', 1);
 			$login_redirect = $this->login_manager->process_login($user);
 			if($login_redirect) {
 				if ($login_redirect == true) {
