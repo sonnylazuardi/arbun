@@ -115,13 +115,7 @@ class Buku extends DataMapper {
     }
     public function search($term)
     { 
-      // $query = $this->db->query
-      // ('SELECT * FROM buku WHERE MATCH (judul) AGAINST ("' . $term . '" IN BOOLEAN MODE)');
-      // $this->_process_query($query);
-      // "SELECT MATCH('Content') AGAINST ('keyword1 keyword2') as Relevance FROM table WHERE MATCH ('Content') AGAINST('+keyword1 +keyword2' IN BOOLEAN MODE) HAVING Relevance > 0.2 ORDER BY Relevance DESC"
-      // $this->select('*');
       $this->where('MATCH(judul, abstrak) AGAINST("' . $term . '" IN BOOLEAN MODE)');
-      // $this->order_by('Relevance', 'DESC');
     } 
     public function _my_rating($buku_id, $akun_id)
     {
@@ -135,6 +129,34 @@ class Buku extends DataMapper {
       $award->select_func('COUNT', '*', 'count');
       $award->where_related('buku', 'id', '${parent}.id');
       $this->select_subquery($award, 'award_count');
+    }
+    public function _eksekusi()
+    {
+      if (!empty($this->_urut)) {
+        if (in_array($this->_urut, array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count'))) $d = 'DESC'; else $d = 'ASC';
+        $this->order_by($this->_urut, $d);
+      }
+
+      if (!empty($this->_q)) {
+        $this->search($this->_q);
+      }
+      
+      foreach (array('kategori', 'matkul', 'bidang') as $rel) {
+        if (!empty($this->{'_'.$rel})) {
+          $this->where_related($rel, 'id', $this->{'_'.$rel});
+        }
+      }
+      if (!empty($this->_akun_nama)) {
+        $this->ilike_related_akun('nama', $this->_akun_nama);
+      }
+      if (!empty($this->_tahun)) {
+        $this->where('YEAR(tgl_terbit)', $this->_tahun);
+      }
+      foreach (array('judul', 'abstrak') as $rel) {
+        if (!empty($this->{'_'.$rel})) {
+          $this->ilike($rel, $this->{'_'.$rel});
+        }
+      }
     }
 }
 

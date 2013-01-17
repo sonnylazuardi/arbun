@@ -7,7 +7,9 @@ class Home extends CI_Controller {
 	}
 	public function index()
 	{
+		$model = new Buku();
 		$data['page']='home';
+		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}
 	public function kontak()

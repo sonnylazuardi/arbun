@@ -5,14 +5,16 @@
       <h2><?php echo (!empty($title)?$title:'Penulis'); ?></h2>
     </div>
     <div class="span6 full-search-bar" style="margin:10px">
+      <div id="biasa">
       <ul class="item-stream unstyled search-input-stream">
         <li class="stream-item search-input-item">
           <div class="form-inline search-form" action="/artists/search">
-              <?php echo form_input('_q', $v['q'], 'id="search" placeholder="Cari Penulis"') ?>
+              <?php echo form_input('_q', $model->_q, 'id="search" placeholder="Cari Penulis"') ?>
               <button class="btn btn-large btn-inverse" id="sub" type="submit"><i class="icon-search icon-white"></i></button>
           </div>
         </li>
       </ul>
+      </div>
     </div> 
   </div>
 </div>

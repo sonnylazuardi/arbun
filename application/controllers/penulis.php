@@ -25,30 +25,12 @@ class Penulis extends CI_Controller {
 		$model->_include_buku_count();
 		$model->_include_buku_view_count();
 		$model->select('*');
-
-		foreach (array('urut', 'q', 'status', 'fakultas_id', 'jurusan_id') as $item)
-			$v[$item] = isset($_GET['_'.$item])?$_GET['_'.$item]:'';
+		$model->from_array($_GET, array('_urut', '_q', '_status', '_fakultas_id', '_jurusan_id'));
+		$model->_eksekusi();
 		
-		if (!empty($v['urut'])) {
-			if (in_array($v['urut'], array('buku_count', 'buku_view_count', 'id'))) $d = 'DESC'; else $d = 'ASC';
-			$model->order_by($v['urut'], $d);
-		}
-
-		if (!empty($v['q'])) {
-			$model->ilike('nama', $v['q']);
-		}
-		if (!empty($v['status'])) {
-			$model->where('status', $v['status']-1);
-		}
-		foreach (array('fakultas_id', 'jurusan_id') as $rel) {
-			if (!empty($v[$rel])) {
-				$model->where($rel, $v[$rel]);
-			}
-		}
 
 		$data['pagination'] = $this->_paginate($model, 'penulis/index', $offset, 20);
 		$data['model']=$model;
-		$data['v']=$v;
 		$data['page']='penulis/index';
 		$this->load->view('theme/template', $data);
 	}

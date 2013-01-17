@@ -123,6 +123,24 @@ class Akun extends DataMapper {
       $award->where_related('akun', 'id', '${parent}.id');
       $this->select_subquery($award, 'buku_view_count');
     }
+    public function _eksekusi()
+    {
+      if (!empty($this->_urut)) {
+        if (in_array($this->_urut, array('buku_count', 'buku_view_count', 'id'))) $d = 'DESC'; else $d = 'ASC';
+        $this->order_by($this->_urut, $d);
+      }
+      if (!empty($this->_q)) {
+        $this->ilike('nama', $this->_q);
+      }
+      if (!empty($this->_status)) {
+        $this->where('status', $this->_status-1);
+      }
+      foreach (array('fakultas_id', 'jurusan_id') as $rel) {
+        if (!empty($this->{'_'.$rel})) {
+            $this->where($rel, $this->{'_'.$rel});
+        }
+      }
+    }
 }
 
 /* End of file akun.php */

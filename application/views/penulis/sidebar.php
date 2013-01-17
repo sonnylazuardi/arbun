@@ -8,7 +8,7 @@
 				<legend></legend>
 				<?php 
 					$u = array('id'=>'Waktu Bergabung', 'buku_view_count'=>'Terpopuler', 'nama'=>'Sesuai Abjad', 'buku_count'=>'Arsip Terbanyak');
-					echo form_dropdown('_urut', $u, $v['urut'], 'onchange="this.form.submit()"');
+					echo form_dropdown('_urut', $u, $model->_urut, 'onchange="this.form.submit()"');
 				?>
 			</div>
 		</div>
@@ -18,20 +18,20 @@
 				<label>Status</label>
 					<?php 
 						$u = array('' => 'Semua', 1=>'Dosen', 2=>'Mahasiswa', 3=>'Staf', 4=>'Alumni');
-						echo form_dropdown('_status', $u, $v['status'], 'onchange="this.form.submit()"');
+						echo form_dropdown('_status', $u, $model->_status, 'onchange="this.form.submit()"');
 					?>
 				<br>
 				<label>Fakultas</label>
 					<?php
 						$a = new Fakultas();
 						$u = array(''=>'Semua') + $a->getArray();
-						echo form_dropdown('_fakultas_id', $u, $v['fakultas_id'], 'onchange="this.form.submit()"');
+						echo form_dropdown('_fakultas_id', $u, $model->_fakultas_id, 'onchange="this.form.submit()"');
 					?>
 				<label>Program Studi</label>
 					<?php
 						$a = new Jurusan();
 						$u = array(''=>'Semua') + $a->getArray();
-						echo form_dropdown('_jurusan_id', $u, $v['jurusan_id'], 'onchange="this.form.submit()"');
+						echo form_dropdown('_jurusan_id', $u, $model->_jurusan_id, 'onchange="this.form.submit()"');
 					?>
 			</div>
 		</div>

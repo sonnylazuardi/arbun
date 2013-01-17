@@ -26,27 +26,12 @@ class Arsip extends CI_Controller {
 		$model->_include_komentar_count();
 		$model->_include_akun();
 		$model->select('*');
-
-		foreach (array('urut', 'q', 'kategori', 'matkul', 'bidang') as $item)
-			$v[$item] = isset($_GET['_'.$item])?$_GET['_'.$item]:'';
-		if (!empty($v['urut'])) {
-			if (in_array($v['urut'], array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count'))) $d = 'DESC'; else $d = 'ASC';
-			$model->order_by($v['urut'], $d);
-		} else $v['urut'] = 'created';
-		if (!empty($v['q'])) {
-			$model->search($v['q']);
-		}
-		
-		foreach (array('kategori', 'matkul', 'bidang') as $rel) {
-			if (!empty($v[$rel])) {
-				$model->where_related($rel, 'id', $v[$rel]);
-			}
-		}
+		$model->from_array($_GET, array('_urut', '_q', '_kategori', '_matkul', '_bidang', '_akun_nama', '_judul', '_tahun', '_abstrak'));
+		$model->_eksekusi();
 
 		$data['pagination'] = $this->_paginate($model, 'arsip/index', $offset, 20);
 
 		$data['model']=$model;
-		$data['v']=$v;
 		$data['page']='arsip/index';
 		$this->load->view('theme/template', $data);
 	}

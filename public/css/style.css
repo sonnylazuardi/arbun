@@ -64,10 +64,10 @@ a.brand {
   margin-top: 40px;
   margin-bottom: 40px;
 }
-form .full-search-bar input[type="text"] {
+.full-search-bar #biasa input[type="text"] {
   height: 35px;
 }
-form .full-search-bar input[type="text"] {
+.full-search-bar #biasa input[type="text"] {
   float: left;
   height: 30px;
   font-size: 20px;
@@ -88,7 +88,7 @@ form .full-search-bar input[type="text"] {
 .search-form{
   margin: 0;
 }
-form .full-search-bar button[type="submit"] {
+.full-search-bar #biasa button[type="submit"] {
   width: 46px;
   height: 40px;
   -webkit-border-radius: 0 6px 6px 0;

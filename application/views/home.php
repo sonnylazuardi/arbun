@@ -7,19 +7,11 @@
     <div class="strip">
       <div class="container">
         <div class="row">
-          <?php echo form_open('arsip/index', array('method'=>'get')) ?>
           <div class="span6 full-search-bar">
-            <ul class="item-stream unstyled search-input-stream">
-              <li class="stream-item search-input-item">
-                <form class="form-inline search-form" action="/artists/search">
-                  <?php echo form_input('_q', '', 'id="search" placeholder="Cari Arsip atau makalah"') ?>
-                  <button class="btn btn-large btn-inverse" id="sub" type="submit"><i class="icon-search icon-white"></i></button>
-                </form>
-              </li>
-            </ul>
-            <?php echo anchor('arsip/search', 'Pencarian Lanjutan', array('class'=>'btn btn-success')); ?>
-            <?php echo anchor('arsip/index', 'Telusuri Arsip', array('class'=>'btn')); ?>
+            <?php $this->load->view('arsip/search') ?>
+            <?php echo anchor('arsip/index', 'Telusuri Arsip', array('class'=>'btn btn-small')); ?>
           </div>  
+          
           <div class="span6 bookwrap tabs-below">
             <div id="myTabContent" class="tab-content" style="overflow:inherit">
               <div class="tab-pane fade active in" id="baru">
