@@ -21,31 +21,34 @@
             <?php echo anchor('arsip/index', 'Telusuri Arsip', array('class'=>'btn')); ?>
           </div>  
           <div class="span6 bookwrap tabs-below">
-            <div class="strip bookrak bookshelf">
-              <div class="shelf">
-                <div class="rows">
-                  <div class="loc">
-                    <?php
-                      $model = new Buku();
-                      $model->order_by('tgl_terbit','desc')->get(6);
-                      $ctr = 1;
-                      foreach ($model as $data) {
-                        echo '<div class="book">'.anchor('arsip/view/'.$data->id, $data->judul).'</div>';
-                        if($ctr == 3) {
-                          echo '</div></div><div class="rows"><div class="loc">';
-                        }
-                        $ctr++;
-                      }
-                    ?>
-                  </div>
-                </div>
+            <div id="myTabContent" class="tab-content" style="overflow:inherit">
+              <div class="tab-pane fade active in" id="baru">
+                <?php $this->load->view('home/baru') ?>
+              </div>
+              <div class="tab-pane fade" id="favorit">
+                <?php $this->load->view('home/favorit') ?>
+              </div>
+              <div class="tab-pane fade" id="populer">
+                <?php $this->load->view('home/populer') ?>
               </div>
             </div>
-            <ul class="nav nav-tabs bwh stripb">
-              <li class="active"><a href="#">Terbaru</a></li>
-              <li><a href="#">Terfavorit</a></li>
-              <li><a href="#">Terpopuler</a></li>
+            <ul id="myTab" class="nav nav-tabs bwh stripb">
+              <li class="active"><a href="#baru" data-toggle="tab">Terbaru</a></li>
+              <li><a href="#favorit" data-toggle="tab">Terfavorit</a></li>
+              <li><a href="#populer" data-toggle="tab">Terpopuler</a></li>
             </ul>
+            <script src="<?php echo base_url() ?>public/js/jquery.js"></script>
+            <script type="text/javascript">
+            $(function(){
+              setInterval(function() {
+                  var tabs = $('#myTab.nav-tabs > li'),
+                      active = tabs.filter('.active'),
+                      next = active.next('li'),
+                      toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
+                  toClick.trigger('click');
+              }, 7000);
+            });
+            </script> 
           </div>
         </div>
       </div>

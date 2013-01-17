@@ -8,6 +8,8 @@ class User extends CI_Controller {
 	}
 	public function account()
 	{
+		$model = $this->login_manager->get_user();
+		$data['model'] = $model;
 		$data['page']='user/account';
 		$this->load->view('theme/template', $data);
 	}
@@ -24,11 +26,11 @@ class User extends CI_Controller {
 
 			$config['upload_path'] = './public/img/user/';
 			$config['allowed_types'] = 'gif|jpg|png';
-			$config['max_size']	= '200';
+			$config['max_size']	= '1200';
 			$config['max_width']  = '1024';
 			$config['max_height']  = '768';
 			$this->load->library('upload', $config);
-			if (isset($_FILES['user_file']) and $_FILES['user_file']['error']!=4) {
+			if ($_FILES['user_file']['error']!=4) {
 				if (!$this->upload->do_upload('user_file'))
 				{
 					$model->picture = 'error';
@@ -42,7 +44,7 @@ class User extends CI_Controller {
 			$model->password_old = $u['password_old'];
 			$model->password_new = $u['password_new'];
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
-
+			$model->captcha = 'skip';
 			if ($model->save()) {
 				redirect('user/account');
 			} elseif (!$model->error->valid_pic && isset($ret)) {
@@ -52,6 +54,12 @@ class User extends CI_Controller {
 		$data['page']='user/editprofil';
 		$data['model']=$model;
 		$this->load->view('theme/template', $data);
+	}
+	function resize_pic($filename){
+		require_once APPPATH.'libraries/phpthumb/ThumbLib.inc.php';
+		$thumb = PhpThumbFactory::create('./public/img/user/'.$filename);
+		$thumb->adaptiveResize(200, 200);
+		$thumb->save('./public/img/user/'.$filename, 'jpg');
 	}
 	public function arsipku()
 	{

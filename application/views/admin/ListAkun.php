@@ -1,53 +1,60 @@
-<html>
-<head>
-<title>Halaman Admin </title>
-</head>
-<body>
-<h2>List Akun</h2>
-<table border=1>
-<tr>
-	<th>No</th>
-	<th>Nama</th>
-	<th>Email</th>
-	<th>NIM</th>
-	<th>Tanggal Lahir</th>
-	<th>Fakultas</th>
-	<th>Jurusan</th>
-	<th>Jenis Kelamin</th>
-	<th>Angkatan</th>
-	<th>Status</th>
-	<th>Picture</th>
-	<th>Aksi</th>
-	
-</tr>
-
-<?php
-$u = array('Dosen','Mahasiswa','Staff','Alumni');
-
-$i = 0;
-foreach ($query as $row)
-{
-	$i++;
-?>
-	<tr>
-	<td><?php echo $i;?></td>
-	<td><?php echo $row->nama;?></td>
-	<td><?php echo $row->email;?></td>
-	<td><?php echo $row->nim;?></td>
-	<td><?php echo $row->tgl_lahir;?></td>
-	<td><?php echo $row->fakultas_id;?></td>
-	<td><?php echo $row->jurusan_id;?></td>
-	<td><?php echo $row->jen_kelamin;?></td>
-	<td><?php echo $row->angkatan;?></td>
-	
-	<td><?php echo $u[$row->status];?></td>
-	<?php $this->load->helper('html'); ?>
-	<td><?php echo img(base_url().'public/img/user/'.$row->picture) ?></td>
-	<td><a href="<?php echo base_url();?>index.php/admin/CekAkun/<?php echo $row->id;?>">Cek</a></td>
-	</tr>
-<?php
-}
-?>
-</table>
-</body>
-</html>
+<?php $this->load->view('admin/header', array('title'=>'Moderasi Akun')) ?>
+<div class="container">
+	<div class="row sel">
+		<?php $this->load->view('admin/sidebar') ?>
+		<div class="span9 box strip">
+		<table class="table table-striped">
+		<thead>
+			<tr>
+				<th>No</th>
+				<th>Nama</th>
+				<th>NIM</th>
+				<th>Fakultas</th>
+				<th>Jurusan</th>
+				<th>Angkatan</th>
+				<th>Status</th>
+				<th>Picture</th>
+				<th>Aktivasi</th>	
+			</tr>
+		</thead>
+		<tbody>
+				<?php
+				$u = array('Dosen','Mahasiswa','Staff','Alumni');
+				$approve = array ('<p style="color:red">Belum Aktif</p>','<p style="color:green">Sudah Aktif</p>');
+				$i = 0;
+				foreach ($query as $row)
+				{
+					$i++;
+				?>
+					<tr>
+					<td><?php echo $i;?></td>
+					<td><?php echo $row->nama;?></td>
+					<td><?php echo $row->nim;?></td>
+					<td><?php echo $row->fakultas_singkat;?></td>
+					<td><?php echo $row->jurusan_nama;?></td>
+					<td><?php echo $row->angkatan;?></td>
+					
+					<td><?php echo $u[$row->status];?></td>
+					<?php $this->load->helper('html'); ?>
+					<td><?php echo img(base_url().'public/img/user/'.$row->picture) ?></td>
+					<td>
+					<form action="<?php echo base_url();?>index.php/admin/CekAkun/<?php echo $row->id;?>" method="POST">
+					<?php echo $approve[$row->approved];?>
+					<select name="akun" onchange="this.form.submit()">
+					<option>Pilih</option>
+					<option value="1">Setuju</option>
+					<option value="0">Tolak</option>
+					</select>
+					
+					</form>
+					</td>
+					</tr>
+				<?php
+				}
+				?>
+			</tbody>
+		</table>
+		<?php echo $pagination ?>
+		</div>
+	</div>
+</div>

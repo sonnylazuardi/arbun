@@ -53,5 +53,5 @@
 		}
 		echo form_upload('user_file');
 	?>
-	<p class="help-block">Gambar berupa file jpg,gif,png maks 500kb, berukuran 120x120px</p>
+	<p class="help-block">Gambar berupa file jpg,gif,png maks 1200kb, berukuran 200x200px</p>
 </div>

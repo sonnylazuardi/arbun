@@ -25,8 +25,9 @@
           </p>
         </div>
         <div class="span3 strip box">
-          <div class="side">
+          <div class="side" style="text-align:center">
             <?php $this->load->view('arsip/rating') ?>
+            <?php echo $model->view.' kali dilihat' ?>
           </div>
         </div>
         <div class="span3 strip box">

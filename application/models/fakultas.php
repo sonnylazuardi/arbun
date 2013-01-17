@@ -5,7 +5,7 @@ class Fakultas extends DataMapper {
 
     var $has_one = array();
     
-    var $has_many = array();
+    var $has_many = array('akun');
 
     var $validation = array();
 

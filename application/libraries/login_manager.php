@@ -77,6 +77,8 @@ class Login_Manager {
 			if(is_numeric($id))
 			{
 				$u = new Akun();
+				$u->include_related('fakultas', array('nama'));
+				$u->include_related('jurusan', array('nama'));
 				$u->get_by_id($id);
 				if($u->exists()) {
 					$this->logged_in_user = $u;

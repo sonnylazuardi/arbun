@@ -205,3 +205,6 @@ footer p {
 .box .side {
   padding: 10px;
 }
+.sel select{
+  width: 100%;
+}

@@ -29,7 +29,7 @@
 				  		<td> 
 								<?php echo anchor('arsip/view/'.$buku->id,'<i class="icon-eye-open"></i>', 'class="btn btn-small"'); ?>
 								<?php echo anchor('arsip/update/'.$buku->id,'<i class="icon-pencil"></i>', 'class="btn btn-small"'); ?>
-								<?php echo anchor('arsip/delete/'.$buku->id,'<i class="icon-trash"></i>', 'class="btn btn-small"'); ?>
+								<?php echo anchor('arsip/delete/'.$buku->id,'<i class="icon-trash"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small"'); ?>
 						  </td>
 						 </tr>
 				  	<?php $ctr++; ?>

@@ -37,7 +37,7 @@ class Auth extends CI_Controller {
 				$model->captcha = $u['captcha'];
 			$config['upload_path'] = './public/img/user/';
 			$config['allowed_types'] = 'gif|jpg|png';
-			$config['max_size']	= '500';
+			$config['max_size']	= '1200';
 			$config['max_width']  = '1024';
 			$config['max_height']  = '768';
 			$this->load->library('upload', $config);
@@ -66,16 +66,10 @@ class Auth extends CI_Controller {
 		$this->load->view('theme/template', $data);
 	}
 	function resize_pic($filename){
-		$config['image_library'] = 'gd2';
-		$config['source_image']	= './public/img/user/'.$filename;
-		$config['create_thumb'] = FALSE;
-		$config['maintain_ratio'] = FALSE;
-		$config['width']	 = 120;
-		$config['height']	= 120;
-
-		$this->load->library('image_lib', $config); 
-
-		$this->image_lib->resize();
+		require_once APPPATH.'libraries/phpthumb/ThumbLib.inc.php';
+		$thumb = PhpThumbFactory::create('./public/img/user/'.$filename);
+		$thumb->adaptiveResize(200, 200);
+		$thumb->save('./public/img/user/'.$filename, 'jpg');
 	}
 	public function login()
 	{

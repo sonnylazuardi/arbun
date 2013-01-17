@@ -7,7 +7,8 @@
 			<div class="row">
 				<div class="span5">
 					<h4><?php echo $user->nama ?></h4>
-					<p><?php echo $user->jurusan->get()->nama ?></p>
+					<?php $arr = array('Dosen','Mahasiswa','Staf','Alumni') ?>
+					<p><?php echo $arr[$user->status].' - '.$user->jurusan->get()->nama ?></p>
 				</div>
 				<div class="span1">
 					<img src="<?php echo $user->get_profpic(); ?>" />

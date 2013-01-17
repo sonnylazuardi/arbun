@@ -3,7 +3,7 @@ class Akun extends DataMapper {
 
     var $table = 'akun';
 
-    var $has_one = array('jurusan');
+    var $has_one = array('fakultas', 'jurusan');
 
     var $has_many = array('buku', 'komentar');
 

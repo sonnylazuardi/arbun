@@ -5,7 +5,7 @@
     <div class="span9 strip box">
       <h3>Edit Arsip</h3>
       <legend></legend> 
-      <?php echo form_open(); ?>
+      <?php echo form_open_multipart(); ?>
       <?php $this->load->view('arsip/_form') ?>
     </div>
   </div>

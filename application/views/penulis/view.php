@@ -4,10 +4,18 @@
   <div class="row">
     <div class="span6">
       <div class="row">
-        <?php $this->load->view('penulis/biodata') ?>
+        <div class="span6 strip box">
+          <div class="side">
+            <?php $this->load->view('penulis/biodata') ?>
+          </div>
+        </div>
       </div>
       <div class="row">
-        <?php $this->load->view('penulis/penghargaan') ?>
+        <div class="span6 strip box">
+          <div class="side">
+            <?php $this->load->view('penulis/penghargaan') ?>
+          </div>
+        </div>
       </div>
     </div>
     <div class="span6 strip box">

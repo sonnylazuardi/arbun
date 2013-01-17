@@ -27,11 +27,10 @@ class Arsip extends CI_Controller {
 				$model->where_related($rel, 'id', $v[$rel]);
 			}
 		}
+		
 		$model->get_paged_iterated($offset, 20);
 		$count = $model->paged->total_rows;
 		$limit = $model->paged->page_size;
-		$data['model']=$model;
-		$data['v']=$v;
 		$this->load->library('pagination');
 		$config['base_url'] = site_url().'/arsip/index/';
 		$config['total_rows'] = $count;
@@ -40,8 +39,10 @@ class Arsip extends CI_Controller {
 		$config['first_url'] = $config['base_url'].$config['suffix'];
 		$config['use_page_numbers'] = TRUE;
 		$this->pagination->initialize($config); 
-
 		$data['pagination'] = $this->pagination->create_links();
+
+		$data['model']=$model;
+		$data['v']=$v;
 		$data['page']='arsip/index';
 		$this->load->view('theme/template', $data);
 	}
@@ -49,6 +50,17 @@ class Arsip extends CI_Controller {
 	{
 		$data['page']='search';
 		$this->load->view('theme/template', $data);
+	}
+	public function _add_view_count($model, $id)
+	{
+		$arr = array();
+		if($this->session->userdata('pageview'))$arr = $this->session->userdata('pageview');
+		if (!in_array($id, $arr)) {
+			$model->view++;
+			$model->skip_validation()->save();
+			array_push($arr, $id);
+			$this->session->set_userdata('pageview', $arr);
+		}
 	}
 	public function view($id = 0)
 	{
@@ -58,15 +70,7 @@ class Arsip extends CI_Controller {
 		$model->select('*');
 		$model->get_by_id($id);
 		if(!$model->exists())show_error('Buku Tidak ditemukan');
-		$arr = array();
-		if($this->session->userdata('pageview'))$arr = $this->session->userdata('pageview');
-		if (!in_array($id, $arr)) {
-			$model->view++;
-			$model->skip_validation()->save();
-			array_push($arr, $id);
-			$this->session->set_userdata('pageview', $arr);
-			log_message('error', print_r($this->session->userdata('pageview'), true));
-		}
+		$this->_add_view_count($model, $id);
 		if(!$model->exists())show_error('Buku tidak ditemukan');
 		$data['model'] = $model;
 		$data['page']='arsip/view';
@@ -131,7 +135,7 @@ class Arsip extends CI_Controller {
 			$config['allowed_types'] = 'pdf';
 			$config['max_size']	= '5000';
 			$this->load->library('upload', $config);
-			if (isset($_FILES['upload_pdf']) and $_FILES['upload_pdf']['error']!=4) {
+			if ($_FILES['upload_pdf']['error']!=4) {
 				if (!$this->upload->do_upload('upload_pdf'))
 				{
 					$model->link  = 'error';
