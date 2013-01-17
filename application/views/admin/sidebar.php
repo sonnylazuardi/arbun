@@ -5,7 +5,9 @@
 				<?php activeMenu('<i class="icon-user"></i> Moderasi Akun', 'admin/ListAkun', 'admin/ListAkun', $page) ?>
 				<?php activeMenu('<i class="icon-book"></i> Moderasi Buku', '
 				admin/ListBuku', 'admin/ListBuku', $page) ?>
-				<?php activeMenu('<i class="icon-comment"></i> Moderasi Komentar', 'admin/ListKomentar', 'admin/ListKomentar', $page) ?>
+				<?php activeMenu('<i class="icon-comment"></i> Moderasi Komentar', 
+				'admin/ListKomentar', 'admin/ListKomentar', $page) ?>
+				<?php activeMenu('<i class="icon-bullhorn"></i> Moderasi Laporan', 'admin/ListLaporan', 'admin/ListLaporan', $page) ?>
 				<li><?php echo anchor('admin/logs','<i class="icon-lock"></i> Logs') ?></li>
 			</ul>
 		</div>

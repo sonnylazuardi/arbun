@@ -27,9 +27,8 @@
 				  		<td><?php echo $buku->created ?></td>
 				  		<td><?php echo $buku->get_matkulku() ?></td>
 				  		<td> 
-								<?php echo anchor('arsip/view/'.$buku->id,'<i class="icon-eye-open"></i>', 'class="btn btn-small"'); ?>
-								<?php echo anchor('arsip/update/'.$buku->id,'<i class="icon-pencil"></i>', 'class="btn btn-small"'); ?>
-								<?php echo anchor('arsip/delete/'.$buku->id,'<i class="icon-trash"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small"'); ?>
+								<?php echo anchor('arsip/update/'.$buku->id,'<i class="icon-pencil icon-white"></i>', 'class="btn btn-small btn-primary"'); ?>
+								<?php echo anchor('arsip/delete/'.$buku->id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger"'); ?>
 						  </td>
 						 </tr>
 				  	<?php $ctr++; ?>

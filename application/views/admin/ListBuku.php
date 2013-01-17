@@ -29,14 +29,14 @@
 						<td><?php echo $row->tgl_terbit;?></td>
 						<td><a href="<?php echo $row->link;?>">Lihat</a></td>
 						<td>
-						<form action="<?php echo base_url();?>index.php/admin/CekBuku/<?php echo $row->id;?>" method="POST">
+						<?php echo form_open('admin/CekBuku/'.$row->id) ?>
 						<?php echo $approve[$row->status];?>
 						<select name="buku" onchange="this.form.submit()">
-						<option>Pilih</option>
-						<option value="1">Setuju</option>
-						<option value="0">Tolak</option>
+							<option>Pilih</option>
+							<option value="1">Setuju</option>
+							<option value="0">Tolak</option>
 						</select>
-						</form>
+						<?php echo form_close() ?>
 						</td>
 						</tr>
 					<?php

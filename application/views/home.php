@@ -25,9 +25,9 @@
               </div>
             </div>
             <ul id="myTab" class="nav nav-tabs bwh stripb">
-              <li class="active"><a href="#baru" data-toggle="tab">Terbaru</a></li>
-              <li><a href="#favorit" data-toggle="tab">Terfavorit</a></li>
-              <li><a href="#populer" data-toggle="tab">Terpopuler</a></li>
+              <li class="active"><a href="#baru" data-toggle="tab"><i class="icon-refresh"></i> Terbaru</a></li>
+              <li><a href="#favorit" data-toggle="tab"><i class="icon-star"></i> Terfavorit</a></li>
+              <li><a href="#populer" data-toggle="tab"><i class="icon-thumbs-up"></i> Terpopuler</a></li>
             </ul>
             <script src="<?php echo base_url() ?>public/js/jquery.js"></script>
             <script type="text/javascript">

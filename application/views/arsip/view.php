@@ -37,11 +37,18 @@
             <p><?php echo $model->get_bidangku(true) ?></p>
           </div>
         </div>
+        <?php if($user): ?>
         <div class="span3 strip box">
           <div class="side">
-            <?php echo anchor('arsip/download/'.$model->id, 'Unduh', 'class="btn btn-warning"') ?>
-            <?php echo anchor('arsip/print/'.$model->id, 'Print', 'class="btn btn-success"') ?>
-            <?php echo anchor('arsip/report/'.$model->id, 'Lapor', 'class="btn btn-danger"') ?>
+            <?php $this->load->view('arsip/bookmark') ?> 
+            <?php echo anchor('reports/create/'.$model->id, '<i class="icon-bullhorn icon-white"></i> Lapor', 'class="btn btn-danger"') ?>
+          </div>
+        </div>
+        <?php endif; ?>
+        <div class="span3 strip box">
+          <div class="side">
+            <?php echo anchor('arsip/download/'.$model->id, '<i class="icon-download icon-white"></i> Unduh', 'class="btn btn-primary"') ?>
+            <?php echo anchor('arsip/print/'.$model->id, '<i class="icon-print icon-white"></i> Print', 'class="btn btn-success" onclick="window.print();return false"') ?>
           </div>
         </div>
         <div class="span3 strip box">
@@ -77,13 +84,6 @@
             </div>
           </div>
         </div>
-        <?php if($user): ?>
-        <div class="span3 strip box">
-          <div class="side">
-            <?php $this->load->view('arsip/bookmark') ?>
-          </div>
-        </div>
-        <?php endif; ?>
         <div class="span3 strip box">
           <div class="side">
             <h5>Komentar</h5>

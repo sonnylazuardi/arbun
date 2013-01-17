@@ -25,6 +25,7 @@ class Penulis extends CI_Controller {
 		$model->_include_buku_count();
 		$model->_include_buku_view_count();
 		$model->select('*');
+		$model->where('approved !=', 0);
 		$model->from_array($_GET, array('_urut', '_q', '_status', '_fakultas_id', '_jurusan_id'));
 		$model->_eksekusi();
 		
@@ -53,6 +54,7 @@ class Penulis extends CI_Controller {
 	public function view($id = 0)
 	{
 		$model = new Akun();
+		$model->where('approved !=', 0);
 		$model->get_by_id($id);
 		$this->_add_view_count($model, $id);
 		if(!$model->exists())show_error('Profil penulis tidak ditemukan');

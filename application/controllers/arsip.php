@@ -26,6 +26,7 @@ class Arsip extends CI_Controller {
 		$model->_include_komentar_count();
 		$model->_include_akun();
 		$model->select('*');
+		$model->where('status !=', 0);
 		$model->from_array($_GET, array('_urut', '_q', '_kategori', '_matkul', '_bidang', '_akun_nama', '_judul', '_tahun', '_abstrak'));
 		$model->_eksekusi();
 
@@ -58,6 +59,7 @@ class Arsip extends CI_Controller {
 		$model->_include_rating_counts();
 		$model->include_related('akun', array('nama'));
 		$model->select('*');
+		$model->where('status !=', 0);
 		$model->get_by_id($id);
 		if(!$model->exists())show_error('Buku Tidak ditemukan');
 		$this->_add_view_count($model, $id);

@@ -60,6 +60,14 @@ class Admin extends CI_Controller
 		$this->session->set_flashdata('pesan', 'Buku berhasil dimoderasi');
 		redirect('admin/ListBuku');
 	}
+	function CekLapor($id)
+	{
+		$data = array('status'=>$this->input->post('buku'));
+		$this->db->where('id',$id);
+		$this->db->update('buku',$data);
+		$this->session->set_flashdata('pesan', 'Buku berhasil dimoderasi');
+		redirect('admin/ListLaporan');
+	}
 	function ListKomentar($offset = 0)
 	{
 		$model = new Komentar();
@@ -79,6 +87,17 @@ class Admin extends CI_Controller
 		$this->session->set_flashdata('pesan', 'Komentar berhasil dimoderasi');
 		redirect('admin/ListKomentar');
 	}	
+	function ListLaporan($offset = 0)
+	{
+		$model = new Lapor();
+		$model->order_by('id', 'desc');
+		$model->include_related('buku', array('judul', 'status'));
+		$model->include_related('akun', array('nama'));
+		$data['pagination'] = $this->_paginate($model, 'admin/ListLaporan', $offset, 20);
+		$data['query'] = $model;
+		$data['page']='admin/ListLaporan';
+		$this->load->view('theme/template', $data);
+	}
 	function logs()
 	{
 	  $this->load->spark('fire_log/0.8.2');

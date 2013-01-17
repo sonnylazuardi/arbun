@@ -21,7 +21,7 @@
 							<td><?php echo $ctr ?></td>
 							<td><?php echo anchor('arsip/view/'.$selip->buku_id, $selip->buku_judul) ?></td>
 							<td> 
-									<?php echo anchor('bookmarks/delete/'.$selip->id.'/'.$selip->buku_id,'<i class="icon-trash"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small" '); ?>
+									<?php echo anchor('bookmarks/delete/'.$selip->id.'/'.$selip->buku_id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger" '); ?>
 							  </td>
 							 </tr>
 						<?php $ctr++; ?>
