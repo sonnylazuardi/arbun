@@ -17,20 +17,21 @@ class Akun extends DataMapper {
             'rules' => array('required', 'trim', 'valid_email', 'unique', 'min_length'=>3,'max_length' => 100),
         ),
         'password' => array(
-            'rules' => array('required'),
+            'rules' => array('required', 'trim', 'min_length' => 3, 'max_length' => 40, 'encrypt'),
             'type' => 'password',
         ),
         'confirm_password' => array( // accessed via $this->confirm_password
-            'rules' => array('matches' => 'password'),
+            'rules' => array('required', 'encrypt', 'matches' => 'password', 'min_length' => 3, 'max_length' => 40),
             'type' => 'password',
         ),
-        'password_old' => array(
+        /*'password_old' => array(
             'rules' => array('valid_old_pass'),
             'type' => 'password',
         ),
         'password_new' => array(
+            'rules' => array('min_length' => 3, 'max_length' => 40),
             'type' => 'password',
-        ),
+        ),*/
         'nim' => array(
             'rules' => array('required', 'unique', 'numeric'),
         ),
@@ -67,14 +68,14 @@ class Akun extends DataMapper {
     {
         parent::__construct($id);
     }
-    function _valid_old_pass($field)
+    /*function _valid_old_pass($field)
     {
-        if($this->{$field}!=$this->password){
+        if($this->_encrypt($field)!=$this->password){
             $this->error_message('valid_old_pass', 'Password lama tidak sesuai');
         } else {
-            $this->password = $this->password_new;
+            $this->password = $this->_encrypt('password_new');
         }
-    }
+    }*/
     function _valid_pic($field)
     {
         if($this->{$field}=='error') {
@@ -84,13 +85,16 @@ class Akun extends DataMapper {
     
     function login()
     {
-        $nim = $this->nim;
+        $unim = $this->nim;
+        $u = new Akun();
+        $u->where('nim', $unim)->get();
+        $this->salt = $u->salt;
         $this->validate()->get();
         if ($this->exists()) {
             return true;
         } else {
             $this->error_message('login', 'NIM/NIP atau Password salah');
-            $this->nim = $nim;
+            $this->nim = $unim;
             return FALSE;
         }
     }
@@ -98,6 +102,19 @@ class Akun extends DataMapper {
     function get_profpic()
     {
         return base_url().'public/img/user/'.$this->picture;
+    }
+
+    function _encrypt($field)
+    {
+        if (!empty($this->{$field}))
+        {
+            if (empty($this->salt))
+            {
+                $this->salt = md5(uniqid(rand(), true));
+            }
+            $this->{$field} = sha1($this->salt . $this->{$field});
+        }
+        // return $this->{$field};
     }
     public function _count_award()
     {

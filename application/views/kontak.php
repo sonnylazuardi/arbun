@@ -31,7 +31,7 @@
 		Pada akhirnya, portal ini diharapkan dapat membantu pada dosen
 		maupun mahasiswa di dalam meminimalisasi kasus plagiarisme. 
 		</p>
-		<p>Kami berharap, situs ini dapat membantu kebutuhan dokumentasi dan publikasi makalah ilmiah khususnya di bidang informatika. Kami mengharapkan saran, masukan, dukungan, dari pengunjung. Anda bisa berpartipasi untuk mendukung kami di </p>
+		<p>Kami berharap, situs ini dapat membantu kebutuhan dokumentasi dan publikasi makalah ilmiah khususnya di bidang informatika. Kami mengharapkan saran, masukan, dukungan, dari pengunjung. Anda bisa berpartipasi untuk mendukung kami di halaman Facebook kami.</p>
 		<?php echo anchor('http://facebook.com/ArsipBuncit', 'Facebook', 'title="Facebook" class="btn btn-primary btn-large"'); ?>
 		<br>
 		<br>

@@ -9,10 +9,10 @@
 			<div class="row" style="margin:10px;">
 				<?php $this->load->view('user/_form'); ?>
 				<div class="span4">
-					<label>Password Lama:</label>
-					<?php echo form_password('Akun[password_old]'); ?>
 					<label>Password Baru:</label>
-					<?php echo form_password('Akun[password_new]'); ?>
+					<?php echo form_password('Akun[password]'); ?>
+					<label>Ulangi Password Baru:</label>
+					<?php echo form_password('Akun[confirm_password]'); ?>
 				</div>
 			</div>
 			<div class="form-actions">

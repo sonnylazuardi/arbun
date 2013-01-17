@@ -41,8 +41,8 @@ class User extends CI_Controller {
 					$model->picture = $ret['file_name'];
 				}
 			}
-			$model->password_old = $u['password_old'];
-			$model->password_new = $u['password_new'];
+			// $model->password_old = $u['password_old'];
+			// $model->password_new = $u['password_new'];
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			$model->captcha = 'skip';
 			if ($model->save()) {
