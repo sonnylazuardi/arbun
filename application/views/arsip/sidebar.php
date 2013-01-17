@@ -1,6 +1,9 @@
 <?php echo form_open('arsip/index', array('method'=>'get', 'style'=>'margin:0')) ?>
 <?php echo form_hidden('_q', $model->_q) ?>
 <?php 
+if (!empty($_GET['adv'])) {
+	echo form_hidden('adv', 'adv');
+}
 foreach (array('_akun_nama', '_judul', '_tahun', '_abstrak') as $rel) {
 	if (!empty($model->{$rel})) {
 		echo form_hidden($rel, $model->{$rel});
