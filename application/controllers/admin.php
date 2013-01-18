@@ -36,9 +36,11 @@ class Admin extends CI_Controller
 	public function akundelete($id = 0)
 	{
 		$model = new Akun();
+		$buku = new Buku();
 		$model->get_by_id($id);
 		if($model->exists()) {
-			$model->delete();
+			unlink('./public/img/user/'.basename($model->picture));
+			$model->delete($buku->get());
 		}
 		redirect('admin/ListAkun');
 	}
@@ -66,6 +68,7 @@ class Admin extends CI_Controller
 		$model = new Buku();
 		$model->get_by_id($id);
 		if($model->exists()) {
+			unlink('./public/pdf/'.basename($model->link));
 			$model->delete();
 		}
 		redirect('admin/ListBuku');

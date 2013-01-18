@@ -167,6 +167,7 @@ class Arsip extends CI_Controller {
 		$model = new Buku();
 		$model->get_by_id($id);
 		if(!$model->exists())show_error('Tidak ditemukan Buku yang dicari');
+		unlink('./public/pdf/'.basename($model->link));
 		$model->delete();
 		$this->session->set_flashdata('pesan', 'Arsip berhasil dihapus');
 		redirect('user/arsipku');
