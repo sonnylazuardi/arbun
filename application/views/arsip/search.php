@@ -37,7 +37,9 @@
 $(function(){
   $('#search-con').on('click',function(){
      $('#biasa').toggle(500);
-     $('#advance').toggle(500); 
+     $('#advance').toggle(500);
+     var text = $('#search-con').text();
+	   $('#search-con').text( text == "Pencarian Lanjutan" ? "Pencarian Biasa" : "Pencarian Lanjutan");
   });
   <?php if(!empty($_GET['adv'])): ?>
   	$('#search-con').trigger('click');

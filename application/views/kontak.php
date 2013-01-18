@@ -46,7 +46,7 @@
 				<tbody>
 				<tr><td ><?php echo img('/public/img/sonny.jpg');?></td> <td><b>Sonny Lazuardi Hermawan</b><br>Teknik Informatika</td></tr>
 				<tr><td ><?php echo img('/public/img/evan.jpg');?></td> <td><b>Ignatius Evan Daryanto</b><br>Teknik Informatika</td></tr>
-				<tr><td ><?php echo img('/public/img/habibie.jpg');?></td> <td><b>Habibie Farid</b><br>Teknik Informatika</td></tr>
+				<tr><td ><?php echo img('/public/img/habibie.jpg');?></td> <td><b>Habibie Faried</b><br>Teknik Informatika</td></tr>
 				<tr><td ><?php echo img('/public/img/genta.jpg');?></td> <td><b>Genta Indra Winata</b><br>Teknik Informatika</td></tr>
 				<tr><td ><?php echo img('/public/img/alif.jpg');?></td> <td><b>Alif Raditya Rochman</b><br>Teknik Informatika</td></tr>
 				</tbody>

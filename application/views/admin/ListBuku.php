@@ -36,6 +36,8 @@
 							<option value="1">Setuju</option>
 							<option value="0">Tolak</option>
 						</select>
+						<?php echo anchor('admin/bukudelete/'.$row->id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger"'); ?>
+
 						<?php echo form_close() ?>
 						</td>
 						</tr>

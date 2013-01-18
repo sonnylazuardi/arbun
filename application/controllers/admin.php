@@ -4,8 +4,8 @@ class Admin extends CI_Controller
 	function __construct()
 	{
 		parent::__construct();
+		if(!$this->session->userdata('admin')) redirect('home/adminlogin');
 	}
-	
 	function index()
 	{
 		redirect('admin/ListAkun');
@@ -33,6 +33,15 @@ class Admin extends CI_Controller
 		$data['page']='admin/ListAkun';
 		$this->load->view('theme/template', $data);
 	}
+	public function akundelete($id = 0)
+	{
+		$model = new Akun();
+		$model->get_by_id($id);
+		if($model->exists()) {
+			$model->delete();
+		}
+		redirect('admin/ListAkun');
+	}
 	function CekAkun($id)
 	{
 		$model = new Akun();
@@ -51,6 +60,15 @@ class Admin extends CI_Controller
 		$data['query'] = $model;
 		$data['page']='admin/ListBuku';
 		$this->load->view('theme/template', $data);
+	}
+	public function bukudelete($id = 0)
+	{
+		$model = new Buku();
+		$model->get_by_id($id);
+		if($model->exists()) {
+			$model->delete();
+		}
+		redirect('admin/ListBuku');
 	}
 	function CekBuku($id)
 	{
@@ -79,6 +97,15 @@ class Admin extends CI_Controller
 		$data['page']='admin/ListKomentar';
 		$this->load->view('theme/template', $data);
 	}
+	public function komentarsdelete($id = 0, $idbuku = 0)
+	{
+		$model = new Komentar();
+		$model->get_by_id($id);
+		if($model->exists()) {
+			$model->delete();
+		}
+		redirect('admin/ListKomentar');
+	}
 	function CekKomentar($id)
 	{
 		$data = array('status'=>$this->input->post('komentar'));
@@ -97,6 +124,15 @@ class Admin extends CI_Controller
 		$data['query'] = $model;
 		$data['page']='admin/ListLaporan';
 		$this->load->view('theme/template', $data);
+	}
+	public function laporandelete($id = 0, $idbuku = 0)
+	{
+		$model = new Lapor();
+		$model->get_by_id($id);
+		if($model->exists()) {
+			$model->delete();
+		}
+		redirect('admin/ListLaporan');
 	}
 	function ListPenghargaan($offset = 0)
 	{

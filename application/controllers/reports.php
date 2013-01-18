@@ -31,16 +31,6 @@ class Reports extends CI_Controller {
 		$data['page']='arsip/report';
 		$this->load->view('theme/template', $data);
 	}
-	public function delete($id = 0, $idbuku = 0)
-	{
-		$user = $this->login_manager->get_user();
-		$model = new Lapor();
-		$model->get_by_id($id);
-		if($model->exists()) {
-			$model->delete();
-		}
-		redirect('admin/ListLaporan');
-	}
 }
 /* End of file welcome.php */
 /* Location: ./application/controllers/welcome.php */

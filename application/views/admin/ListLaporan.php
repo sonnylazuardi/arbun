@@ -33,7 +33,7 @@
 										<option value="1">Biarkan</option>
 										<option value="0">Blok</option>
 									</select>
-									<?php echo anchor('reports/delete/'.$row->id.'/'.$row->buku_id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger"'); ?>
+									<?php echo anchor('admin/laporandelete/'.$row->id.'/'.$row->buku_id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger"'); ?>
 									<?php echo form_close() ?>
 								</td>
 							</tr>

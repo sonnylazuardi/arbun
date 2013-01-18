@@ -17,6 +17,25 @@ class Home extends CI_Controller {
 		$data['page']='kontak';
 		$this->load->view('theme/template', $data);
 	}
+	public function adminlogin()
+	{
+		$model = new Akun();
+		if (isset($_POST['Login'])) {
+			$model->from_array($_POST['Login'], array('nim', 'password'));
+			if($model->nim=='arbun' && $model->password=='arbunituikan'){
+				$this->session->set_userdata('admin', true);
+				redirect('admin/index');
+			}
+		}
+		$data['model'] = $model;
+		$data['page']='login';
+		$this->load->view('theme/template', $data);
+	}
+	public function adminlogout()
+	{
+		$this->session->unset_userdata('admin');
+		redirect('home/index');
+	}
 	
 }
 
