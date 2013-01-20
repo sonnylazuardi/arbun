@@ -47,14 +47,38 @@
     </div>
 
     <div class="kategori container stripb">
-      <div class="row">
-        <div class="span3">
-          <h4>Kategori</h4>
-            <?php $u = new Kategori(); echo $u->getLinks(); ?>
+      <div class="span6">
+        <div class="row">
+          <div class="span3">
+            <h4>Kategori</h4>
+              <?php $u = new Kategori(); echo $u->getLinks(); ?>
+          </div>
+          <div class="span3">
+            <h4>Mata Kuliah</h4>
+              <?php $u = new Matkul(); echo $u->getLinks(); ?>
+          </div>
         </div>
-        <div class="span3">
-          <h4>Mata Kuliah</h4>
-            <?php $u = new Matkul(); echo $u->getLinks(); ?>
+        <div class="row" style="margin-top:30px">
+          <div class="span3">
+            <?php 
+              $u = new Buku();
+              $c = $u->where('status !=', 0)->count();
+              foreach (str_split($c) as $a) {
+                echo '<span class="digit">'.$a.'</span>';
+              }
+             ?>
+             <br>Arsip
+          </div>
+          <div class="span3">
+            <?php 
+              $u = new Akun();
+              $c = $u->where('approved !=', 0)->count();
+              foreach (str_split($c) as $a) {
+                echo '<span class="digit">'.$a.'</span>';
+              }
+             ?>
+             <br>Penulis
+          </div>
         </div>
       </div>
     </div>

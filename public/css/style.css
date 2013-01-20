@@ -113,7 +113,6 @@ footer p {
 }
 .kategori h4{
   font-weight: normal;
-  color: #7b7b7b;
 }
 .bwh {
   margin-left: 20px;
@@ -210,4 +209,17 @@ footer p {
 }
 .hl{
   font-weight: bold;
+}
+.digit {
+  background: url(../img/digit.png) no-repeat;
+  width: 30px;
+  height: 35px;
+  margin: 0 2px;
+  padding-top: 8px;
+  float: left;
+  font-family: "Impact", Arial, sans-serif;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #000000;
+  font-size: 20px;
+  text-align: center;
 }

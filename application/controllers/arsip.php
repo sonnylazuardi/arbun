@@ -177,12 +177,7 @@ class Arsip extends CI_Controller {
 		$model = new Buku();
 		$model->get_by_id($id);
 		if(!$model->exists())show_error('Tidak ditemukan Buku yang dicari');
-		$this->load->helper('download');
-		$this->load->helper('file');
-		$data = file_get_contents($model->link); // Read the file's contents
-		$name = $model->judul.'.pdf';
-
-		force_download($name, $data);
+		redirect($model->link);
 	}
 }
 
