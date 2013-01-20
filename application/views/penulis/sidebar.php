@@ -7,7 +7,7 @@
 				<h4>Urutan</h4>
 				<legend></legend>
 				<?php 
-					$u = array('id'=>'Waktu Bergabung', 'buku_view_count'=>'Terpopuler', 'nama'=>'Sesuai Abjad', 'buku_count'=>'Arsip Terbanyak');
+					$u = array(''=>'Pilih','id'=>'Waktu Bergabung', 'buku_view_count'=>'Terpopuler', 'nama'=>'Sesuai Abjad', 'buku_count'=>'Arsip Terbanyak');
 					echo form_dropdown('_urut', $u, $model->_urut, 'onchange="this.form.submit()"');
 				?>
 			</div>

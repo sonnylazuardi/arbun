@@ -22,7 +22,12 @@ class User extends CI_Controller {
 		$model->tgl = $date->format("d");
 		if(isset($_POST['Akun'])) {
 			$u = $_POST['Akun'];
-			$model->from_array($u);
+			if( ! empty($u['password']))
+			{
+				$model->from_array($u, array('password', 'confirm_password'));
+			}
+			$model->from_array($u, array('nama', 'nim', 'email',
+			'tgl_lahir', 'angkatan', 'status', 'fakultas_id', 'jurusan_id', 'jen_kelamin'));
 
 			$config['upload_path'] = './public/img/user/';
 			$config['allowed_types'] = 'gif|jpg|png';

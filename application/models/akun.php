@@ -111,7 +111,10 @@ class Akun extends DataMapper {
 
     function get_profpic()
     {
-        return base_url().'public/img/user/'.$this->picture;
+        if (file_exists("./public/img/user/".$this->picture) && !empty($this->picture))
+            return base_url().'public/img/user/'.$this->picture;
+        else
+            return base_url().'public/img/noimg.png';
     }
 
     function _encrypt($field)

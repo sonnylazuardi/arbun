@@ -25,7 +25,7 @@
 <div class="span3">
 	<label>Status :</label>
 	<?php 
-		$statuses = array('Dosen', 'Mahasiswa', 'Staf', 'Lain-lain');
+		$statuses = array('Dosen', 'Mahasiswa', 'Staf', 'Alumni');
 		echo form_dropdown('Akun[status]', $statuses, $model->status);
 	?>
 	<label>Fakultas/Sekolah :</label>
