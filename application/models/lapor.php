@@ -8,9 +8,9 @@ class Lapor extends DataMapper {
     var $has_many = array();
 
     var $validation = array(
-			'isi' => array(
-        'rules' => array('required'),
-      ),
+	   'isi' => array(
+            'rules' => array('required'),
+        ),
     );
 
     function __construct()

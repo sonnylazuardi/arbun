@@ -115,7 +115,9 @@ class Buku extends DataMapper {
     }
     public function search($term)
     { 
-      $this->where('MATCH(judul, abstrak) AGAINST("' . $term . '" IN BOOLEAN MODE)');
+      // $this->where('MATCH(judul, abstrak) AGAINST("' . $term . '" IN BOOLEAN MODE)');
+      $this->ilike('judul', $term);
+      $this->or_ilike('abstrak', $term);
     } 
     public function _my_rating($buku_id, $akun_id)
     {

@@ -29,6 +29,13 @@
             <p><?php echo $model->get_bidangku(true) ?></p>
           </div>
         </div>
+        <?php if($this->session->userdata('admin')): ?>
+        <div class="span3 strip box">
+          <div class="side">
+            <?php echo anchor('admin/TambahAward/'.$model->id, '<i class="icon-plus icon-white"></i> Tambah Penghargaan', 'class="btn btn-primary"') ?>
+          </div>
+        </div>  
+        <?php endif; ?>
         <?php if($user): ?>
         <div class="span3 strip box">
           <div class="side">

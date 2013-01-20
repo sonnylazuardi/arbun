@@ -17,7 +17,7 @@ foreach (array('_akun_nama', '_judul', '_tahun', '_abstrak') as $rel) {
 				<h4>Urutan</h4>
 				<legend></legend>
 				<?php 
-					$u = array('view'=>'Terpopuler', 'rating_count'=>'Terfavorit', 'komentar_count'=>'Tebanyak Diskusi', 'tgl_terbit'=>'Tanggal Terbit', 'created'=>'Tanggal Upload', 'judul'=>'Judul', 'akun_nama'=>'Penulis');
+					$u = array(''=>'Pilih', 'view'=>'Terpopuler', 'rating_count'=>'Terfavorit', 'komentar_count'=>'Tebanyak Diskusi', 'tgl_terbit'=>'Tanggal Terbit', 'created'=>'Tanggal Upload', 'judul'=>'Judul', 'akun_nama'=>'Penulis');
 					echo form_dropdown('_urut', $u, $model->_urut, 'onchange="this.form.submit()"');
 				?>
 			</div>

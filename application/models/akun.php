@@ -14,7 +14,7 @@ class Akun extends DataMapper {
             'rules' => array('required', 'trim', 'min_length'=>3,'max_length' => 100),
         ),
         'email' => array(
-            'rules' => array('required', 'trim', 'valid_email', 'unique', 'min_length'=>3,'max_length' => 100),
+            'rules' => array('required', 'trim', 'check_email', 'valid_email', 'unique', 'min_length'=>3,'max_length' => 100),
         ),
         'password' => array(
             'rules' => array('required', 'trim', 'min_length' => 3, 'max_length' => 40, 'encrypt'),
@@ -80,6 +80,16 @@ class Akun extends DataMapper {
     {
         if($this->{$field}=='error') {
             $this->error_message('valid_pic', 'File gambar hanya bertipe gif,jpg,png dibawah 500kb');
+        }
+    }
+    function _check_email($field)
+    {
+        $allowed = array('std.stei.itb.ac.id', 's.itb.ac.id', 'students.itb.ac.id');
+        $domain = array_pop(explode('@', $this->{$field}));
+        if ( ! in_array($domain, $allowed))
+        {
+            // Not allowed
+            $this->error_message('check_email', 'Email harus merupakan email dari ITB '.implode(', ', $allowed));
         }
     }
     

@@ -14,15 +14,16 @@
 					</thead>
 					<tbody><?php
 						$i = 0;
-						foreach ($model as $rows) : ?>
+						foreach ($model as $row) : ?>
 						<?php
 							$i++;
 						?>
 							<tr>
 							<td><?php echo $i;?></td>
-							<td><?php echo $rows->buku_id;?></td>
-							<td><?php echo $rows->nama;?></td>
-							<td><?php echo anchor('admin/DeleteAward/'.$i,'<i class="icon-trash"></i>', 'class="btn btn-small"'); ?>
+							<td><?php echo $row->buku_judul;?></td>
+							<td><?php echo $row->nama;?></td>
+							<td>
+								<?php echo anchor('admin/awardsdelete/'.$row->id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger"'); ?>
 							</td>
 							</tr>
 						<?php

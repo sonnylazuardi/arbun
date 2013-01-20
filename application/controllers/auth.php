@@ -32,6 +32,9 @@ class Auth extends CI_Controller {
 		if(isset($_POST['Akun'])) {
 			$u = $_POST['Akun'];
 			$model->from_array($u);
+			$model->thn = $u['thn'];
+			$model->bln = $u['bln'];
+			$model->tgl = $u['tgl'];
 			$model->confirm_password = $u['confirm_password'];
 			if($this->_valid_captcha())
 				$model->captcha = $u['captcha'];
@@ -51,7 +54,6 @@ class Auth extends CI_Controller {
 					$model->picture = $ret['file_name'];
 				}
 			}
-
 			$model->tgl_lahir = $u['thn'].'-'.$u['bln'].'-'.$u['tgl'];
 			$model->approved = 1;
 			if ($model->save()) {
@@ -100,7 +102,46 @@ class Auth extends CI_Controller {
 	}
 	public function forgot()
 	{
+		if ($this->input->post('email'))
+		{
+			$model = new Akun();
+			$model->where('email', $this->input->post('email'))->get();
+			if($model->exists())
+			{
+				$this->load->library('email');
+				$this->email->from('arbun@gmx.com', 'Arbun');
+				$this->email->to($model->email); 
+				$this->email->subject('Pergantian Password');
+				$this->load->helper('password');
+				$forget = create_password();
+				$model->forget = $forget;
+				$model->skip_validation()->save();
+				$this->email->message('Klik disini untuk ganti password {unwrap}'.site_url().'/auth/gantipassword/'.$forget.'{/unwrap}');	
+				$this->email->send();
+				log_message('error', $this->email->print_debugger());
+				$this->session->set_flashdata('pesan', 'Email lupa password berhasil dikirim');
+				redirect('home/index');
+			} else $data['error'] = 'email tersebut tidak terdaftar';
+		}
 		$data['page']='auth/forgot';
+		$this->load->view('theme/template', $data);
+	}
+	public function gantipassword($cek = 0)
+	{
+		$model = new Akun();
+		$model->where('forget', $cek)->get();
+		if(!$model->exists())show_error('Tidak bisa mengganti password');
+		if($this->input->post('submit')) {
+			$this->load->helper('password');
+			$password = create_password();
+			$model->password = $password;
+			$model->confirm_password = $password;
+			$model->captcha = 'skip';
+			$model->forget = null;
+			$model->save();
+			$data['password'] = $password;
+		}
+		$data['page']='auth/gantipassword';
 		$this->load->view('theme/template', $data);
 	}
 	function _valid_captcha()

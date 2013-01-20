@@ -7,7 +7,11 @@ class Award extends DataMapper {
     
     var $has_many = array();
 
-    var $validation = array();
+    var $validation = array(
+       'nama' => array(
+            'rules' => array('required'),
+        ),
+    );
 
     function __construct($id = NULL)
     {

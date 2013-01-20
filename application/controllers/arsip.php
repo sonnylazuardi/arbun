@@ -135,7 +135,7 @@ class Arsip extends CI_Controller {
 					$ret = $this->upload->data();
 					$model->link = base_url().'public/pdf/'.$ret['file_name'];
 				}
-			} elseif(!empty($model->upload_url)) $model->link = site_url().'/proxy/index?url='.$model->upload_url;
+			} elseif(!empty($model->upload_url)) $model->link = $model->upload_url;
 
 			if ($model->save($rel)) {
 				$this->session->set_flashdata('pesan', 'Arsip berhasil disimpan');

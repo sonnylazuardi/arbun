@@ -208,3 +208,6 @@ footer p {
 .sel select{
   width: 100%;
 }
+.hl{
+  font-weight: bold;
+}

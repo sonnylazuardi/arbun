@@ -36,11 +36,10 @@ class Admin extends CI_Controller
 	public function akundelete($id = 0)
 	{
 		$model = new Akun();
-		$buku = new Buku();
 		$model->get_by_id($id);
 		if($model->exists()) {
 			unlink('./public/img/user/'.basename($model->picture));
-			$model->delete($buku->get());
+			$model->delete();
 		}
 		redirect('admin/ListAkun');
 	}
@@ -100,7 +99,7 @@ class Admin extends CI_Controller
 		$data['page']='admin/ListKomentar';
 		$this->load->view('theme/template', $data);
 	}
-	public function komentarsdelete($id = 0, $idbuku = 0)
+	public function komentarsdelete($id = 0)
 	{
 		$model = new Komentar();
 		$model->get_by_id($id);
@@ -128,7 +127,7 @@ class Admin extends CI_Controller
 		$data['page']='admin/ListLaporan';
 		$this->load->view('theme/template', $data);
 	}
-	public function laporandelete($id = 0, $idbuku = 0)
+	public function laporandelete($id = 0)
 	{
 		$model = new Lapor();
 		$model->get_by_id($id);
@@ -140,17 +139,37 @@ class Admin extends CI_Controller
 	function ListPenghargaan($offset = 0)
 	{
 		$model = new Award();
-		$model->get();
+		$model->order_by('id', 'desc');
+		$model->include_related('buku', array('judul', 'status'));
+		$data['pagination'] = $this->_paginate($model, 'admin/ListPenghargaan', $offset, 20);
 		$data['model'] = $model;
 		$data['page']='admin/ListPenghargaan';
 		$this->load->view('theme/template', $data);
 	}
-	public function DeleteAward($id = 0)
+	function TambahAward($idbuku = 0)
+	{
+		$model = new Award();
+		$buku = new Buku();
+		$buku->get_by_id($idbuku);
+		if(!$buku->exists())show_error('Buku tidak ditemukan');
+		if(isset($_POST['data'])) {
+			$model->buku_id = $idbuku;
+			$model->nama = $_POST['data']['nama'];
+			if ($model->save()) {
+				$this->session->set_flashdata('pesan', 'Berhasil ditambahkan');
+				redirect('admin/ListPenghargaan');
+			}
+		}
+		$data['page']='arsip/award';
+		$data['buku']=$buku;
+		$data['model']=$model;
+		$this->load->view('theme/template', $data);
+	}
+	public function awardsdelete($id = 0)
 	{
 		$model = new Award();
 		$model->get_by_id($id);
 		if($model->exists()) {
-			if($model->id == $id)
 				$model->delete();
 		}
 		redirect('admin/ListPenghargaan');

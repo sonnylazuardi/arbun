@@ -23,8 +23,18 @@ $(function(){
 	  				</div>
 	  				<div class="span7">
 				  		<div style="margin: 0 -18px 0 25px">
+				  		<?php $this->load->helper('search'); ?>
 				  		<p style="font-weight:bold"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></p>
 				  		<span style="font-size:.9em">
+				  			<?php
+				  				if (!empty($model->_q)) :
+				  					echo search_extract($buku->abstrak, $model->_q); 
+				  				elseif (!empty($model->_abstrak)) :
+				  					echo search_extract($buku->abstrak, $model->_abstrak); 
+				  				else :
+				  					echo limit_words($buku->abstrak, 40);
+				  				endif;
+				  			?>
 				  			<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
 				  			<?php echo $buku->view. ' kali dilihat' ?> <br>
 				  			<?php echo $buku->akun_nama ?> <br>
