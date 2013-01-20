@@ -29,18 +29,6 @@
               <li><a href="#favorit" data-toggle="tab"><i class="icon-star"></i> Terfavorit</a></li>
               <li><a href="#populer" data-toggle="tab"><i class="icon-thumbs-up"></i> Terpopuler</a></li>
             </ul>
-            <script src="<?php echo base_url() ?>public/js/jquery.js"></script>
-            <script type="text/javascript">
-            $(function(){
-              setInterval(function() {
-                  var tabs = $('#myTab.nav-tabs > li'),
-                      active = tabs.filter('.active'),
-                      next = active.next('li'),
-                      toClick = next.length ? next.find('a') : tabs.eq(0).find('a');
-                  toClick.trigger('click');
-              }, 7000);
-            });
-            </script> 
           </div>
         </div>
       </div>
