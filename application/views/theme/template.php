@@ -16,7 +16,7 @@
     <title>ARBUN - Arsip Buncit</title>
     <!-- Le styles -->
     <link href="<?php echo base_url();?>public/css/bootstrap.css" rel="stylesheet">
-    <!-- <link href="<?php echo base_url();?>public/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <link href="<?php echo base_url();?>public/css/bootstrap-responsive.css" rel="stylesheet">
     <link href="<?php echo base_url();?>public/css/style.css" rel="stylesheet">
 	<!-- <link href="style.css" rel="stylesheet"> -->
   <!--<link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet"> -->

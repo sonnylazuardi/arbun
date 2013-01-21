@@ -150,11 +150,12 @@ class Arsip extends CI_Controller {
 			redirect('auth/login');
 		$model = new Buku();
 		$model->get_by_id($id);
+		if(!$model->exists())show_error('Tidak ditemukan Buku yang dicari');
 		//log_message('error', print_r($model->kategori->all, true));
 		$model->kategoriku = $model->get_kategoriku();
 		$model->matkulku = $model->get_matkulku();
 		$model->bidangku = $model->get_bidangku();
-		if(!$model->exists())show_error('Tidak ditemukan Buku yang dicari');
+		if(!empty($model->link))$model->upload_url = $model->link;
 		$this->_save($model, $user);
 		$data['page']='arsip/update';
 		$data['model']=$model;

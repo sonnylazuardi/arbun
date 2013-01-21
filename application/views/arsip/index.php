@@ -36,12 +36,12 @@ $(function(){
 				  				endif;
 				  			?>
 				  			<div class="row">
-				  				<div class="span3">
+				  				<div class="span4">
 				  					<?php echo anchor('penulis/view/'.$buku->akun_id, $buku->akun_nama) ?> <br>
 				  					<?php echo $buku->get_matkulku(true) ?> <br>
 				  					<?php echo $buku->get_bidangku(true) ?>
 				  				</div>
-				  				<div class="span3">
+				  				<div class="span2">
 				  					<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
 				  					<i class="icon-eye-open"></i> <?php echo $buku->view ?><br>
 				  					<?php $tglku = date("d M Y", strtotime($buku->tgl_terbit)); ?>

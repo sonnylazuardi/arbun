@@ -215,11 +215,68 @@ footer p {
   width: 30px;
   height: 35px;
   margin: 0 2px;
-  padding-top: 8px;
+  padding-top: 0px;
   float: left;
   font-family: "Impact", Arial, sans-serif;
   color: #ffffff;
   text-shadow: 0 1px 0 #000000;
   font-size: 20px;
   text-align: center;
+}
+.table-view tr td:first-child{
+  text-align: right;
+}
+@media (min-width: 1200px) {
+  .bookwrap .tab-content{
+    margin-left: 60px;
+  }
+  .bookwrap .stripb{
+    margin-left: 90px;
+  }
+
+}
+@media (min-width: 768px) and (max-width: 979px) {
+  body{
+    margin-top: 0;
+  }
+  .container{
+    margin: 0 50px;
+  }
+  .full-search-bar #biasa input[type="text"] {
+    width: 80%;
+  }
+  .bwh{
+    margin-left: 10px;
+  }
+}
+@media (max-width: 767px) {
+  body{
+    margin-top: 0;
+  }
+  .bookwrap {
+    margin:0 auto;
+  }
+  .bookrak {
+    margin:0 auto;
+  }
+  .strip.bookrak{
+    background: transparent;
+  }
+  .full-search-bar #biasa input[type="text"] {
+    width: 85%;
+  }
+  .full-search-bar{
+    margin-left: 20px;
+    margin-right: 20px;
+    width: inherit;
+  }
+  .stripb{
+    margin-bottom: -30px;
+  }
+  .strip{
+    margin-bottom: 50px;
+  }
+  .span3{
+    margin-bottom: 20px;
+  }
 }

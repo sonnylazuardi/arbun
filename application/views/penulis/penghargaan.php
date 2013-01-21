@@ -4,6 +4,7 @@
 	<div class="span5" style="height:70px; overflow:auto; padding-left:15px; padding-right:20px;">
 		<div class="row">
 		<?php 
+		$model->buku->order_by('id', 'desc');
 		$model->buku->get_iterated();
 		foreach ($model->buku as $bukuku) {
 			$bukuku->award->get_iterated();

@@ -149,11 +149,11 @@ class Akun extends DataMapper {
       }
       return $sum;
     }
-    public function _newest_bookmark()
+    public function _newest_award()
     {
-      $this->buku->_include_bookmark_count();
-      $this->buku->order_by('id', 'desc')->get();
-
+      $this->buku->include_related('award', array('nama'));
+      $this->buku->order_by('id', 'desc');
+      return $this->buku->get()->award_nama;
     }
     public function _include_buku_count()
     {

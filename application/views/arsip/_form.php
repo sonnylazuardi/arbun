@@ -2,7 +2,7 @@
 <div class="row" style="margin:10px">
 	<ul class="nav nav-tabs">
 	  <li class="active"><a href="#">Pribadi</a></li>
-	  <li><?php echo anchor('arsip/createlain', 'Orang Lain'); ?></li>
+	  <!-- <li><?php echo anchor('arsip/createlain', 'Orang Lain'); ?></li> -->
 	</ul>
 	<div class="span4">
 		<label>Judul :</label>
@@ -25,7 +25,7 @@
 		<legend></legend>
     <ul id="myTab" class="nav nav-tabs">
       <li class="active"><a href="#filelokal" data-toggle="tab">File Lokal</a></li>
-      <li><a href="#publicurl" data-toggle="tab">Public URL</a></li>
+      <li><a href="#publicurl" data-toggle="tab">Tautan Publik</a></li>
     </ul>
     <div id="myTabContent" class="tab-content">
       <div class="tab-pane fade active in" id="filelokal">
@@ -33,8 +33,8 @@
         <p class="help-block">File berupa format PDF dengan ukuran maks 2MB</p>
       </div>
       <div class="tab-pane fade" id="publicurl">
-      	<label>Link URL :</label>
-        <?php echo form_input('Buku[upload_url]', '', 'placeholder="http://example.com/mybook.pdf"'); ?>
+      	<label>Tautan URL :</label>
+        <?php echo form_input('Buku[upload_url]', $model->upload_url, 'placeholder="http://example.com/mybook.pdf"'); ?>
       </div>
     </div>
 

@@ -13,7 +13,8 @@
         <div class="span2" style="margin-bottom:20px">
           <p>
             <?php echo anchor('penulis/view/'.$model->akun_id, $model->akun_nama) ?> <br/>
-            <?php echo $model->tgl_terbit ?>
+            <?php $tglku = date("d M Y", strtotime($model->tgl_terbit)); ?>
+            <?php echo $tglku ?>
           </p>
         </div>
         <div class="span3 strip box">

@@ -22,17 +22,18 @@ foreach($model->buku as $buku) :?>
 				<div class="book" style="margin-left:-20px;"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></div>
 			</div>
 			<div class="span4">
-	  		<div >
-	  		<p style="font-weight:bold"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></p>
-	  		<span style="font-size:.9em">
-	  			<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
-	  			<?php echo $buku->view. ' kali dilihat' ?> <br>
-	  			<?php echo $buku->akun_nama ?> <br>
-		  		<?php echo $buku->tgl_terbit ?> <br>
-		  		<?php echo $buku->get_matkulku() ?> <br>
-		  		<?php echo $buku->get_bidangku() ?> <br>
-	  		</span>
-			  </div>
+				<p style="font-weight:bold"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></p>
+	  		<div class="row">
+  				<div class="span4">
+  					<?php echo anchor('penulis/view/'.$buku->akun_id, $buku->akun_nama) ?> <br>
+  					<?php echo $buku->get_matkulku(true) ?> <br>
+  					<?php echo $buku->get_bidangku(true) ?>
+  					<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
+  					<i class="icon-eye-open"></i> <?php echo $buku->view ?><br>
+  					<?php $tglku = date("d M Y", strtotime($buku->tgl_terbit)); ?>
+  					<i class="icon-calendar"></i> <?php echo $tglku ?>
+  				</div>
+  			</div>
 			</div>
 		</div>
 	</div>

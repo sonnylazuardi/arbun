@@ -46,26 +46,26 @@
               <?php $u = new Matkul(); echo $u->getLinks(); ?>
           </div>
         </div>
-        <div class="row" style="margin-top:30px">
-          <div class="span3">
+        <div class="row" style="margin-top:30px; line-height:2.5em">
+          <div class="span3" style="margin-bottom:20px">
             <?php 
               $u = new Buku();
               $c = $u->where('status !=', 0)->count();
               foreach (str_split($c) as $a) {
                 echo '<span class="digit">'.$a.'</span>';
               }
-             ?>
-             <br>Arsip
+             ?> 
+             Arsip
           </div>
-          <div class="span3">
+          <div class="span3" style="margin-bottom:20px">
             <?php 
               $u = new Akun();
               $c = $u->where('approved !=', 0)->count();
               foreach (str_split($c) as $a) {
                 echo '<span class="digit">'.$a.'</span>';
               }
-             ?>
-             <br>Penulis
+             ?> 
+             Penulis
           </div>
         </div>
       </div>
