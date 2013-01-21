@@ -226,7 +226,7 @@ footer p {
 .table-view tr td:first-child{
   text-align: right;
 }
-@media (min-width: 1200px) {
+/*@media (min-width: 1200px) {
   .bookwrap .tab-content{
     margin-left: 60px;
   }
@@ -279,4 +279,4 @@ footer p {
   .span3{
     margin-bottom: 20px;
   }
-}
+}*/
