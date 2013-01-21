@@ -56,8 +56,8 @@ class Penulis extends CI_Controller {
 		$model = new Akun();
 		$model->where('approved !=', 0);
 		$model->get_by_id($id);
-		$this->_add_view_count($model, $id);
 		if(!$model->exists())show_error('Profil penulis tidak ditemukan');
+		$this->_add_view_count($model, $id);
 		$data['model'] = $model;
 		$data['page']='penulis/view';
 		$this->load->view('theme/template', $data);

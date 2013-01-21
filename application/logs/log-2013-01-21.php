@@ -22,3 +22,7 @@ ERROR - 2013-01-21 05:04:53 --> Query error: Unknown column ''' in 'order clause
 ERROR - 2013-01-21 05:05:03 --> Query error: Unknown column ''' in 'order clause'
 ERROR - 2013-01-21 05:06:08 --> Query error: Unknown column ''' in 'order clause'
 ERROR - 2013-01-21 05:06:22 --> Query error: Unknown column ''' in 'order clause'
+ERROR - 2013-01-21 05:23:20 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`arbun`.`akun`, CONSTRAINT `test16` FOREIGN KEY (`fakultas_id`) REFERENCES `fakultas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2013-01-21 05:23:25 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`arbun`.`akun`, CONSTRAINT `test16` FOREIGN KEY (`fakultas_id`) REFERENCES `fakultas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2013-01-21 05:23:27 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`arbun`.`akun`, CONSTRAINT `test16` FOREIGN KEY (`fakultas_id`) REFERENCES `fakultas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2013-01-21 05:23:36 --> Query error: Cannot add or update a child row: a foreign key constraint fails (`arbun`.`akun`, CONSTRAINT `test16` FOREIGN KEY (`fakultas_id`) REFERENCES `fakultas` (`id`) ON DELETE CASCADE ON UPDATE CASCADE)
