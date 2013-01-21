@@ -158,7 +158,7 @@ class Akun extends DataMapper {
       if (!empty($this->_urut)) {
         if (in_array($this->_urut, array('buku_count', 'buku_view_count', 'id'))) $d = 'DESC'; else $d = 'ASC';
         $this->order_by($this->_urut, $d);
-      }
+      } else $this->order_by('id', 'desc');
       if (!empty($this->_q)) {
         $this->ilike('nama', $this->_q);
       }

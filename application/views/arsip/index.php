@@ -35,12 +35,20 @@ $(function(){
 				  					echo limit_words($buku->abstrak, 40);
 				  				endif;
 				  			?>
-				  			<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
-				  			<?php echo $buku->view. ' kali dilihat' ?> <br>
-				  			<?php echo $buku->akun_nama ?> <br>
-					  		<?php echo $buku->tgl_terbit ?> <br>
-					  		<?php echo $buku->get_matkulku() ?> <br>
-					  		<?php echo $buku->get_bidangku() ?> <br>
+				  			<div class="row">
+				  				<div class="span3">
+				  					<?php echo anchor('penulis/view/'.$buku->akun_id, $buku->akun_nama) ?> <br>
+				  					<?php echo $buku->get_matkulku(true) ?> <br>
+				  					<?php echo $buku->get_bidangku(true) ?>
+				  				</div>
+				  				<div class="span3">
+				  					<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
+				  					<i class="icon-eye-open"></i> <?php echo $buku->view ?><br>
+				  					<?php $tglku = date("d M Y", strtotime($buku->tgl_terbit)); ?>
+				  					<i class="icon-calendar"></i> <?php echo $tglku ?>
+				  				</div>
+				  			</div>
+					  		
 				  		</span>
 						  </div>
 						</div>

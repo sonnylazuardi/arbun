@@ -137,7 +137,7 @@ class Buku extends DataMapper {
       if (!empty($this->_urut)) {
         if (in_array($this->_urut, array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count'))) $d = 'DESC'; else $d = 'ASC';
         $this->order_by($this->_urut, $d);
-      }
+      } else $this->order_by('id', 'desc');
 
       if (!empty($this->_q)) {
         $this->search($this->_q);
