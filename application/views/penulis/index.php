@@ -10,7 +10,7 @@
 			  	<div class="row" style="margin-bottom:10px">
 					<div class="span1"><span style="padding-left:20px"><?php echo img($penulis->get_profpic()) ?></span></div>
 					<div class="span4">
-						<span style="padding-left:10px"><?php echo anchor('penulis/view/'.$penulis->id,$penulis->nama) ?>
+						<span style="padding-left:10px"><?php echo anchor('penulis/view/'.$penulis->id, $penulis->nama) ?>
 						<br>
 						<span style="padding-left:10px"><?php echo $penulis->jurusan->get()->nama ?>
 					</div>

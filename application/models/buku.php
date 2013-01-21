@@ -132,10 +132,17 @@ class Buku extends DataMapper {
       $award->where_related('buku', 'id', '${parent}.id');
       $this->select_subquery($award, 'award_count');
     }
+    public function _include_bookmark_count()
+    {
+      $bookmark = $this->bookmark;
+      $bookmark->select_func('COUNT', '*', 'count');
+      $bookmark->where_related('buku', 'id', '${parent}.id');
+      $this->select_subquery($bookmark, 'bookmark_count');
+    }
     public function _eksekusi()
     {
-      if (!empty($this->_urut)) {
-        if (in_array($this->_urut, array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count'))) $d = 'DESC'; else $d = 'ASC';
+      if (!empty($this->_urut) and in_array($this->_urut, array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count',))) {
+        if (in_array($this->_urut, array('view', 'created', 'tgl_terbit', 'komentar_count', 'rating_count', 'judul', 'akun_nama'))) $d = 'DESC'; else $d = 'ASC';
         $this->order_by($this->_urut, $d);
       } else $this->order_by('id', 'desc');
 

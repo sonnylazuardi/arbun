@@ -8,10 +8,10 @@
 	<tr><td style="text-align:right"><?php echo 'Email : ';?></td> <td><?php  echo $model->email ?></td></tr>
 	<tr><td style="text-align:right"><?php echo 'Program Studi : ';?></td> <td><?php  echo $model->jurusan->get()->nama ?></td></tr>
 	<tr><td style="text-align:right"><?php echo 'Profil Dilihat : ';?></td> <td><?php echo $model->view;?></td></tr>
-	<tr><td style="text-align:right"><?php echo 'Bookmark Diterima : ';?></td> <td><?php echo '0';?></td></tr>
+	<tr><td style="text-align:right"><?php echo 'Bookmark Diterima : ';?></td> <td><?php echo $model->_count_bookmark();?></td></tr>
 	<tr><td style="text-align:right"><?php echo 'Arsip Dibuat : ';?></td> <td><?php  echo $model->buku->count() ?></td></tr>
 	<tr><td style="text-align:right"><?php echo 'Arsip Terbaru :';?></td> <td><?php echo $model->buku->order_by('created', 'desc')->get(1)->tgl_terbit; ?></td></tr>
-	<tr><td style="text-align:right"><?php echo 'Penghargaan Diterima : ';?></td> <td><?php echo '0';?></td></tr>
+	<tr><td style="text-align:right"><?php echo 'Penghargaan Diterima : ';?></td> <td><?php echo $model->_count_award();?></td></tr>
 	<tr><td style="text-align:right"><?php echo 'Penghargaan Terbaru :';?></td> <td><?php echo '-';?></td></tr>
 	</tbody>
 </table>

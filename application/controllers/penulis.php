@@ -26,7 +26,7 @@ class Penulis extends CI_Controller {
 		$model->_include_buku_view_count();
 		$model->select('*');
 		$model->where('approved !=', 0);
-		$model->from_array($_GET, array('_urut', '_q', '_status', '_fakultas_id', '_jurusan_id'));
+		$model->from_array($this->input->get(), array('_urut', '_q', '_status', '_fakultas_id', '_jurusan_id'));
 		$model->_eksekusi();
 		
 

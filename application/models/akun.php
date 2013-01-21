@@ -139,6 +139,22 @@ class Akun extends DataMapper {
       }
       return $sum;
     }
+    public function _count_bookmark()
+    {
+      $this->buku->_include_bookmark_count();
+      $this->buku->get_iterated();
+      $sum = 0;
+      foreach ($this->buku as $data) {
+        $sum += $data->bookmark_count;
+      }
+      return $sum;
+    }
+    public function _newest_bookmark()
+    {
+      $this->buku->_include_bookmark_count();
+      $this->buku->order_by('id', 'desc')->get();
+
+    }
     public function _include_buku_count()
     {
       $buku = $this->buku;
@@ -155,7 +171,7 @@ class Akun extends DataMapper {
     }
     public function _eksekusi()
     {
-      if (!empty($this->_urut)) {
+      if (!empty($this->_urut) and in_array($this->_urut, array('id', 'buku_view_count', 'nama', 'buku_count'))) {
         if (in_array($this->_urut, array('buku_count', 'buku_view_count', 'id'))) $d = 'DESC'; else $d = 'ASC';
         $this->order_by($this->_urut, $d);
       } else $this->order_by('id', 'desc');

@@ -27,7 +27,7 @@ class Arsip extends CI_Controller {
 		$model->_include_akun();
 		$model->select('*');
 		$model->where('status !=', 0);
-		$model->from_array($_GET, array('_urut', '_q', '_kategori', '_matkul', '_bidang', '_akun_nama', '_judul', '_tahun', '_abstrak'));
+		$model->from_array($this->input->get(), array('_urut', '_q', '_kategori', '_matkul', '_bidang', '_akun_nama', '_judul', '_tahun', '_abstrak'));
 		$model->_eksekusi();
 
 		$data['pagination'] = $this->_paginate($model, 'arsip/index', $offset, 20);
