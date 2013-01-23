@@ -30,7 +30,7 @@
 						<?php endforeach; ?>
 					  </tbody>
 					</table>
-				<?php else: echo "Tidak ada selipan"; endif; ?>
+				<?php else: echo "Tidak ada komentar"; endif; ?>
 			</div>
 			<?php echo $pagination ?>
 		</div>

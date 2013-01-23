@@ -1,3 +1,5 @@
+<link href="<?php echo base_url();?>public/css/jquery.autocomplete.css" rel="stylesheet">
+<script src="<?php echo base_url() ?>public/js/jquery.js"></script>
 <?php $this->load->view('theme/validation'); ?>
 <div class="row" style="margin:10px">
 	<ul class="nav nav-tabs">
@@ -10,8 +12,26 @@
 		<label>Abstrak :</label>
 		<?php echo form_textarea('Buku[abstrak]', $model->abstrak, 'cols="2" rows="5"') ?>
 		<p class="help-block">Kategori, Mata Kuliah dan Bidang dipisahkan dengan koma untuk masing-masing item</p>
+		
 		<label>Kategori :</label>
-		<?php echo form_input('Buku[kategoriku]', $model->kategoriku, 'placeholder="Makalah, Tugas Akhir"') ?>
+		<?php echo form_input('Buku[kategoriku]', $model->kategoriku, 'placeholder="Makalah, Tugas Akhir" id="kategoriku"') ?>
+		<script type="text/javascript">
+    $(function() {
+      $("#kategoriku").autocomplete("<?php echo site_url('token/kategori') ?>", {
+	      remoteDataType: 'json',
+	      minChars: 1,
+	      useDelimiter: true,
+	      processData: function(data) {
+				var i, processed = [];
+				for (i=0; i < data.length; i++) {
+					processed.push([data[i]]);
+				}
+				return processed;
+	        }
+	    });
+    });
+    </script>
+
 		<label>Mata Kuliah :</label>
 		<?php echo form_input('Buku[matkulku]', $model->matkulku, 'placeholder="Struktur Diskrit, Algoritma dan Struktur Data"') ?>
 		<label>Bidang :</label>
@@ -47,6 +67,7 @@
 		<label>ISBN :</label>
 		<?php echo form_input('Buku[ISBN]', $model->ISBN) ?>
 		<label>Tanggal Terbit :</label>
+		<span class="help-block">Format tanggal Tahun-Bulan-Tanggal</span>
 		<?php echo form_input('Buku[tgl_terbit]', $model->tgl_terbit) ?>
 	</div>
 </div>
