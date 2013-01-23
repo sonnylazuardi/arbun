@@ -93,19 +93,22 @@ class Arsip extends CI_Controller {
 	public function _save_rel($tipe)
 	{
 		$u = $_POST['Buku'];
-		$datas = explode(', ', $u[$tipe.'ku']);
+		$datas = explode(',', $u[$tipe.'ku']);
 		$hasil = array();
 		if(!empty($u[$tipe.'ku'])) {
 			foreach ($datas as $data) {
-				$u = $this->_model_tipe($tipe);
-				$u->where('nama', $data)->get();
-				if(!$u->exists()) {
-					$d = $this->_model_tipe($tipe);
-					$d->nama = $data;
-					$d->skip_validation()->save();
-					$hasil[] = $d->id;
-				} else {
-					$hasil[] = $u->id;
+				$data = trim($data);
+				if (!empty($data)) {
+					$u = $this->_model_tipe($tipe);
+					$u->where('nama', $data)->get();
+					if(!$u->exists()) {
+						$d = $this->_model_tipe($tipe);
+						$d->nama = $data;
+						$d->skip_validation()->save();
+						$hasil[] = $d->id;
+					} else {
+						$hasil[] = $u->id;
+					}
 				}
 			}
 		}

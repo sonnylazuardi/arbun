@@ -19,3 +19,19 @@
   </div>
 </div>
 <?php echo form_close() ?> 
+
+<link href="<?php echo base_url();?>public/css/jquery.autocomplete.css" rel="stylesheet">
+<script src="<?php echo base_url() ?>public/js/jquery.js"></script>
+<script type="text/javascript">
+$(function() {
+  $("#search").autocomplete("<?php echo site_url('token/search_penulis') ?>", {
+    remoteDataType: 'json', minChars: 2,
+    showResult: function(value, data) {
+      return "<img src=\"" + data[0] + "\" width=\"50px\"/> " + value;
+    },
+    onItemSelect: function(item) {
+      window.location = "<?php echo site_url('penulis/view') ?>/" + item.data[1];
+    },
+  });
+});
+</script>
