@@ -19,7 +19,7 @@
 				  	</tr>
 				  </thead>
 				  <tbody>
-				  	<?php $ctr = 1; ?>
+				  	<?php $ctr = $model->paged->current_row + 1; ?>
 				  	<?php foreach($model as $buku) :?>
 				  	<tr>
 				  		<td><?php echo $ctr ?></td>
@@ -35,6 +35,7 @@
 				  	<?php endforeach; ?>
 				  </tbody>
 				</table>
+				<?php echo $pagination ?>
 			</div>
 		</div>
 	</div>

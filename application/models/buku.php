@@ -104,10 +104,11 @@ class Buku extends DataMapper {
     }
     public function _include_komentar_count()
     {
-      $ratings = $this->komentar;
-      $ratings->select_func('COUNT', '*', 'count');
-      $ratings->where_related('buku', 'id', '${parent}.id');
-      $this->select_subquery($ratings, 'komentar_count');
+      $komens = $this->komentar;
+      $komens->select_func('COUNT', '*', 'count');
+      $komens->where('status !=', 0);
+      $komens->where_related('buku', 'id', '${parent}.id');
+      $this->select_subquery($komens, 'komentar_count');
     }
     public function _include_akun()
     {

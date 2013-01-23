@@ -21,7 +21,7 @@
 						?>
 							<tr>
 								<td><?php echo $i;?></td>
-								<td><?php echo $row->akun_nama;?></td>
+								<td><?php $row->akun->tulis_profile() ?></td>
 								<td><?php echo $row->buku_judul;?></td>
 								<td><?php echo $row->isi;?></td>
 								<td>

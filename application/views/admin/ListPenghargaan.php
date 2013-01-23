@@ -20,7 +20,7 @@
 						?>
 							<tr>
 							<td><?php echo $i;?></td>
-							<td><?php echo $row->buku_judul;?></td>
+							<td><?php echo anchor('arsip/view/'.$row->buku_id, $row->buku_judul);?></td>
 							<td><?php echo $row->nama;?></td>
 							<td>
 								<?php echo anchor('admin/awardsdelete/'.$row->id,'<i class="icon-trash icon-white"></i>', 'onclick="if(!confirm(\'Yakin mau dihapus?\'))return false;" class="btn btn-small btn-danger"'); ?>

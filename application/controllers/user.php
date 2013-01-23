@@ -67,12 +67,12 @@ class User extends CI_Controller {
 		$thumb->adaptiveResize(200, 200);
 		$thumb->save('./public/img/user/'.$filename, 'jpg');
 	}
-	public function arsipku()
+	public function arsipku($offset = 0)
 	{
 		$model = new Buku();
 		$user = $this->login_manager->get_user();
-		$model->where('akun_id', $user->id)->get();
-
+		$model->where('akun_id', $user->id);
+		$data['pagination'] = $this->_paginate($model, 'user/arsipku', $offset, 20);
 		$data['page']='user/arsipku';
 		$data['model']=$model;
 		$this->load->view('theme/template', $data);
@@ -103,6 +103,19 @@ class User extends CI_Controller {
 
 		$data['pagination'] = $this->_paginate($model, 'user/selipanku', $offset, 20);
 		$data['page']='user/selipanku';
+		$data['model']=$model;
+		$this->load->view('theme/template', $data);
+	}
+	public function komentarku($offset = 0)
+	{
+		$model = new Komentar();
+		$user = $this->login_manager->get_user();
+		$model->include_related('buku', array('judul'));
+		$model->order_by('id', 'desc');
+		$model->where('akun_id', $user->id);
+
+		$data['pagination'] = $this->_paginate($model, 'user/komentarku', $offset, 20);
+		$data['page']='user/komentarku';
 		$data['model']=$model;
 		$this->load->view('theme/template', $data);
 	}

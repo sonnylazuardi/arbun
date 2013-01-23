@@ -13,7 +13,6 @@
 				<th>Jurusan</th>
 				<th>Angkatan</th>
 				<th>Status</th>
-				<th>Picture</th>
 				<th>Aktivasi</th>	
 			</tr>
 		</thead>
@@ -28,15 +27,13 @@
 				?>
 					<tr>
 					<td><?php echo $i;?></td>
-					<td><?php echo $row->nama;?></td>
+					<td><?php $row->tulis_profile() ?></td>
 					<td><?php echo $row->nim;?></td>
 					<td><?php echo $row->fakultas_singkat;?></td>
 					<td><?php echo $row->jurusan_nama;?></td>
 					<td><?php echo $row->angkatan;?></td>
 					
 					<td><?php echo $u[$row->status];?></td>
-					<?php $this->load->helper('html'); ?>
-					<td><?php echo img($row->get_profpic()) ?></td>
 					<td>
 					<form action="<?php echo base_url();?>index.php/admin/CekAkun/<?php echo $row->id;?>" method="POST">
 					<?php echo $approve[$row->approved];?>

@@ -43,7 +43,7 @@ $(function(){
 				  				</div>
 				  				<div class="span2">
 				  					<div class="stard" data-rating="<?php echo $buku->rating_count ?>"></div>
-				  					<i class="icon-eye-open"></i> <?php echo $buku->view ?><br>
+				  					<i class="icon-eye-open"></i> <?php echo $buku->view ?> 
 				  					<i class="icon-comment"></i> <?php echo $buku->komentar_count ?><br>
 				  					<?php $tglku = date("d M Y", strtotime($buku->tgl_terbit)); ?>
 				  					<i class="icon-calendar"></i> <?php echo $tglku ?>

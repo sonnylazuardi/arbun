@@ -116,6 +116,10 @@ class Akun extends DataMapper {
         else
             return base_url().'public/img/noimg.png';
     }
+    function tulis_profile()
+    {
+        echo '<img src="'.$this->get_profpic().'" width="50px"/><br>'.anchor('penulis/view/'.$this->id, $this->nama);
+    }
 
     function _encrypt($field)
     {

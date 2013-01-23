@@ -56,6 +56,7 @@ class Arsip extends CI_Controller {
 	{
 		$model = new Buku();
 		$model->_include_rating_count();
+		$model->_include_komentar_count();
 		$model->_include_rating_counts();
 		$model->include_related('akun', array('nama'));
 		$model->select('*');

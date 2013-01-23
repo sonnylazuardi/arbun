@@ -1,8 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="span9 strip box">
-      <div style="margin:10px">
-        <iframe src="http://docs.google.com/viewer?url=<?php echo $model->link ?>&embedded=true" width="680" height="800" style="border: none;"></iframe>
+    <div class="span9"><h4><?php echo $model->judul ?></h4>
+      <div class="strip box">
+        <div style="margin:10px">
+          <iframe src="http://docs.google.com/viewer?url=<?php echo $model->link ?>&embedded=true" width="680" height="800" style="border: none;"></iframe>
+        </div>
       </div>
     </div>
     <div class="span3">
@@ -14,13 +16,14 @@
           <p>
             <?php echo anchor('penulis/view/'.$model->akun_id, $model->akun_nama) ?> <br/>
             <?php $tglku = date("d M Y", strtotime($model->tgl_terbit)); ?>
-            <?php echo $tglku ?>
+            <i class="icon-calendar icon-white"></i> <?php echo $tglku ?> <br>
+            <i class="icon-eye-open icon-white"></i> <?php echo $model->view ?> 
+            <i class="icon-comment icon-white"></i> <?php echo $model->komentar_count ?>
           </p>
         </div>
         <div class="span3 strip box">
           <div class="side" style="text-align:center">
             <?php $this->load->view('arsip/rating') ?>
-            <?php echo $model->view.' kali dilihat' ?>
           </div>
         </div>
         <div class="span3 strip box">
@@ -31,25 +34,19 @@
           </div>
         </div>
         <?php if($this->session->userdata('admin')): ?>
-        <div class="span3 strip box">
-          <div class="side">
-            <?php echo anchor('admin/TambahAward/'.$model->id, '<i class="icon-plus icon-white"></i> Tambah Penghargaan', 'class="btn btn-primary"') ?>
-          </div>
+        <div class="span3 box">
+            <?php echo anchor('admin/TambahAward/'.$model->id, '<i class="icon-plus"></i> Penghargaan', 'class="btn"') ?>
         </div>  
         <?php endif; ?>
         <?php if($user): ?>
-        <div class="span3 strip box">
-          <div class="side">
+        <div class="span3 box">
             <?php $this->load->view('arsip/bookmark') ?> 
             <?php echo anchor('reports/create/'.$model->id, '<i class="icon-bullhorn icon-white"></i> Lapor', 'class="btn btn-danger"') ?>
-          </div>
         </div>
         <?php endif; ?>
-        <div class="span3 strip box">
-          <div class="side">
+        <div class="span3 box">
             <?php echo anchor('arsip/download/'.$model->id, '<i class="icon-download icon-white"></i> Unduh', 'class="btn btn-primary"') ?>
             <?php echo anchor('arsip/print/'.$model->id, '<i class="icon-print icon-white"></i> Print', 'class="btn btn-success" onclick="window.print();return false"') ?>
-          </div>
         </div>
         <div class="span3 strip box">
           <div class="side">
