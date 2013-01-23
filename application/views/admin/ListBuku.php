@@ -27,7 +27,7 @@
 						<td><?php echo $row->judul;?></td>
 						<td><?php echo $row->akun->get()->nama;?></td>
 						<td><?php echo $row->tgl_terbit;?></td>
-						<td><a href="<?php echo $row->link;?>">Lihat</a></td>
+						<td><?php echo anchor('arsip/view/'.$row->id, 'Lihat') ?></td>
 						<td>
 						<?php echo form_open('admin/CekBuku/'.$row->id) ?>
 						<?php echo $approve[$row->status];?>

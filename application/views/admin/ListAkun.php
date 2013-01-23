@@ -36,7 +36,7 @@
 					
 					<td><?php echo $u[$row->status];?></td>
 					<?php $this->load->helper('html'); ?>
-					<td><?php echo img(base_url().'public/img/user/'.$row->picture) ?></td>
+					<td><?php echo img($row->get_profpic()) ?></td>
 					<td>
 					<form action="<?php echo base_url();?>index.php/admin/CekAkun/<?php echo $row->id;?>" method="POST">
 					<?php echo $approve[$row->approved];?>
