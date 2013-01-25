@@ -237,3 +237,7 @@ h3.popover-title
 {
   margin: 0;
 }
+.sauto{
+  float: left;
+  margin-right: 10px;
+}

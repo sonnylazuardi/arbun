@@ -54,7 +54,7 @@ $(function() {
   $("#search").autocomplete("<?php echo site_url('token/search_arsip') ?>", {
     remoteDataType: 'json', minChars: 2,
     showResult: function(value, data) {
-      return "<b>" + value + "</b> <br>" + data[1];
+      return "<img src=\"" + data[2] + "\" width=\"50px\" class=\"sauto\"/> <b>" + value + "</b> <br>" + data[1];
     },
     onItemSelect: function(item) {
       window.location = "<?php echo site_url('arsip/view') ?>/" + item.data[0];

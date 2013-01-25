@@ -33,7 +33,7 @@ class Token extends CI_Controller {
 		if($model->exists()){
 			$arr = array();
 			foreach ($model as $buku) {
-				$arr[] = array($buku->judul, $buku->id, $buku->akun_nama);
+				$arr[] = array($buku->judul, $buku->id, $buku->akun_nama, $buku->get_cover());
 			}
 			echo json_encode($arr);
 		}
