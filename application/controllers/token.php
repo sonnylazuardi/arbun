@@ -8,6 +8,20 @@ class Token extends CI_Controller {
 		   exit('No direct script access allowed');
 		}
 	}
+	public function jurusan()
+	{
+		$fakultas_id = $this->input->post('fakultas_id');
+    $model = new Jurusan();
+    $model->where('fakultas_id', $fakultas_id);
+    $model->get();
+    $result = array();
+    $result[0]= 'Pilih Jurusan';
+    foreach ($model as $row)
+    {
+        $result[$row->id]= $row->nama;
+    }
+    echo form_dropdown("Akun[jurusan_id]",$result,'');
+	}
 	public function search_arsip()
 	{
 		$judul = $this->input->get('q');	

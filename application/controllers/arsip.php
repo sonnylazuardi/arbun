@@ -76,6 +76,7 @@ class Arsip extends CI_Controller {
 			redirect('auth/login');
 		$model = new Buku();
 		$model->view = 0;
+		$model->status = 1;
 		$model->tgl_terbit = date('Y-m-d');
 		$this->_save($model, $user);
 		$data['page']='arsip/create';
@@ -127,6 +128,21 @@ class Arsip extends CI_Controller {
 			));
 			$rel['akun'] = $user;
 
+			$config['upload_path'] = './public/img/cover/';
+			$config['allowed_types'] = 'gif|jpg|png';
+			$config['max_size']	= '1000';
+			$this->load->library('upload', $config);
+			if ($_FILES['upload_cover']['error']!=4) {
+				if ($this->upload->do_upload('upload_cover')) {
+					$ret = $this->upload->data();
+					if(!empty($model->cover))
+						unlink('./public/img/cover/'.$model->cover);
+					$this->load->helper('pics');
+					resize_pic('./public/img/cover/'.$ret['file_name'], 200, 256);
+					$model->cover = $ret['file_name'];
+				}
+			}
+
 			$config['upload_path'] = './public/pdf/';
 			$config['allowed_types'] = 'pdf';
 			$config['max_size']	= '5000';
@@ -137,6 +153,8 @@ class Arsip extends CI_Controller {
 					$model->link  = 'error';
 				} else {
 					$ret = $this->upload->data();
+					if(!empty($model->link))
+						unlink('./public/pdf/'.basename($model->link));
 					$model->link = base_url().'public/pdf/'.$ret['file_name'];
 				}
 			} elseif(!empty($model->upload_url)) $model->link = $model->upload_url;

@@ -12,7 +12,7 @@ class Admin extends CI_Controller
 	}
 	function _paginate($model, $url, $offset, $limit)
 	{
-		$model->get_paged($offset, $limit);
+		$model->get_paged_iterated($offset, $limit);
 		$this->load->library('pagination');
 		$config['base_url'] = site_url().'/'.$url.'/';
 		$config['total_rows'] = $model->paged->total_rows;
@@ -67,7 +67,8 @@ class Admin extends CI_Controller
 		$model = new Buku();
 		$model->get_by_id($id);
 		if($model->exists()) {
-			unlink('./public/pdf/'.basename($model->link));
+			if(!empty($model->link)) unlink('./public/pdf/'.basename($model->link));
+			if(!empty($model->cover)) unlink('./public/img/cover/'.$model->cover);
 			$model->delete();
 		}
 		redirect('admin/ListBuku');

@@ -139,6 +139,8 @@ footer p {
 .bookshelf .shelf .loc {
   text-align: center;
 }
+.book img {
+}
 .book{
   overflow: hidden;
   width: 82px;
@@ -146,16 +148,18 @@ footer p {
   background-color: #ddd;
   display: inline-block;
   margin: 0 24px;
-  padding: 5px;
+  padding: 0;
   border: 1px solid #fff; 
-  box-shadow: 0px -30px 50px rgba(0,0,0,.3) inset;
   float: left;
   line-height: .6em;
-  box-sizing:;
+  text-align: center;
 }
 .book a{
   font-size:.7em;
-  color: #000;
+  color: #fff;
+}
+.book .teks:hover {
+  opacity: 100;
 }
 .tabs-below > .nav-tabs
 {
@@ -225,6 +229,9 @@ footer p {
 }
 .table-view tr td:first-child{
   text-align: right;
+}
+.loadings {
+  background : #ddd;
 }
 /*@media (min-width: 1200px) {
   .bookwrap .tab-content{

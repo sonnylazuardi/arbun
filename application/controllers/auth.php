@@ -41,8 +41,6 @@ class Auth extends CI_Controller {
 			$config['upload_path'] = './public/img/user/';
 			$config['allowed_types'] = 'gif|jpg|png';
 			$config['max_size']	= '1200';
-			$config['max_width']  = '1024';
-			$config['max_height']  = '768';
 			$this->load->library('upload', $config);
 			if ($_FILES['user_file']['error']!=4) {
 				if (!$this->upload->do_upload('user_file'))
@@ -50,7 +48,8 @@ class Auth extends CI_Controller {
 					$model->picture = 'error';
 				} else {
 					$ret = $this->upload->data();
-					$this->resize_pic($ret['file_name']);
+					$this->load->helper('pics');
+					resize_pic('./public/img/user/'.$ret['file_name'], 200, 200);
 					$model->picture = $ret['file_name'];
 				}
 			}
@@ -67,12 +66,6 @@ class Auth extends CI_Controller {
 		$data['page']='auth/register';
 		$data['model']=$model;
 		$this->load->view('theme/template', $data);
-	}
-	function resize_pic($filename){
-		require_once APPPATH.'libraries/phpthumb/ThumbLib.inc.php';
-		$thumb = PhpThumbFactory::create('./public/img/user/'.$filename);
-		$thumb->adaptiveResize(200, 200);
-		$thumb->save('./public/img/user/'.$filename, 'jpg');
 	}
 	public function login()
 	{

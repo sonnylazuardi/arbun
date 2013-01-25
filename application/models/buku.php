@@ -114,6 +114,13 @@ class Buku extends DataMapper {
     {
       $this->include_related('akun', array('nama'));
     }
+    public function get_cover()
+    {
+      if (file_exists("./public/img/cover/".$this->cover) && !empty($this->cover))
+          return base_url().'public/img/cover/'.$this->cover;
+      else
+          return base_url().'public/img/nocover.jpg';
+    }
     public function search($term)
     { 
       // $this->where('MATCH(judul, abstrak) AGAINST("' . $term . '" IN BOOLEAN MODE)');

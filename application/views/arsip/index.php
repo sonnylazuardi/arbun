@@ -19,7 +19,9 @@ $(function(){
 	  		<div class="span8" style="margin-bottom:20px">
 	  			<div class="row">
 	  				<div class="span1">
-	  					<div class="book" style="margin:0"><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></div>
+	  					<a href="<?php echo site_url('arsip/view/'.$buku->id, $buku->judul) ?>" class="book" style="margin:0">
+	  						<img src="<?php echo $buku->get_cover() ?>" alt="" />
+	  					</a>
 	  				</div>
 	  				<div class="span7">
 				  		<div style="margin: 0 -18px 0 25px">

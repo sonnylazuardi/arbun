@@ -29,17 +29,24 @@
 		echo form_dropdown('Akun[status]', $statuses, $model->status);
 	?>
 	<label>Fakultas/Sekolah :</label>
+	<div id="fakultas">
 	<?php 
 		$ret = new Fakultas();
 		$fakultases = $ret->getArray();
-		echo form_dropdown('Akun[fakultas_id]', $fakultases, $model->fakultas_id);
+		$fakultases = array(''=>'Pilih Fakultas') + $fakultases;
+		echo form_dropdown('Akun[fakultas_id]', $fakultases, $model->fakultas_id, 'id="fakultas_id"');
 	?>
+	</div>
 	<label>Jurusan :</label>
+	<div id="jurusan">
 	<?php 
-		$ret = new Jurusan();
-		$jurusans = $ret->getArray();
-		echo form_dropdown('Akun[jurusan_id]', $jurusans, $model->jurusan_id);
+		if(!empty($model->jurusan_id)) {
+			echo form_dropdown('Akun[jurusan_id]', array($model->jurusan_id=>$model->jurusan->get()->nama), $model->jurusan_id);
+		} else {
+			echo form_dropdown('Akun[jurusan_id]', array(''=>'Pilih Fakultas'), '');
+		}
 	?>
+	</div>
 	<label>Jenis Kelamin :</label>
 	<?php 
 		$kelamins = array('Laki-laki', 'Perempuan');
@@ -55,3 +62,21 @@
 	?>
 	<p class="help-block">Gambar berupa file jpg,gif,png maks 1200kb, berukuran 200x200px</p>
 </div>
+<script src="<?php echo base_url() ?>public/js/jquery.js"></script>
+<script type="text/javascript">
+	$(function(){
+		$('#fakultas_id').change(function(){
+			var fakultas_id = {fakultas_id:$("#fakultas_id").val()};
+			$(this).addClass('loadings');
+      $.ajax({
+	      type: "POST",
+	      url : "<?php echo site_url('token/jurusan')?>",
+	      data: fakultas_id,
+	      success: function(msg){
+	        $('#jurusan').html(msg);
+	        $("#fakultas_id").removeClass('loadings');
+	      }
+		  });
+		});
+	});
+</script>

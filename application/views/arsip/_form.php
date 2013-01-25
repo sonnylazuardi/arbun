@@ -9,6 +9,11 @@
 		<?php echo form_input('Buku[judul]', $model->judul) ?>
 		<label>Abstrak :</label>
 		<?php echo form_textarea('Buku[abstrak]', $model->abstrak, 'cols="2" rows="5"') ?>
+
+		<label>Tanggal Terbit :</label>
+		<span class="help-block">Format tanggal Tahun-Bulan-Tanggal</span>
+		<?php echo form_input('Buku[tgl_terbit]', $model->tgl_terbit) ?>
+
 		<p class="help-block">Kategori, Mata Kuliah dan Bidang dipisahkan dengan koma untuk masing-masing item</p>
 		
 		<label>Kategori :</label>
@@ -19,8 +24,12 @@
 		<label>Bidang :</label>
 		<?php echo form_input('Buku[bidangku]', $model->bidangku, 'placeholder="Stack, Graf, Pohon" id="bidangku"') ?>
 		<label>Status :</label>
-		<?php $arr = array(1=>'Publik', 2=>'Internal'); ?>
-		<?php echo form_dropdown('Buku[status]', $arr, $model->status) ?>
+		<?php if($model->status == 0): ?>
+			Diblok
+		<?php else: ?>
+			<?php $arr = array(1=>'Publik', 2=>'Internal'); ?>
+			<?php echo form_dropdown('Buku[status]', $arr, $model->status) ?>
+		<?php endif; ?>
 	</div>
 	<div class="span4">
 		<h5>Unggah Arsip</h5>
@@ -42,15 +51,15 @@
 
 		<h5>Informasi Tambahan</h5>
 		<legend></legend>
+		<label>Cover Depan :</label>
+		<?php echo form_upload('upload_cover'); ?>
+		 <p class="help-block">File berupa gambar berformat jpg,gif,png dengan ukuran maks 1MB</p>
 		<label>Jilid :</label>
 		<?php echo form_input('Buku[jilid]', $model->jilid) ?>
 		<label>Penerbit :</label>
 		<?php echo form_input('Buku[penerbit]', $model->penerbit) ?>
 		<label>ISBN :</label>
 		<?php echo form_input('Buku[ISBN]', $model->ISBN) ?>
-		<label>Tanggal Terbit :</label>
-		<span class="help-block">Format tanggal Tahun-Bulan-Tanggal</span>
-		<?php echo form_input('Buku[tgl_terbit]', $model->tgl_terbit) ?>
 	</div>
 </div>
 <div class="form-actions">

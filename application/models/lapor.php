@@ -3,7 +3,7 @@ class Lapor extends DataMapper {
 
     var $table = 'lapor';
 
-    var $has_one = array('akun','buku');
+    var $has_one = array('akun', 'buku');
     
     var $has_many = array();
 
