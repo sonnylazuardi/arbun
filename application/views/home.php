@@ -1,3 +1,5 @@
+<?php $this->load->helper('search'); ?>
+
 <div class="container">
       <div class="span6 desk" style="margin-top:50px">
         <h3>Portal dokumentasi dan publikasi makalah Informatika Institut Teknologi Bandung.</h3>
@@ -83,3 +85,13 @@
         </div>
       </div>
     </div>
+
+<script src="<?php echo base_url() ?>public/js/jquery.js"></script>
+<script type="text/javascript">
+  $(function () {
+      $("[rel='popover']").popover({
+        trigger: 'hover',
+        placement: 'bottom'
+      });
+  });
+</script>

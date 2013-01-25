@@ -19,9 +19,15 @@ $(function(){
 	  		<div class="span8" style="margin-bottom:20px">
 	  			<div class="row">
 	  				<div class="span1">
-	  					<a href="<?php echo site_url('arsip/view/'.$buku->id, $buku->judul) ?>" class="book" style="margin:0">
+	  					<a href="<?php echo site_url('arsip/view/'.$buku->id, $buku->judul) ?>" class="book" style="margin:0" rel="tooltip" title="<?php echo $buku->judul ?>">
 	  						<img src="<?php echo $buku->get_cover() ?>" alt="" />
 	  					</a>
+	  					<script src="<?php echo base_url() ?>public/js/jquery.js"></script>
+	  					<script type="text/javascript">
+						    $(function () {
+						        $("[rel='tooltip']").tooltip();
+						    });
+							</script>
 	  				</div>
 	  				<div class="span7">
 				  		<div style="margin: 0 -18px 0 25px">

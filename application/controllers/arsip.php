@@ -61,6 +61,8 @@ class Arsip extends CI_Controller {
 		$model->include_related('akun', array('nama'));
 		$model->select('*');
 		$model->where('status !=', 0);
+		$user = $this->login_manager->get_user();
+		if (!$user) $model->where('status', 1);
 		$model->get_by_id($id);
 		if(!$model->exists())show_error('Buku Tidak ditemukan');
 		$this->_add_view_count($model, $id);
