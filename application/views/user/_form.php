@@ -53,11 +53,8 @@
 		echo form_dropdown('Akun[jen_kelamin]', $kelamins, $model->jen_kelamin);
 	?>
 	<label>Gambar Profil :</label>
-
+	<img src="<?php echo $model->get_profpic(); ?>" alt="" width="80px">
 	<?php 
-		if (!empty($model->picture) and $model->picture!='error') {
-			echo '<img src="'.base_url().'public/img/user/'.$model->picture.'"" />';
-		}
 		echo form_upload('user_file');
 	?>
 	<p class="help-block">Gambar berupa file jpg,gif,png maks 1200kb, berukuran 200x200px</p>

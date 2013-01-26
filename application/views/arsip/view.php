@@ -1,6 +1,11 @@
 <div class="container">
   <div class="row">
-    <div class="span9"><h4><?php echo $model->judul ?></h4>
+    <div class="span9">
+      <div class="row">
+        <div class="span9">
+          <img src="<?php echo $model->get_cover() ?>" width="65px" class="sauto" alt="" /><h4><?php echo $model->judul ?></h4>
+        </div>
+      </div>
       <div class="strip box">
         <div style="margin:10px">
           <iframe src="http://docs.google.com/viewer?url=<?php echo $model->link ?>&embedded=true" width="680" height="800" style="border: none;"></iframe>

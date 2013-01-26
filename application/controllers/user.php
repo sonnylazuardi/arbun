@@ -41,7 +41,8 @@ class User extends CI_Controller {
 					$model->picture = 'error';
 				} else {
 					$ret = $this->upload->data();
-					$this->resize_pic($ret['file_name']);
+					$this->load->helper('pics');
+					resize_pic('./public/img/user/'.$ret['file_name'], 200, 200);
 					unlink('./public/img/user/'.$model->picture);
 					$model->picture = $ret['file_name'];
 				}

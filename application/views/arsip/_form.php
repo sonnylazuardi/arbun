@@ -52,6 +52,7 @@
 		<h5>Informasi Tambahan</h5>
 		<legend></legend>
 		<label>Cover Depan :</label>
+		<img src="<?php echo $model->get_cover() ?>" width="130px" alt="">
 		<?php echo form_upload('upload_cover'); ?>
 		 <p class="help-block">File berupa gambar berformat jpg,gif,png dengan ukuran maks 1MB</p>
 		<label>Jilid :</label>

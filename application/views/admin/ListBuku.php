@@ -23,7 +23,7 @@
 					?>
 						<tr>
 						<td><?php echo $i;?></td>
-						<td><?php echo anchor('arsip/view/'.$row->id, $row->judul) ?></td>
+						<td><img src="<?php echo $row->get_cover() ?>" width="60px" class="sauto" alt="" /><?php echo anchor('arsip/view/'.$row->id, $row->judul) ?></td>
 						<td><?php $row->akun->tulis_profile() ?></td>
 						<td><?php echo $row->tgl_terbit;?></td>
 						<td>

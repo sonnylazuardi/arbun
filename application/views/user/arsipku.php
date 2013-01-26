@@ -23,7 +23,7 @@
 				  	<?php foreach($model as $buku) :?>
 				  	<tr>
 				  		<td><?php echo $ctr ?></td>
-				  		<td><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></td>
+				  		<td><img src="<?php echo $buku->get_cover() ?>" width="60px" class="sauto" alt="" /><?php echo anchor('arsip/view/'.$buku->id, $buku->judul) ?></td>
 				  		<td><?php echo $buku->created ?></td>
 				  		<td><?php echo $buku->get_matkulku() ?></td>
 				  		<td> 
