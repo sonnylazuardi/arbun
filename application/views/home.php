@@ -80,7 +80,7 @@
               js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=361859217203807";
               fjs.parentNode.insertBefore(js, fjs);
             }(document, 'script', 'facebook-jssdk'));</script>
-            Dukung kami <div class="fb-like" data-href="http://www.facebook.com/ArsipBuncit" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true" data-colorscheme="dark"></div>
+            Dukung kami <div class="fb-like" data-href="http://www.facebook.com/ArsipBundel" data-send="false" data-layout="box_count" data-width="450" data-show-faces="true" data-colorscheme="dark"></div>
           </div>
         </div>
       </div>

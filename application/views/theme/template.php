@@ -13,7 +13,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ARBUN - Arsip Buncit</title>
+    <title>ARBUN</title>
     <!-- Le styles -->
     <link href="<?php echo base_url();?>public/css/bootstrap.css" rel="stylesheet">
     <!-- <link href="<?php echo base_url();?>public/css/bootstrap-responsive.css" rel="stylesheet"> -->

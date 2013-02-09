@@ -12,6 +12,7 @@
     <div class="span8 strip box">
       <div class="side"><h4>Tentang Arbun</h4>
         <legend></legend>
+        <iframe width="560" height="315" src="http://www.youtube.com/embed/34D_7n2vHt0" frameborder="0" allowfullscreen style="text-align:center"></iframe>
 		<p>
 		Saat ini, akses dan pencarian publikasi makalah dan tugas akhir di
 		program studi Teknik Informatika Institut Teknologi Bandung sangat

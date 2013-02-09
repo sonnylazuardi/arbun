@@ -8,7 +8,7 @@
       </div>
       <div class="strip box">
         <div style="margin:10px">
-          <iframe src="http://docs.google.com/viewer?url=<?php echo $model->link ?>&embedded=true" width="680" height="800" style="border: none;"></iframe>
+          <iframe src="http://docs.google.com/viewer?url=<?php echo $model->link ?>&embedded=true" width="680" height="1250" style="border: none;"></iframe>
         </div>
       </div>
     </div>
